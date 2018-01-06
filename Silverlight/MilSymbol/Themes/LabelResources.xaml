@@ -1,0 +1,99 @@
+<ResourceDictionary
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Style x:Key="BS10" TargetType="Shape" >
+		<Setter Property="StrokeMiterLimit" Value="2" />
+		<Setter Property="StrokeThickness" Value="10" />
+		<Setter Property="Stroke" Value="Black" />
+	</Style>
+
+	<Style x:Key="TacticalGraphicsLabels" TargetType="TextBlock" >
+		<Setter Property="FontSize" Value="72"/>
+		<Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+		<Setter Property="LineHeight" Value="76"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontFamily" Value="Arial"/>
+	</Style>
+	<Style x:Key="MeterDepthLabel" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="174"/>
+		<Setter Property="FontStyle" Value="Italic"/>
+		<Setter Property="FontFamily" Value="Arial" />
+		<Setter Property="Foreground" Value="#FFC0C0C0" />
+	</Style>
+	<Style x:Key="DecimeterDepthLabel" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Left"/>
+		<Setter Property="FontSize" Value="120"/>
+		<Setter Property="FontStyle" Value="Italic"/>
+		<Setter Property="FontFamily" Value="Arial" />
+		<Setter Property="Foreground" Value="#FFC0C0C0" />
+	</Style>
+	<Style x:Key="FreezeLabel" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="100"/>
+		<Setter Property="FontFamily" Value="Arial" />
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+	<Style x:Key="TropoLabel" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="110"/>
+		<Setter Property="FontFamily" Value="Arial" />
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+	<Style x:Key="PressureLabel" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="120"/>
+		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="FontFamily" Value="Arial" />
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+	<Style x:Key="LeftLabels" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Right"/>
+		<Setter Property="FontSize" Value="72"/>
+		<Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+		<Setter Property="LineHeight" Value="100" />
+		<Setter Property="FontFamily" Value="Arial" />
+	</Style>
+	<Style x:Key="BigLabels" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Left"/>
+		<Setter Property="FontSize" Value="100"/>
+		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="FontFamily" Value="Arial" />
+	</Style>
+	<Style x:Key="RightLabels" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Left"/>
+		<Setter Property="FontSize" Value="72"/>
+		<Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+		<Setter Property="LineHeight" Value="100"/>
+		<Setter Property="FontFamily" Value="Arial"/>
+	</Style>
+	<Style x:Key="TopLabels" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="72"/>
+		<Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+		<Setter Property="LineHeight" Value="76" />
+		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="FontFamily" Value="Arial" />
+	</Style>
+	<Style x:Key="MiddleLabels" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="56"/>
+		<Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+		<Setter Property="LineHeight" Value="56" />
+		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="FontFamily" Value="Arial" />
+	</Style>
+
+	<!--Don't mess with the echelon markings - they're picked especially to conform to the standard-->
+	<Style x:Key="EchelonLabels" TargetType="TextBlock" >
+		<Setter Property="TextAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="96"/>
+		<Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+		<Setter Property="LineHeight" Value="100" />
+		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="FontFamily" Value="Arial" />
+	</Style>
+
+</ResourceDictionary>

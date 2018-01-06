@@ -1,0 +1,13 @@
+.cache/
+.vscode/
+.vs/
+__pycache__/
+*.suo
+*.csproj.user
+bin/
+obj/
+Debug/
+Release/
+Bin/
+
+

@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="GraphicsTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    Loaded="UserControlLoaded"
+    HorizontalAlignment="Left" VerticalAlignment="Top" 
+    mc:Ignorable="d"
+    Width="640" Height="640"
+    d:DesignWidth="640" d:DesignHeight="640">
+  <Grid x:Name="LayoutRoot" Width="640" HorizontalAlignment="Left">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+    </Grid.RowDefinitions>
+    <StackPanel x:Name="Layout" Orientation="Horizontal" Grid.Row="0" Height="25">
+      <Button Content="Labels" ToolTipService.ToolTip="Draws symbols with labels" Width ="75" Click="ButtonClick" />
+      <Button Content="Miscellany" ToolTipService.ToolTip="Draws less common symbol variations" Width ="75" Click="ButtonClick"  />
+      <ComboBox x:Name="Combo" Width="175" Loaded="ComboLoaded"   >
+        <ComboBoxItem Content="Appendices" ToolTipService.ToolTip="Draws available 2525C appendices" Visibility="Collapsed"></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Space" Tag="^S.P" ToolTipService.ToolTip="Draws all Appendix A space symbols" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Air" Tag="^S.A" ToolTipService.ToolTip="Draws all Appendix A air symbols" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Equipment" Tag="^S.G.E" ToolTipService.ToolTip="Draws all Appendix A ground equipment" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Equipment (no frame)" Tag="^S.G.E" ToolTipService.ToolTip="Draws some Appendix A ground equipment without frames" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Installation" Tag="^S.G.I" ToolTipService.ToolTip="Draws all Appendix A ground installations" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Unit (pt 1)" Tag="^S.G.U[CU]" ToolTipService.ToolTip="Draws all Appendix A units" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Unit (pt 2)" Tag="^S.G.U[S]" ToolTipService.ToolTip="Draws all Appendix A units" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Water" Tag="^S.S" ToolTipService.ToolTip="Draws all Appendix A surface water symbols" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Water (no frame)" Tag="^S.S" ToolTipService.ToolTip="Draws some Appendix A surface water symbols without frames" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Subsurface" Tag="^S.U" ToolTipService.ToolTip="Draws all Appendix A subsurface symbols" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - Subsurface (no frame)" Tag="^S.U" ToolTipService.ToolTip="Draws some Appendix A subsurface symbols without frames" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix A - SOF" Tag="^S.F" ToolTipService.ToolTip="Draws all Appendix A SOF symbols" ></ComboBoxItem>
+        <ComboBoxItem Content="Appendix B" Tag="^G" ToolTipService.ToolTip="Draws all single point tactical symbols"  />
+        <ComboBoxItem Content="Appendix C" Tag="^W.........P" ToolTipService.ToolTip="Draws all single point Weather (METOC) symbols"  />
+        <ComboBoxItem Content="Appendix D" Tag="^I" ToolTipService.ToolTip="Draws all Intelligence symbols"  />
+        <ComboBoxItem Content="Appendix E" Tag="^O" ToolTipService.ToolTip="Draws all Stability Operations symbols"  />
+        <ComboBoxItem Content="Appendix G" Tag="^E" ToolTipService.ToolTip="Draws all Emergency Operations symbols"  />
+      </ComboBox>
+      <Button Content="Mobility" ToolTipService.ToolTip="Draws various symbol decorations" Width ="75" Click="ButtonClick" />
+      <TextBlock Width="165" />
+      <Button Content="Check" ToolTipService.ToolTip="Checks the current image for accuracy" Width ="75" Click="CheckClick" />
+    </StackPanel>
+    <ScrollViewer x:Name="sv" Height="575" VerticalScrollBarVisibility="Visible" Grid.Row="1">
+      <Canvas x:Name="Symbols" Background="White" />
+    </ScrollViewer>
+  </Grid>
+</UserControl>

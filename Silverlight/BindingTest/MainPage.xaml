@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="BindingTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:local="clr-namespace:BindingTest" 
+    xmlns:MilSymbol="clr-namespace:MilSym.MilSymbol;assembly=MilSym.MilSymbol"
+    mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
+  <UserControl.Resources>
+    <local:DoubleConverter x:Key="DoubleConverter"/>
+    <local:Symbols x:Key="SymbolItemsSource" d:IsDataSource="True" />
+    <DataTemplate x:Key="SymbolItemTemplate">
+      <MilSymbol:MilSymbol 
+                ToolTipService.ToolTip="{Binding Name}"
+                SymbolCode="{Binding SymbolCode}" 
+                Angle="{Binding AngleDegrees}"
+                Canvas.Top="{Binding Position.Y}"
+                Canvas.Left="{Binding Position.X}"
+                LabelH="{Binding AngleDegrees,Converter={StaticResource DoubleConverter}}"
+                Scale="0.14"
+        />
+    </DataTemplate>
+  </UserControl.Resources>
+
+  <Grid x:Name="LayoutRoot">
+    <Canvas x:Name="Bindings" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White"
+                    local:BindStuff.ItemsSource="{Binding Items, Source={StaticResource SymbolItemsSource}}"
+                    local:BindStuff.ItemTemplate="{StaticResource SymbolItemTemplate}"
+        />
+  </Grid>
+</UserControl>

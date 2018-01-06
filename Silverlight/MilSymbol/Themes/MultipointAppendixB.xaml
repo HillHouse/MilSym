@@ -1,0 +1,2680 @@
+﻿<ResourceDictionary
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	>
+
+  <Style x:Key="BT55" TargetType="TextBlock" >
+    <Setter Property="FontFamily" Value="Arial"/>
+    <Setter Property="Foreground" Value="Black"/>
+    <Setter Property="FontSize" Value="55"/>
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+  <Style x:Key="BT35" TargetType="TextBlock" >
+    <Setter Property="FontFamily" Value="Arial"/>
+    <Setter Property="Foreground" Value="Black"/>
+    <Setter Property="FontSize" Value="35"/>
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+  <Style x:Key="BT32" TargetType="TextBlock" >
+    <Setter Property="FontFamily" Value="Arial"/>
+    <Setter Property="Foreground" Value="Black"/>
+    <Setter Property="FontSize" Value="32"/>
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+  <Style x:Key="BT25" TargetType="TextBlock" >
+    <Setter Property="FontFamily" Value="Arial"/>
+    <Setter Property="Foreground" Value="Black"/>
+    <Setter Property="FontSize" Value="25"/>
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+  <Style x:Key="BT20" TargetType="TextBlock" >
+    <Setter Property="FontFamily" Value="Arial"/>
+    <Setter Property="Foreground" Value="Black"/>
+    <Setter Property="FontSize" Value="20"/>
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+  <Style x:Key="BT15" TargetType="TextBlock" >
+    <Setter Property="FontFamily" Value="Arial"/>
+    <Setter Property="Foreground" Value="Black"/>
+    <Setter Property="FontSize" Value="15"/>
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+  <Style x:Key="BS1" TargetType="Shape" >
+    <Setter Property="StrokeMiterLimit" Value="2" />
+    <Setter Property="StrokeThickness" Value="10" />
+    <Setter Property="Stroke" Value="Green" />
+  </Style>
+
+  <sys:String x:Key="G_TPR_1">ReliefInPlace -50,-25 25,-25 25,25 -50,25</sys:String>
+  <ControlTemplate x:Key="G_TPR">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-50,-25">
+              <LineSegment Point="25,-25" />
+            </PathFigure>
+            <PathFigure StartPoint="-45,-20">
+              <LineSegment Point="-50,-25" />
+              <LineSegment Point="-45,-30" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C34" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="25,25">
+              <LineSegment Point="-50,25" />
+            </PathFigure>
+            <PathFigure StartPoint="20,20">
+              <LineSegment Point="25,25" />
+              <LineSegment Point="20,30" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B32">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="25,-25">
+              <ArcSegment Size="25,25" RotationAngle="90" IsLargeArc="False" SweepDirection="Clockwise" Point="25,25" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="RIP" Style="{StaticResource BT25}" Foreground="{Binding Brush}" Canvas.Left="-45" Canvas.Top="-13" Name="E21"/>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPUS_1">SecurityScreen -186,0 -50,-10 50,-10 186,0</sys:String>
+  <ControlTemplate x:Key="G_TPUS">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A34" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="56,-10">
+              <LineSegment Point="146,0" />
+              <LineSegment Point="132,-10" />
+              <LineSegment Point="186,0" />
+            </PathFigure>
+            <PathFigure StartPoint="175,-10">
+              <LineSegment Point="186,0" />
+              <LineSegment Point="175,10" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-56,-10">
+              <LineSegment Point="-146,0" />
+              <LineSegment Point="-132,-10" />
+              <LineSegment Point="-186,0" />
+            </PathFigure>
+            <PathFigure StartPoint="-175,-10">
+              <LineSegment Point="-186,0" />
+              <LineSegment Point="-175,10" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="S" Style="{StaticResource BT25}" Foreground="{Binding Brush}" Canvas.Left="-45" Canvas.Top="-25" Name="B12"/>
+      <TextBlock Text="S" Style="{StaticResource BT25}" Foreground="{Binding Brush}" Canvas.Left="25" Canvas.Top="-25" Name="D34"/>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPUG_1">SecurityGuard -186,0 -50,-10 50,-10 186,0</sys:String>
+  <ControlTemplate x:Key="G_TPUG">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A34" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="56,-10">
+              <LineSegment Point="146,0" />
+              <LineSegment Point="132,-10" />
+              <LineSegment Point="186,0" />
+            </PathFigure>
+            <PathFigure StartPoint="175,-10">
+              <LineSegment Point="186,0" />
+              <LineSegment Point="175,10" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-56,-10">
+              <LineSegment Point="-146,0" />
+              <LineSegment Point="-132,-10" />
+              <LineSegment Point="-186,0" />
+            </PathFigure>
+            <PathFigure StartPoint="-175,-10">
+              <LineSegment Point="-186,0" />
+              <LineSegment Point="-175,10" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="G" Style="{StaticResource BT25}" Foreground="{Binding Brush}" Canvas.Left="-45" Canvas.Top="-25" Name="B12"/>
+      <TextBlock Text="G" Style="{StaticResource BT25}" Foreground="{Binding Brush}" Canvas.Left="25" Canvas.Top="-25" Name="D34"/>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPUC_1">SecurityCover -186,0 -50,-10 50,-10 186,0</sys:String>
+  <ControlTemplate x:Key="G_TPUC">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A34" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="56,-10">
+              <LineSegment Point="146,0" />
+              <LineSegment Point="132,-10" />
+              <LineSegment Point="186,0" />
+            </PathFigure>
+            <PathFigure StartPoint="175,-10">
+              <LineSegment Point="186,0" />
+              <LineSegment Point="175,10" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-56,-10">
+              <LineSegment Point="-146,0" />
+              <LineSegment Point="-132,-10" />
+              <LineSegment Point="-186,0" />
+            </PathFigure>
+            <PathFigure StartPoint="-175,-10">
+              <LineSegment Point="-186,0" />
+              <LineSegment Point="-175,10" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="C" Style="{StaticResource BT25}" Foreground="{Binding Brush}" Canvas.Left="-45" Canvas.Top="-25" Name="B12"/>
+      <TextBlock Text="C" Style="{StaticResource BT25}" Foreground="{Binding Brush}" Canvas.Left="25" Canvas.Top="-25" Name="D34"/>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPJ_1">Contain 0,-103 0,103 240,0 0,0 240,-103 240,103</sys:String>
+  <ControlTemplate x:Key="G_TPJ">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,68">
+              <LineSegment Point="0,103" />
+              <ArcSegment Size="103,103" RotationAngle="80" IsLargeArc="False" SweepDirection="Clockwise" Point="-101,18" />
+              <LineSegment Point="-67,11" />
+            </PathFigure>
+            <PathFigure StartPoint="-67,-11">
+              <LineSegment Point="-101,-18" />
+              <ArcSegment Size="103,103" RotationAngle="80" IsLargeArc="False" SweepDirection="Clockwise" Point="0,-103" />
+              <LineSegment Point="0,-68" />
+            </PathFigure>
+            <PathFigure StartPoint="-35,97">
+              <LineSegment Point="-23,64" />
+            </PathFigure>
+            <PathFigure StartPoint="-35,-97">
+              <LineSegment Point="-23,-64" />
+            </PathFigure>
+            <PathFigure StartPoint="-66,79">
+              <LineSegment Point="-44,52" />
+            </PathFigure>
+            <PathFigure StartPoint="-66,-79">
+              <LineSegment Point="-44,-52" />
+            </PathFigure>
+            <PathFigure StartPoint="-89,52">
+              <LineSegment Point="-59,34" />
+            </PathFigure>
+            <PathFigure StartPoint="-89,-52">
+              <LineSegment Point="-59,-34" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C34">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="25,14">
+              <LineSegment Point="0,0" />
+              <LineSegment Point="25,-14" />
+            </PathFigure>
+            <PathFigure StartPoint="0,0">
+              <LineSegment Point="105,0" />
+            </PathFigure>
+            <PathFigure StartPoint="155,0">
+              <LineSegment Point="240,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="C" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="-113" Canvas.Top="-20" Name="B12"/>
+      <TextBlock Text="ENY" Style="{StaticResource BT15}" Foreground="{Binding Brush}" Canvas.Left="111" Canvas.Top="-8" Name="D34"/>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPL_1">Delay 0,0 240,0 240,-140</sys:String>
+  <ControlTemplate x:Key="G_TPL">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="240,0">
+              <LineSegment Point="155,0" />
+            </PathFigure>
+            <PathFigure StartPoint="25,14">
+              <LineSegment Point="0,0" />
+              <LineSegment Point="25,-14" />
+            </PathFigure>
+            <PathFigure StartPoint="0,0">
+              <LineSegment Point="105,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B23">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="240,-140">
+              <ArcSegment Size="70,70" RotationAngle="180" IsLargeArc="False" SweepDirection="Clockwise" Point="240,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="D" Canvas.Left="118" Canvas.Top="-20" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Name="C12"/>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPM_1">Retirement 0,0 240,0 240,-140</sys:String>
+  <ControlTemplate x:Key="G_TPM">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="240,0">
+              <LineSegment Point="155,0" />
+            </PathFigure>
+            <PathFigure StartPoint="25,14">
+              <LineSegment Point="0,0" />
+              <LineSegment Point="25,-14" />
+            </PathFigure>
+            <PathFigure StartPoint="0,0">
+              <LineSegment Point="105,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B23">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="240,-140">
+              <ArcSegment Size="70,70" RotationAngle="180" IsLargeArc="False" SweepDirection="Clockwise" Point="240,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="R" Canvas.Left="118" Canvas.Top="-20" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Name="C12" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPW_1">Withdraw 0,0 240,0 240,-140</sys:String>
+  <ControlTemplate x:Key="G_TPW">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="240,0">
+              <LineSegment Point="155,0" />
+            </PathFigure>
+            <PathFigure StartPoint="25,14">
+              <LineSegment Point="0,0" />
+              <LineSegment Point="25,-14" />
+            </PathFigure>
+            <PathFigure StartPoint="0,0">
+              <LineSegment Point="105,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B23" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="240,-140">
+              <ArcSegment Size="70,70" RotationAngle="180" IsLargeArc="False" SweepDirection="Clockwise" Point="240,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="W" Canvas.Left="112" Canvas.Top="-20" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Name="C12" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPWP_1">WithdrawUnderPressure 0,70 240,70 240,-70</sys:String>
+  <ControlTemplate x:Key="G_TPWP">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A12">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="240,70">
+              <LineSegment Point="178,70" />
+            </PathFigure>
+            <PathFigure StartPoint="25,84">
+              <LineSegment Point="0,70" />
+              <LineSegment Point="25,56" />
+            </PathFigure>
+            <PathFigure StartPoint="0,70">
+              <LineSegment Point="105,70" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B23">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="240,-70">
+              <ArcSegment Size="70,70" RotationAngle="180" IsLargeArc="False" SweepDirection="Clockwise" Point="240,70" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="WP" Canvas.Left="112" Canvas.Top="50" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Name="C12" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPC_1">Canalize 355,-110 355,110 0,0 355,0 0,-110 0,110</sys:String>
+  <ControlTemplate x:Key="G_TPC">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C65" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,-110">
+              <LineSegment Point="0,-17" />
+            </PathFigure>
+            <PathFigure StartPoint="0,17">
+              <LineSegment Point="0,110" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="D51" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="355,-110">
+              <LineSegment Point="0,-110" />
+            </PathFigure>
+            <PathFigure StartPoint="362,-125">
+              <LineSegment Point="348,-95" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B62" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,110">
+              <LineSegment Point="355,110" />
+            </PathFigure>
+            <PathFigure StartPoint="362,125">
+              <LineSegment Point="348,95" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="C" Canvas.Left="-10" Canvas.Top="-20" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Name="A65"/>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPY_1">Bypass 355,-110 355,110 0,0 355,0 0,-110 0,110</sys:String>
+  <ControlTemplate x:Key="G_TPY">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="D65">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,-110">
+              <LineSegment Point="0,-17" />
+            </PathFigure>
+            <PathFigure StartPoint="0,17">
+              <LineSegment Point="0,110" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C51">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="355,-110">
+              <LineSegment Point="0,-110" />
+            </PathFigure>
+            <PathFigure StartPoint="310,-125">
+              <LineSegment Point="355,-110" />
+              <LineSegment Point="310,-95" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B62">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,17">
+              <LineSegment Point="0,110" />
+              <LineSegment Point="355,110" />
+            </PathFigure>
+            <PathFigure StartPoint="310,125">
+              <LineSegment Point="355,110" />
+              <LineSegment Point="310,95" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="B" Canvas.Left="-10" Canvas.Top="-20" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Name="A65" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPB_1">TaskBlock 100,-100 100,100 -100,0 100,0</sys:String>
+  <ControlTemplate x:Key="G_TPB">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="100,-100">
+              <LineSegment Point="100,100" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B43" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-100,0">
+              <LineSegment Point="-13,0" />
+            </PathFigure>
+            <PathFigure StartPoint="13,0">
+              <LineSegment Point="100,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="B" Canvas.Left="-13" Canvas.Top="-20" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Name="C43" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPH_1">Breach 355,-110 355,110 0,0 355,0 0,-110 0,110</sys:String>
+  <ControlTemplate x:Key="G_TPH">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A65" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,-110">
+              <LineSegment Point="0,-17" />
+            </PathFigure>
+            <PathFigure StartPoint="0,17">
+              <LineSegment Point="0,110" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B51" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="355,-110">
+              <LineSegment Point="0,-110" />
+            </PathFigure>
+            <PathFigure StartPoint="348,-125">
+              <LineSegment Point="362,-95" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C62">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,110">
+              <LineSegment Point="355,110" />
+            </PathFigure>
+            <PathFigure StartPoint="348,125">
+              <LineSegment Point="362,95" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="B" Canvas.Left="-10" Canvas.Top="-20" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Name="D65"/>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPP_1">Penetrate 340,0 340,260 0,130 340,130</sys:String>
+  <ControlTemplate x:Key="G_TPP">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="340,0">
+              <LineSegment Point="340,260" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B43" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="340,130">
+              <LineSegment Point="185,130" />
+            </PathFigure>
+            <PathFigure StartPoint="155,130">
+              <LineSegment Point="0,130" />
+            </PathFigure>
+            <PathFigure StartPoint="295,115">
+              <LineSegment Point="340,130" />
+              <LineSegment Point="295,145" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="P" Style="{StaticResource BT35}" Foreground="{Binding Brush}"  Canvas.Left="158" Canvas.Top="110" Name="C43"/>
+    </Canvas>
+  </ControlTemplate>
+
+  <!-- We add three points - 4, 5, and 6 - to the standard's 1, 2, and 3. 
+	5_________1
+	3_________4
+	6_________2
+	-->
+
+  <sys:String x:Key="G_TPX_1">Clear 340,0 340,260 0,130 340,130 0,0 0,260</sys:String>
+  <ControlTemplate x:Key="G_TPX">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="340,0">
+              <LineSegment Point="340,260" />
+            </PathFigure>
+            <PathFigure StartPoint="340,40">
+              <LineSegment Point="0,40" />
+            </PathFigure>
+            <PathFigure StartPoint="340,130">
+              <LineSegment Point="185,130" />
+            </PathFigure>
+            <PathFigure StartPoint="155,130">
+              <LineSegment Point="0,130" />
+            </PathFigure>
+            <PathFigure StartPoint="340,220">
+              <LineSegment Point="0,220" />
+            </PathFigure>
+            <PathFigure StartPoint="295,25">
+              <LineSegment Point="340,40" />
+              <LineSegment Point="295,55" />
+            </PathFigure>
+            <PathFigure StartPoint="295,115">
+              <LineSegment Point="340,130" />
+              <LineSegment Point="295,145" />
+            </PathFigure>
+            <PathFigure StartPoint="295,205">
+              <LineSegment Point="340,220" />
+              <LineSegment Point="295,235" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="C" Style="{StaticResource BT35}" Foreground="{Binding Brush}"  Canvas.Left="158" Canvas.Top="110" Name="A34" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPT_1">TaskDisrupt -105,-75 -105,75 160,75 -105,0 160,0 160,-75</sys:String>
+  <ControlTemplate x:Key="G_TPT">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A45" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="35,15">
+              <LineSegment Point="80,0" />
+              <LineSegment Point="35,-15" />
+            </PathFigure>
+            <PathFigure StartPoint="-160,0">
+              <LineSegment Point="-45,0" />
+            </PathFigure>
+            <PathFigure StartPoint="-8,0">
+              <LineSegment Point="80,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B23" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="115,60">
+              <LineSegment Point="160,75" />
+              <LineSegment Point="115,90" />
+            </PathFigure>
+            <PathFigure StartPoint="160,75">
+              <LineSegment Point="-105,75" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C16" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-20,-60">
+              <LineSegment Point="25,-75" />
+              <LineSegment Point="-20,-90" />
+            </PathFigure>
+            <PathFigure StartPoint="-105,-75">
+              <LineSegment Point="25,-75" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="D12" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-105,75">
+              <LineSegment Point="-105,-75" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="D" Canvas.Left="-39" Canvas.Top="-21" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Name="E45" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPE_1">Two 234,197 98,197</sys:String>
+  <ControlTemplate x:Key="G_TPE">
+    <Canvas >
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="151,305">
+              <LineSegment Point="186,275" />
+              <LineSegment Point="189,325" />
+            </PathFigure>
+            <PathFigure StartPoint="236,333">
+              <LineSegment Point="262,282" />
+              <LineSegment Point="286,322" />
+            </PathFigure>
+            <PathFigure StartPoint="333,291">
+              <LineSegment Point="308,253" />
+              <LineSegment Point="359,253" />
+            </PathFigure>
+            <PathFigure StartPoint="355,134">
+              <LineSegment Point="298,134" />
+              <LineSegment Point="325,95" />
+            </PathFigure>
+            <PathFigure StartPoint="202,65">
+              <LineSegment Point="226,106" />
+              <LineSegment Point="256,63" />
+            </PathFigure>
+            <PathFigure StartPoint="136,103">
+              <LineSegment Point="159,141" />
+              <LineSegment Point="110,141" />
+            </PathFigure>
+            <PathFigure StartPoint="146,265">
+              <LineSegment Point="116,265" />
+              <LineSegment Point="116,302" />
+            </PathFigure>
+            <PathFigure StartPoint="98,197">
+              <ArcSegment Size="136,136" RotationAngle="170" IsLargeArc="False" SweepDirection="Clockwise" Point="368,173" />
+              <LineSegment Point="332,197" />
+              <LineSegment Point="368,221" />
+              <ArcSegment Size="136,136" RotationAngle="140" IsLargeArc="False" SweepDirection="Clockwise" Point="116,265" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="I" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="364" Canvas.Top="178"/>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPO_1">Two 234,197 98,197</sys:String>
+  <ControlTemplate x:Key="G_TPO">
+    <Canvas>
+      <TextBlock Text="O" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="355" Canvas.Top="178" />
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="91,295">
+              <LineSegment Point="141,235" />
+            </PathFigure>
+            <PathFigure StartPoint="159,278">
+              <LineSegment Point="73,252" />
+            </PathFigure>
+            <PathFigure StartPoint="98,197">
+              <ArcSegment Size="136,136" RotationAngle="170" IsLargeArc="False" SweepDirection="Clockwise" Point="368,173" />
+            </PathFigure>
+            <PathFigure StartPoint="368,221">
+              <ArcSegment Size="136,136" RotationAngle="140" IsLargeArc="False" SweepDirection="Clockwise" Point="116,265" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPQ_1">Two 174,197 38,197</sys:String>
+  <ControlTemplate x:Key="G_TPQ">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="38,197">
+              <ArcSegment Size="136,136" RotationAngle="170" IsLargeArc="False" SweepDirection="Clockwise" Point="308,173" />
+            </PathFigure>
+            <PathFigure StartPoint="308,221">
+              <ArcSegment Size="136,136" RotationAngle="140" IsLargeArc="False" SweepDirection="Clockwise" Point="56,265" />
+            </PathFigure>
+            <PathFigure StartPoint="76,293">
+              <LineSegment Point="58,316" />
+            </PathFigure>
+            <PathFigure StartPoint="96,309">
+              <LineSegment Point="83,336" />
+            </PathFigure>
+            <PathFigure StartPoint="125,324">
+              <LineSegment Point="115,349" />
+            </PathFigure>
+            <PathFigure StartPoint="160,332">
+              <LineSegment Point="161,360" />
+            </PathFigure>
+            <PathFigure StartPoint="200,331">
+              <LineSegment Point="206,358" />
+            </PathFigure>
+            <PathFigure StartPoint="236,319">
+              <LineSegment Point="246,346" />
+            </PathFigure>
+            <PathFigure StartPoint="271,293">
+              <LineSegment Point="289,320" />
+            </PathFigure>
+            <PathFigure StartPoint="290,269">
+              <LineSegment Point="316,286" />
+            </PathFigure>
+            <PathFigure StartPoint="303,242">
+              <LineSegment Point="336,252" />
+            </PathFigure>
+            <PathFigure StartPoint="307,222">
+              <LineSegment Point="343,228" />
+            </PathFigure>
+            <PathFigure StartPoint="305,161">
+              <LineSegment Point="337,150" />
+            </PathFigure>
+            <PathFigure StartPoint="294,132">
+              <LineSegment Point="321,115" />
+            </PathFigure>
+            <PathFigure StartPoint="278,108">
+              <LineSegment Point="299,87" />
+            </PathFigure>
+            <PathFigure StartPoint="252,85">
+              <LineSegment Point="269,60" />
+            </PathFigure>
+            <PathFigure StartPoint="222,69">
+              <LineSegment Point="233,43" />
+            </PathFigure>
+            <PathFigure StartPoint="193,62">
+              <LineSegment Point="199,34" />
+            </PathFigure>
+            <PathFigure StartPoint="162,61">
+              <LineSegment Point="162,34" />
+            </PathFigure>
+            <PathFigure StartPoint="131,67">
+              <LineSegment Point="124,41" />
+            </PathFigure>
+            <PathFigure StartPoint="109,77">
+              <LineSegment Point="96,54" />
+            </PathFigure>
+            <PathFigure StartPoint="87,92">
+              <LineSegment Point="71,69" />
+            </PathFigure>
+            <PathFigure StartPoint="69,110">
+              <LineSegment Point="47,90" />
+            </PathFigure>
+            <PathFigure StartPoint="54,132">
+              <LineSegment Point="27,117" />
+            </PathFigure>
+            <PathFigure StartPoint="43,158">
+              <LineSegment Point="14,144" />
+            </PathFigure>
+            <PathFigure StartPoint="39,181">
+              <LineSegment Point="6,174" />
+            </PathFigure>
+            <PathFigure StartPoint="56,302">
+              <LineSegment Point="56,265" />
+              <LineSegment Point="86,265" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="R" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="298" Canvas.Top="178" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPF_1">Two 360,45 5,45</sys:String>
+  <ControlTemplate x:Key="G_TPF">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="325,70">
+              <LineSegment Point="360,45" />
+              <LineSegment Point="325,20" />
+            </PathFigure>
+            <PathFigure StartPoint="360,45">
+              <LineSegment Point="280,45" />
+              <LineSegment Point="269,80" />
+              <LineSegment Point="255,10" />
+              <LineSegment Point="229,80" />
+              <LineSegment Point="215,10" />
+              <LineSegment Point="189,80" />
+              <LineSegment Point="175,10" />
+              <LineSegment Point="149,80" />
+              <LineSegment Point="135,10" />
+              <LineSegment Point="109,80" />
+              <LineSegment Point="95,10" />
+              <LineSegment Point="69,80" />
+              <LineSegment Point="55,45" />
+              <LineSegment Point="45,45" />
+            </PathFigure>
+            <PathFigure StartPoint="20,45">
+              <LineSegment Point="5,45" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="F" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="22" Canvas.Top="26" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPA_1">Two 387,92 8,92</sys:String>
+  <ControlTemplate x:Key="G_TPA">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="294,148" IsClosed="true">
+              <LineSegment Point="365,92" />
+              <LineSegment Point="294,36" />
+              <LineSegment Point="294,16" />
+              <LineSegment Point="387,92" />
+              <LineSegment Point="294,168" />
+            </PathFigure>
+            <PathFigure StartPoint="8,52" IsClosed="true">
+              <LineSegment Point="8,132" />
+              <LineSegment Point="98,132" />
+              <LineSegment Point="132,92" />
+              <LineSegment Point="98,52" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" StrokeDashArray="8 5">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="132,92">
+              <LineSegment Point="365,92" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPAS_1">Two 375,35 40,35</sys:String>
+  <ControlTemplate x:Key="G_TPAS">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="40,35" IsClosed="true">
+              <LineSegment Point="5,5" />
+              <LineSegment Point="110,5" />
+              <LineSegment Point="135,35" />
+              <LineSegment Point="110,65" />
+              <LineSegment Point="5,65" />
+            </PathFigure>
+            <PathFigure StartPoint="135,35 ">
+              <LineSegment Point="300,35" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="375,35" IsClosed="true">
+              <LineSegment Point="300,65" />
+              <LineSegment Point="300,5" />
+              <LineSegment Point="375,35" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPS_1">Two 174,197 38,197</sys:String>
+  <ControlTemplate x:Key="G_TPS">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="38,197">
+              <ArcSegment Size="136,136" RotationAngle="170" IsLargeArc="False" SweepDirection="Clockwise" Point="308,173" />
+            </PathFigure>
+            <PathFigure StartPoint="308,221">
+              <ArcSegment Size="136,136" RotationAngle="140" IsLargeArc="False" SweepDirection="Clockwise" Point="56,265" />
+            </PathFigure>
+            <PathFigure StartPoint="56,302">
+              <LineSegment Point="56,265" />
+              <LineSegment Point="86,265" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="S" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="298" Canvas.Top="178" />
+    </Canvas>
+  </ControlTemplate>
+
+
+  <!--   Do not uncomment this section
+    <sys:String x:Key="G_MPOADC_1">Two 7,7 7,367</sys:String>
+    <ControlTemplate x:Key="G_MPOADC">
+        <Canvas>
+            <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="7,127" IsClosed="true">
+                            <LineSegment Point="127,187" />
+                            <LineSegment Point="7,247" />
+                            <LineSegment Point="127,307" />
+                            <LineSegment Point="7,367" />
+                            <LineSegment Point="7,7" />
+                            <LineSegment Point="127,67" />
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+        </Canvas>
+    </ControlTemplate>
+-->
+
+  <!--    Do not uncomment this section
+    <sys:String x:Key="G_MPOADU_1">Two 7,7 7,367</sys:String>
+    <ControlTemplate x:Key="G_MPOADU">
+        <Canvas>
+            <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="7,127" IsClosed="true">
+                            <LineSegment Point="127,187" />
+                            <LineSegment Point="7,247" />
+                            <LineSegment Point="127,307" />
+                            <LineSegment Point="7,367" />
+                            <LineSegment Point="7,7" />
+                            <LineSegment Point="127,67" />
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+        </Canvas>
+    </ControlTemplate>
+-->
+
+  <sys:String x:Key="G_MPOAW_1">Two 10,107 350,107</sys:String>
+  <ControlTemplate x:Key="G_MPOAW">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="350,107">
+              <LineSegment Point="310,107" />
+              <LineSegment Point="290,157" />
+              <LineSegment Point="270,107" />
+              <LineSegment Point="200,107" />
+              <LineSegment Point="180,157" />
+              <LineSegment Point="160,107" />
+              <LineSegment Point="90,107" />
+              <LineSegment Point="70,157" />
+              <LineSegment Point="50,107" />
+              <LineSegment Point="10,107" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOMC_1">Two -190,0 190,0</sys:String>
+  <ControlTemplate x:Key="G_MPOMC">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" StrokeDashArray="8,3" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="190,0" IsClosed="true">
+              <LineSegment Point="-190,0" />
+              <ArcSegment Size="190,190" RotationAngle="180" IsLargeArc="true" SweepDirection="Clockwise" Point="190,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOEF_1">Two 7,43 351,43</sys:String>
+  <ControlTemplate x:Key="G_MPOEF">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="77,43">
+              <LineSegment Point="145,43" />
+              <LineSegment Point="160,87" />
+              <LineSegment Point="196,-1" />
+              <LineSegment Point="222,87" />
+              <LineSegment Point="258,-1" />
+              <LineSegment Point="273,43" />
+              <LineSegment Point="351,43" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="7,43" IsClosed="true">
+              <LineSegment Point="77,19" />
+              <LineSegment Point="77,67" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOED_1">ObstacleDisrupt 296,18 296,140 5,18</sys:String>
+  <ControlTemplate x:Key="G_MPOED">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="44,18">
+              <LineSegment Point="296,18" />
+              <LineSegment Point="296,140" />
+              <LineSegment Point="146,140" />
+            </PathFigure>
+            <PathFigure StartPoint="296,48">
+              <LineSegment Point="328,48" />
+            </PathFigure>
+            <PathFigure StartPoint="296,76">
+              <LineSegment Point="102,76" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="5,18">
+              <LineSegment Point="44,5" />
+              <LineSegment Point="44,31" />
+            </PathFigure>
+            <PathFigure StartPoint="107,140">
+              <LineSegment Point="146,127" />
+              <LineSegment Point="146,153" />
+            </PathFigure>
+            <PathFigure StartPoint="63,76">
+              <LineSegment Point="102,63" />
+              <LineSegment Point="102,89" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOET_1">ThreeCross -85,240 240,0</sys:String>
+  <ControlTemplate x:Key="G_MPOET">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="240,0">
+              <ArcSegment Size="240,240" RotationAngle="90" IsLargeArc="false" SweepDirection="Clockwise" Point="0,240" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-85,240" IsClosed="true">
+              <LineSegment Point="0,275" />
+              <LineSegment Point="0,205" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPORP_1">PlannedRoadblock 200,20 0,20 100,0 100,20 200,0 0,0</sys:String>
+  <ControlTemplate x:Key="G_MPORP">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" StrokeDashArray="6 3" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,0">
+              <LineSegment Point="200,0" />
+            </PathFigure>
+            <PathFigure StartPoint="0,40">
+              <LineSegment Point="200,40" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPORS_1">SafeRoadblock 200,20 0,20 100,0 100,20 200,0 0,0</sys:String>
+  <ControlTemplate x:Key="G_MPORS">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" StrokeDashArray="6 3" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,0">
+              <LineSegment Point="200,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,40">
+              <LineSegment Point="200,40" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPORA_1">ArmedRoadblock 200,20 0,20 100,0 100,20 200,0 0,0</sys:String>
+  <ControlTemplate x:Key="G_MPORA">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,0">
+              <LineSegment Point="200,0" />
+            </PathFigure>
+            <PathFigure StartPoint="0,40">
+              <LineSegment Point="200,40" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPORC_1">RoadblockExecuted 82,-97 -58,113 58,-113 -82,97 -58,-113 82,97 -82,-97 58,113</sys:String>
+  <ControlTemplate x:Key="G_MPORC">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="D12">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="82,-97">
+              <LineSegment Point="-58,113" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A34">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="58,-113">
+              <LineSegment Point="-82,97" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B56">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-58,-113">
+              <LineSegment Point="82,97" />
+            </PathFigure>
+            <PathFigure StartPoint="58,113">
+              <LineSegment Point="-82,-97" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C78">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-82,-97">
+              <LineSegment Point="58,113" />
+            </PathFigure>
+            <PathFigure StartPoint="82,97 ">
+              <LineSegment Point="-58,-113" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOT_1">TripWire 53,1 53,169 106,43 53,43 53,169 106,222</sys:String>
+  <ControlTemplate x:Key="G_MPOT">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A12">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="53,1">
+              <LineSegment Point="53,169" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B34">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,43">
+              <LineSegment Point="106,43" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C56">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="53,169">
+              <ArcSegment Size="53,53" RotationAngle="90" IsLargeArc="False" SweepDirection="CounterClockwise" Point="106,222" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGAS_1">Three 33,0 246,103 246,-103</sys:String>
+  <ControlTemplate x:Key="G_GPGAS">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="53,-14">
+              <LineSegment Point="145,-79" />
+              <LineSegment Point="145,-40" />
+              <LineSegment Point="232,-95" />
+            </PathFigure>
+            <PathFigure StartPoint="53,14">
+              <LineSegment Point="145,79" />
+              <LineSegment Point="145,40" />
+              <LineSegment Point="232,95" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="236,-88">
+              <LineSegment Point="246,-103" />
+              <LineSegment Point="226,-103" />
+            </PathFigure>
+            <PathFigure StartPoint="236,88">
+              <LineSegment Point="246,103" />
+              <LineSegment Point="226,103" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPDLP_1">PrincipalDirectionOfFire 0,86 -160,-87 160,-87</sys:String>
+  <ControlTemplate x:Key="G_GPDLP">
+    <Canvas>
+      <TextBlock Text="(PDF)" Style="{StaticResource BT20}" Foreground="{Binding Brush}" Canvas.Left="-190" Canvas.Top="-120" Name="D32"/>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A12">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-160,-87">
+              <LineSegment Point="0,86" />
+            </PathFigure>
+            <PathFigure StartPoint="-153,-59">
+              <LineSegment Point="-160,-87" />
+              <LineSegment Point="-132,-80" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="B13">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,86">
+              <LineSegment Point="160,-87" />
+            </PathFigure>
+            <PathFigure StartPoint="153,-59">
+              <LineSegment Point="160,-87" />
+              <LineSegment Point="132,-80" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}"  Name="C21">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="-126,-54" IsClosed="true">
+              <LineSegment Point="-28,52" />
+              <LineSegment Point="-23,47" />
+              <LineSegment Point="-121,-59" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLI_1">Infiltration 4,216 294,216 294,241 4,241 294,191 4,191</sys:String>
+  <ControlTemplate x:Key="G_GPOLI">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="A34" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="4,238">
+              <PolyBezierSegment Points="31,212 86,249 128,252 157,253 171,237 203,237 252,242 256,270 294,244" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Name="C56" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="4,188">
+              <PolyBezierSegment Points="31,162 86,199 128,202 157,203 171,187 203,187 252,192 256,220 294,194" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="T" Style="{StaticResource BT25}" Foreground="{Binding Brush}" Canvas.Left="142" Canvas.Top="204" Name="B21" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOAF_1">AttackByFirePosition 290,177 66,62 66,292 290,177 66,62 66,292</sys:String>
+  <ControlTemplate x:Key="G_GPOAF">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="10,6">
+              <LineSegment Point="66,62" />
+              <LineSegment Point="66,292" />
+              <LineSegment Point="10,348" />
+            </PathFigure>
+            <PathFigure StartPoint="66,177">
+              <LineSegment Point="290,177" />
+            </PathFigure>
+            <PathFigure StartPoint="248,142">
+              <LineSegment Point="290,177" />
+              <LineSegment Point="248,212" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPSLA_1">Ambush 335,150 70,0 70,300 335,150 70,0 70,300</sys:String>
+  <ControlTemplate x:Key="G_GPSLA">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="70,0">
+              <PolyBezierSegment Points="136,69,136,231,70,300" />
+            </PathFigure>
+            <PathFigure StartPoint="285,123">
+              <LineSegment Point="335,150" />
+              <LineSegment Point="285,177" />
+            </PathFigure>
+            <PathFigure StartPoint="119,150">
+              <LineSegment Point="335,150" />
+            </PathFigure>
+            <PathFigure StartPoint="10,35">
+              <LineSegment Point="93,35" />
+            </PathFigure>
+            <PathFigure StartPoint="25,80">
+              <LineSegment Point="110,80" />
+            </PathFigure>
+            <PathFigure StartPoint="33,125">
+              <LineSegment Point="118,125" />
+            </PathFigure>
+            <PathFigure StartPoint="33,175">
+              <LineSegment Point="118,175" />
+            </PathFigure>
+            <PathFigure StartPoint="25,220">
+              <LineSegment Point="110,220" />
+            </PathFigure>
+            <PathFigure StartPoint="10,265">
+              <LineSegment Point="93,265" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOEB_1">ObstacleBlock 5,5 5,229 378,117 5,117 378,5 378,229</sys:String>
+  <ControlTemplate x:Key="G_MPOEB">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="5,117">
+              <LineSegment Point="378,117" />
+            </PathFigure>
+            <PathFigure StartPoint="5,5">
+              <LineSegment Point="5,229" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPBDE_1">BypassEasy 362,22 362,262 7,142 362,142 7,22 7,262</sys:String>
+  <ControlTemplate x:Key="G_MPBDE">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="327,262">
+              <LineSegment Point="7,262" />
+              <LineSegment Point="7,22" />
+              <LineSegment Point="327,22" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="327,37">
+              <LineSegment Point="327,7" />
+              <LineSegment Point="362,22" />
+            </PathFigure>
+            <PathFigure StartPoint="327,277">
+              <LineSegment Point="327,247" />
+              <LineSegment Point="362,262" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+
+  <sys:String x:Key="G_MPBDD_1">BypassDifficult 362,22 362,262 7,142 362,142 7,22 7,262</sys:String>
+  <ControlTemplate x:Key="G_MPBDD">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="327,262">
+              <LineSegment Point="7,262" />
+              <LineSegment Point="47,242" />
+              <LineSegment Point="7,222" />
+              <LineSegment Point="47,202" />
+              <LineSegment Point="7,182" />
+              <LineSegment Point="47,162" />
+              <LineSegment Point="7,142" />
+              <LineSegment Point="47,122" />
+              <LineSegment Point="7,102" />
+              <LineSegment Point="47,82" />
+              <LineSegment Point="7,62" />
+              <LineSegment Point="47,42" />
+              <LineSegment Point="7,22" />
+              <LineSegment Point="327,22" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="327,37">
+              <LineSegment Point="327,7" />
+              <LineSegment Point="362,22" />
+            </PathFigure>
+            <PathFigure StartPoint="327,277">
+              <LineSegment Point="327,247" />
+              <LineSegment Point="362,262" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPBDI_1">BypassImpossible 362,22 362,262 22,142 362,142 7,22 7,262</sys:String>
+  <ControlTemplate x:Key="G_MPBDI">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="342,262">
+              <LineSegment Point="22,262" />
+              <LineSegment Point="22,162" />
+            </PathFigure>
+            <PathFigure StartPoint="22,122">
+              <LineSegment Point="22,22" />
+              <LineSegment Point="342,22" />
+            </PathFigure>
+            <PathFigure StartPoint="7,122">
+              <LineSegment Point="37,122" />
+            </PathFigure>
+            <PathFigure StartPoint="7,162">
+              <LineSegment Point="37,162" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="327,37">
+              <LineSegment Point="327,7" />
+              <LineSegment Point="362,22" />
+            </PathFigure>
+            <PathFigure StartPoint="327,277">
+              <LineSegment Point="327,247" />
+              <LineSegment Point="362,262" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPBCE_1">FordEasy 12,144 396,144 204,6 204,144 12,6 396,6</sys:String>
+  <ControlTemplate x:Key="G_MPBCE">
+    <Canvas>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="12,6">
+              <LineSegment Point="108,6" />
+              <LineSegment Point="108,18" />
+              <LineSegment Point="12,18" />
+            </PathFigure>
+            <PathFigure StartPoint="156,6">
+              <LineSegment Point="252,6" />
+              <LineSegment Point="252,18" />
+              <LineSegment Point="156,18" />
+            </PathFigure>
+            <PathFigure StartPoint="300,6">
+              <LineSegment Point="396,6" />
+              <LineSegment Point="396,18" />
+              <LineSegment Point="300,18" />
+            </PathFigure>
+            <PathFigure StartPoint="12,132">
+              <LineSegment Point="108,132" />
+              <LineSegment Point="108,144" />
+              <LineSegment Point="12,144" />
+            </PathFigure>
+            <PathFigure StartPoint="156,132">
+              <LineSegment Point="252,132" />
+              <LineSegment Point="252,144" />
+              <LineSegment Point="156,144" />
+            </PathFigure>
+            <PathFigure StartPoint="300,132">
+              <LineSegment Point="396,132" />
+              <LineSegment Point="396,144" />
+              <LineSegment Point="300,144" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPBCD_1">FordDifficult 12,144 396,144 204,6 204,144 12,6 396,6</sys:String>
+  <ControlTemplate x:Key="G_MPBCD">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="204,-6">
+              <LineSegment Point="234,12" />
+              <LineSegment Point="204,30" />
+              <LineSegment Point="234,48" />
+              <LineSegment Point="204,66" />
+              <LineSegment Point="234,84" />
+              <LineSegment Point="204,102" />
+              <LineSegment Point="234,120" />
+              <LineSegment Point="204,138" />
+              <LineSegment Point="234,156" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="12,6">
+              <LineSegment Point="108,6" />
+              <LineSegment Point="108,18" />
+              <LineSegment Point="12,18" />
+            </PathFigure>
+            <PathFigure StartPoint="156,6">
+              <LineSegment Point="252,6" />
+              <LineSegment Point="252,18" />
+              <LineSegment Point="156,18" />
+            </PathFigure>
+            <PathFigure StartPoint="300,6">
+              <LineSegment Point="396,6" />
+              <LineSegment Point="396,18" />
+              <LineSegment Point="300,18" />
+            </PathFigure>
+            <PathFigure StartPoint="12,132">
+              <LineSegment Point="108,132" />
+              <LineSegment Point="108,144" />
+              <LineSegment Point="12,144" />
+            </PathFigure>
+            <PathFigure StartPoint="156,132">
+              <LineSegment Point="252,132" />
+              <LineSegment Point="252,144" />
+              <LineSegment Point="156,144" />
+            </PathFigure>
+            <PathFigure StartPoint="300,132">
+              <LineSegment Point="396,132" />
+              <LineSegment Point="396,144" />
+              <LineSegment Point="300,144" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPPF_1">Two 5,109 368,90</sys:String>
+  <ControlTemplate x:Key="G_GPPF">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="5,109">
+              <PolyBezierSegment Points="40,112 75,115 110,106 142,98 170,87 205,86 256,85 293,99 339,90" />
+            </PathFigure>
+            <PathFigure StartPoint="275,26">
+              <LineSegment Point="339,90" />
+              <LineSegment Point="275,154" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" StrokeDashArray="7,3" StrokeDashOffset="3">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="282,4">
+              <LineSegment Point="368,90" />
+              <LineSegment Point="282,176" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPDLF_1">Two 78,33 286,33</sys:String>
+  <ControlTemplate x:Key="G_GPDLF">
+    <Canvas>
+      <TextBlock Text="FEBA" Style="{StaticResource BT20}" Foreground="{Binding Brush}" Canvas.Left="309" Canvas.Top="19"/>
+      <TextBlock Text="FEBA" Style="{StaticResource BT20}" Foreground="{Binding Brush}" Canvas.Left="0" Canvas.Top="19"/>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="78.5,51">
+              <ArcSegment Size="18,18" RotationAngle="360" IsLargeArc="True" SweepDirection="Clockwise" Point="78.6,51" />
+            </PathFigure>
+            <PathFigure StartPoint="286.4,51">
+              <ArcSegment Size="18,18" RotationAngle="359" IsLargeArc="True" SweepDirection="Clockwise" Point="286.5,51" />
+            </PathFigure>
+            <PathFigure StartPoint="66,45">
+              <LineSegment Point="91,21" />
+            </PathFigure>
+            <PathFigure StartPoint="66,21">
+              <LineSegment Point="91,45" />
+            </PathFigure>
+            <PathFigure StartPoint="274,45">
+              <LineSegment Point="299,21" />
+            </PathFigure>
+            <PathFigure StartPoint="274,21">
+              <LineSegment Point="299,45" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLKA_1">Two 7,60 382,75</sys:String>
+  <ControlTemplate x:Key="G_GPOLKA">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="7,60">
+              <BezierSegment Point1="129,8" Point2="230,123" Point3="382,75" />
+            </PathFigure>
+            <PathFigure StartPoint="365,67">
+              <LineSegment Point="382,75" />
+              <LineSegment Point="372,91" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" Fill="#FFFFFFFF" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="182,81" IsClosed="true" >
+              <LineSegment Point="187,56" />
+              <LineSegment Point="232,89" />
+              <LineSegment Point="236,64" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLKGM_1">Two 387,92 8,92</sys:String>
+  <ControlTemplate x:Key="G_GPOLKGM">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="294,148" IsClosed="true">
+              <LineSegment Point="365,92" />
+              <LineSegment Point="294,36" />
+              <LineSegment Point="294,16" />
+              <LineSegment Point="387,92" />
+              <LineSegment Point="294,168" />
+            </PathFigure>
+            <PathFigure StartPoint="8,92">
+              <LineSegment Point="365,92" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLKGS_1">Two 358,24 0,24</sys:String>
+  <ControlTemplate x:Key="G_GPOLKGS">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="321,0" >
+              <LineSegment Point="358,24" />
+              <LineSegment Point="321,48" />
+            </PathFigure>
+            <PathFigure StartPoint="0,24">
+              <LineSegment Point="358,24" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPBCF_1">Two 7,28 361,28</sys:String>
+  <ControlTemplate x:Key="G_MPBCF">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="57,28" >
+              <LineSegment Point="312,28" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="362,28" IsClosed="true">
+              <LineSegment Point="312,49" />
+              <LineSegment Point="312,7" />
+            </PathFigure>
+            <PathFigure StartPoint="7,28" IsClosed="true">
+              <LineSegment Point="57,7" />
+              <LineSegment Point="57,49" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPBCL_1">Two 32,98 316,98</sys:String>
+  <ControlTemplate x:Key="G_MPBCL">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="32,98" >
+              <LineSegment Point="316,98" />
+            </PathFigure>
+            <PathFigure StartPoint="6,113">
+              <LineSegment Point="32,98" />
+              <LineSegment Point="6,83" />
+            </PathFigure>
+            <PathFigure StartPoint="342,113">
+              <LineSegment Point="316,98" />
+              <LineSegment Point="342,83" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPBCR_1">Two 40,122 326,122</sys:String>
+  <ControlTemplate x:Key="G_MPBCR">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="40,122" >
+              <LineSegment Point="326,122" />
+            </PathFigure>
+            <PathFigure StartPoint="10,189">
+              <LineSegment Point="40,122" />
+              <LineSegment Point="10,55" />
+            </PathFigure>
+            <PathFigure StartPoint="356,189">
+              <LineSegment Point="326,122" />
+              <LineSegment Point="356,55" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPSW_1">Two 7,7 370,7</sys:String>
+  <ControlTemplate x:Key="G_MPSW">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="7,117">
+              <LineSegment Point="7,7" />
+              <LineSegment Point="370,7" />
+              <LineSegment Point="370,117" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_FPLT_1">Two 6,71 316,71</sys:String>
+  <ControlTemplate x:Key="G_FPLT">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="6,71" >
+              <LineSegment Point="316,71" />
+            </PathFigure>
+            <PathFigure StartPoint="316,6">
+              <LineSegment Point="316,136" />
+            </PathFigure>
+            <PathFigure StartPoint="6,6">
+              <LineSegment Point="6,136" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_FPLTS_1">Two 6,71 316,71</sys:String>
+  <ControlTemplate x:Key="G_FPLTS">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="6,71" >
+              <LineSegment Point="316,71" />
+            </PathFigure>
+            <PathFigure StartPoint="316,6">
+              <LineSegment Point="316,136" />
+            </PathFigure>
+            <PathFigure StartPoint="6,6">
+              <LineSegment Point="6,136" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="SMOKE" Style="{StaticResource BT32}" Foreground="{Binding Brush}" Canvas.Left="102" Canvas.Top="81" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_FPLTF_1">Two 6,71 316,71</sys:String>
+  <ControlTemplate x:Key="G_FPLTF">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="6,71" >
+              <LineSegment Point="316,71" />
+            </PathFigure>
+            <PathFigure StartPoint="316,6">
+              <LineSegment Point="316,136" />
+            </PathFigure>
+            <PathFigure StartPoint="6,6">
+              <LineSegment Point="6,136" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="FPF" Style="{StaticResource BT32}" Foreground="{Binding Brush}" Canvas.Left="131" Canvas.Top="81" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_SPLCM_1">Two 330,60 5,60</sys:String>
+  <ControlTemplate x:Key="G_SPLCM">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="5,25" IsClosed="true">
+              <LineSegment Point="5,95" />
+              <LineSegment Point="255,95" />
+              <LineSegment Point="255,115" />
+              <LineSegment Point="330,60" />
+              <LineSegment Point="255,5" />
+              <LineSegment Point="255,25" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_SPLCH_1">Two 255,75 5,75</sys:String>
+  <ControlTemplate x:Key="G_SPLCH">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="5,112" IsClosed="true">
+              <LineSegment Point="255,112" />
+              <LineSegment Point="255,38" />
+              <LineSegment Point="5,38" />
+            </PathFigure>
+            <PathFigure StartPoint="263,75" IsClosed="true">
+              <LineSegment Point="330,5" />
+              <LineSegment Point="330,145" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_OPHN_1">Two 7,67 307,67</sys:String>
+  <ControlTemplate x:Key="G_OPHN">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="67,7">
+              <LineSegment Point="7,67" />
+              <LineSegment Point="307,67" />
+              <LineSegment Point="247,127" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_OPB_1">Two 0,100 400,100</sys:String>
+  <ControlTemplate x:Key="G_OPB">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,100" >
+              <LineSegment Point="180,100" />
+            </PathFigure>
+            <PathFigure StartPoint="220,100">
+              <LineSegment Point="400,100" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="B" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="188" Canvas.Top="81" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_OPBE_1">Two 0,100 400,100</sys:String>
+  <ControlTemplate x:Key="G_OPBE">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,100" >
+              <LineSegment Point="180,100" />
+            </PathFigure>
+            <PathFigure StartPoint="220,100">
+              <LineSegment Point="400,100" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="E" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="188" Canvas.Top="81" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_OPBA_1">Two 0,100 400,100</sys:String>
+  <ControlTemplate x:Key="G_OPBA">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,100" >
+              <LineSegment Point="180,100" />
+            </PathFigure>
+            <PathFigure StartPoint="220,100">
+              <LineSegment Point="400,100" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="A" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="188" Canvas.Top="81" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_OPBT_1">Two 0,100 400,100</sys:String>
+  <ControlTemplate x:Key="G_OPBT">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,100" >
+              <LineSegment Point="180,100" />
+            </PathFigure>
+            <PathFigure StartPoint="220,100">
+              <LineSegment Point="400,100" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="T" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="188" Canvas.Top="81" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_OPBO_1">Two 0,100 400,100</sys:String>
+  <ControlTemplate x:Key="G_OPBO">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="0,100" >
+              <LineSegment Point="180,100" />
+            </PathFigure>
+            <PathFigure StartPoint="220,100">
+              <LineSegment Point="400,100" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="O" Style="{StaticResource BT35}" Foreground="{Binding Brush}" Canvas.Left="188" Canvas.Top="81" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_SPAD_1">DetaineeHoldingArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_SPAD">
+    <Canvas>
+      <TextBlock TextAlignment="Center" Style="{StaticResource BT20}" Foreground="{Binding Brush}" >
+        DETAINEE<LineBreak/>HOLDING<LineBreak/>AREA
+      </TextBlock>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_SPAE_1">EPWHoldingArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_SPAE">
+    <Canvas>
+      <TextBlock TextAlignment="Center" Style="{StaticResource BT20}" Foreground="{Binding Brush}" >
+        EPW<LineBreak/>HOLDING<LineBreak/>AREA
+      </TextBlock>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_SPAR_1">ForwardArmingAndRefuelingArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_SPAR">
+    <Canvas>
+      <TextBlock Text="FARP" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_SPAH_1">RefugeeHoldingArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_SPAH">
+    <Canvas>
+      <TextBlock TextAlignment="Center" Style="{StaticResource BT20}" Foreground="{Binding Brush}" >
+        REFUGEE<LineBreak/>HOLDING<LineBreak/>AREA
+      </TextBlock>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_SPASB_1">BrigadeSupportArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_SPASB">
+    <Canvas>
+      <TextBlock Text="BSA" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_SPASD_1">DivisionSupportArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_SPASD">
+    <Canvas>
+      <TextBlock Text="DSA" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_SPASR_1">RegimentalSupportArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_SPASR">
+    <Canvas>
+      <TextBlock Text="RSA" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGAD_1">DropZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPGAD">
+    <Canvas>
+      <TextBlock Text="DZ" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGAG_1">GeneralArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPGAG">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGAA_1">AssemblyArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPGAA">
+    <Canvas>
+      <TextBlock Text="AA" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGAE_1">EngagementArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPGAE">
+    <Canvas>
+      <TextBlock Text="EA" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGAX_1">ExtractionZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPGAX">
+    <Canvas>
+      <TextBlock Text="EZ" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGAP_1">PickupZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPGAP">
+    <Canvas>
+      <TextBlock Text="PZ" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPAAMH_1">HighAltitudeMissileEngagementZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPAAMH">
+    <Canvas>
+      <TextBlock Text="HIMEZ" Style="{StaticResource BT20}" TextAlignment="Left" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPAAML_1">LowAltitudeMissileEngagementZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPAAML">
+    <Canvas>
+      <TextBlock Text="LOMEZ" Style="{StaticResource BT20}" TextAlignment="Left" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPAAM_1">MissileEngagementZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPAAM">
+    <Canvas>
+      <TextBlock Text="MEZ" Style="{StaticResource BT20}" TextAlignment="Left" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPAAH_1">HighDensityAirspaceControlZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPAAH">
+    <Canvas>
+      <TextBlock Text="HIDACZ" Style="{StaticResource BT20}" TextAlignment="Left" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPAAF_1">ShortRangeAirDefenseEngagementZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPAAF">
+    <Canvas>
+      <TextBlock Text="SHORADEZ" Style="{StaticResource BT20}" TextAlignment="Left" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPAAR_1">RestrictedOperationsZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPAAR">
+    <Canvas>
+      <TextBlock Text="ROZ" Style="{StaticResource BT20}" TextAlignment="Left" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGAL_1">LandingZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPGAL">
+    <Canvas>
+      <TextBlock Text="LZ" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOAK_1">AttackPosition 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPOAK">
+    <Canvas>
+      <TextBlock Text="ATK" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOAO_1">Objective 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPOAO">
+    <Canvas>
+      <TextBlock Text="OBJ" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOAP_1">PenetrationBox 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPOAP">
+    <Canvas>
+      <TextBlock Text="OBJ" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPSAO_1">AreaOfOperations 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPSAO">
+    <Canvas>
+      <TextBlock Text="AO" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPSAT_1">TargetedAreaOfInterest 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPSAT">
+    <Canvas>
+      <TextBlock Text="TAI" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPSAN_1">NamedAreaOfInterest 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPSAN">
+    <Canvas>
+      <TextBlock Text="NAI" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOGB_1">ObstacleBelt</sys:String>
+  <ControlTemplate x:Key="G_MPOGB">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOGF_1">ObstacleFreeArea 0,0</sys:String>
+  <ControlTemplate x:Key="G_MPOGF">
+    <Canvas>
+      <TextBlock Text="Free" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOGR_1">ObstacleRestrictedArea</sys:String>
+  <ControlTemplate x:Key="G_MPOGR">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOGL_1">ObstacleLine</sys:String>
+  <ControlTemplate x:Key="G_MPOGL">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOADU_1">AntiTankDitchUnderConstruction</sys:String>
+  <ControlTemplate x:Key="G_MPOADU">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOADC_1">AntiTankDitchComplete</sys:String>
+  <ControlTemplate x:Key="G_MPOADC">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOAR_1">AntiTankDitchAntiMine</sys:String>
+  <ControlTemplate x:Key="G_MPOAR">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPAAW_1">WeaponsFreeZone 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPAAW">
+    <Canvas>
+      <TextBlock Text="WFZ" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOAA_1">AssaultPosition 0,0</sys:String>
+  <ControlTemplate x:Key="G_GPOAA">
+    <Canvas>
+      <TextBlock Text="ASLT" Style="{StaticResource BT20}" Foreground="{Binding Brush}" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGAF_1">FortifiedArea</sys:String>
+  <ControlTemplate x:Key="G_GPGAF">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGLL_1">LightLine</sys:String>
+  <ControlTemplate x:Key="G_GPGLL">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPSLH_1">HoldingLine</sys:String>
+  <ControlTemplate x:Key="G_GPSLH">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPSLR_1">ReleaseLine</sys:String>
+  <ControlTemplate x:Key="G_GPSLR">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPSLB_1">BridgeheadLine</sys:String>
+  <ControlTemplate x:Key="G_GPSLB">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLF_1">FinalCoordinationLine</sys:String>
+  <ControlTemplate x:Key="G_GPOLF">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLL_1">LimitOfAdvance</sys:String>
+  <ControlTemplate x:Key="G_GPOLL">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLT_1">LineOfDeparture</sys:String>
+  <ControlTemplate x:Key="G_GPOLT">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLC_1">LineOfDeparture/LineOfContact</sys:String>
+  <ControlTemplate x:Key="G_GPOLC">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLP_1">ProbableLineOfDeployment</sys:String>
+  <ControlTemplate x:Key="G_GPOLP">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_MPOGZ_1">ObstacleZone</sys:String>
+  <ControlTemplate x:Key="G_MPOGZ">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGLP_1">PhaseLine</sys:String>
+  <ControlTemplate x:Key="G_GPGLP">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGLF_1">ForwardLineOwnTroops</sys:String>
+  <ControlTemplate x:Key="G_GPGLF">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPGLB_1">Boundaries</sys:String>
+  <ControlTemplate x:Key="G_GPGLB">
+    <Canvas>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPPA_1">AxisOfAdvanceFeint 180,0 75,0 75,50</sys:String>
+  <ControlTemplate x:Key="G_GPPA">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="75,25" >
+              <LineSegment Point="75,50" />
+              <LineSegment Point="150,0" />
+              <LineSegment Point="75,-50" />
+              <LineSegment Point="75,-25" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" StrokeDashArray="2 1" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="90,60" >
+              <LineSegment Point="180,0" />
+              <LineSegment Point="90,-60" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLAGM_1">AxisOfAdvanceMainAttack 150,0 75,0 75,50</sys:String>
+  <ControlTemplate x:Key="G_GPOLAGM">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}"  >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="75,25" >
+              <LineSegment Point="75,50" />
+              <LineSegment Point="150,0" />
+              <LineSegment Point="75,-50" />
+              <LineSegment Point="75,-25" />
+              <LineSegment Point="110, 0" />
+              <LineSegment Point="75,25" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLAV_1">AxisOfAdvanceAviation 150,0 75,0 75,50</sys:String>
+  <ControlTemplate x:Key="G_GPOLAV">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="75,25" >
+              <LineSegment Point="75,50" />
+              <LineSegment Point="150,0" />
+              <LineSegment Point="75,-50" />
+              <LineSegment Point="75,-25" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLAA_1">AxisOfAdvanceAirborne 150,0 75,0 75,50</sys:String>
+  <ControlTemplate x:Key="G_GPOLAA">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="75,25" >
+              <LineSegment Point="75,50" />
+              <LineSegment Point="150,0" />
+              <LineSegment Point="75,-50" />
+              <LineSegment Point="75,-25" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLAR_1">AxisOfAdvanceRotaryWing 150,0 75,0 75,50</sys:String>
+  <ControlTemplate x:Key="G_GPOLAR">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="75,25" >
+              <LineSegment Point="75,50" />
+              <LineSegment Point="150,0" />
+              <LineSegment Point="75,-50" />
+              <LineSegment Point="75,-25" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_GPOLAGS_1">AxisOfAdvanceSupportingAttack 150,0 75,0 75,50</sys:String>
+  <ControlTemplate x:Key="G_GPOLAGS">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="75,25" >
+              <LineSegment Point="75,50" />
+              <LineSegment Point="150,0" />
+              <LineSegment Point="75,-50" />
+              <LineSegment Point="75,-25" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPK_1">CounterAttack 150,0 75,0 75,50</sys:String>
+  <ControlTemplate x:Key="G_TPK">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="75,25" >
+              <LineSegment Point="75,50" />
+              <LineSegment Point="150,0" />
+              <LineSegment Point="75,-50" />
+              <LineSegment Point="75,-25" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="CATK" Style="{StaticResource BT20}" Foreground="{Binding Brush}" Canvas.Top="-18" Canvas.Left="-30" Name="B12" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPKF_1">CounterAttackByFire 206,0 75,0 75,50</sys:String>
+  <ControlTemplate x:Key="G_TPKF">
+    <Canvas>
+      <Path Style="{Binding UnframedLine}" StrokeThickness="{Binding LineThickness}" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="75,25" >
+              <LineSegment Point="75,50" />
+              <LineSegment Point="150,0" />
+              <LineSegment Point="75,-50" />
+              <LineSegment Point="75,-25" />
+            </PathFigure>
+            <PathFigure StartPoint="112,-75" >
+              <LineSegment Point="168,-50" />
+              <LineSegment Point="168,50" />
+              <LineSegment Point="112,75" />
+            </PathFigure>
+            <PathFigure StartPoint="168,0" >
+              <LineSegment Point="188,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Path Style="{Binding UnframedLineFill}"  StrokeThickness="{Binding LineThickness}" StrokeDashArray="10 0">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="188,-9" IsClosed="true">
+              <LineSegment Point="188,9" />
+              <LineSegment Point="206,0" />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="CATK" Style="{StaticResource BT20}" Foreground="{Binding Brush}" Canvas.Top="-18" Canvas.Left="-30" Name="B12" />
+    </Canvas>
+  </ControlTemplate>
+
+  <sys:String x:Key="G_TPZ_1">Seize 0,0 50,0 213,67 280,230</sys:String>
+  <ControlTemplate x:Key="G_TPZ">
+    <Canvas>
+      <Path Stroke="#FF000000" StrokeThickness="10" StrokeMiterLimit="2">
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="50,0">
+              <ArcSegment Size="230,230" RotationAngle="0" IsLargeArc="False" SweepDirection="Clockwise" Point="198,54" />
+            </PathFigure>
+            <PathFigure StartPoint="226,82">
+              <ArcSegment Size="230,230" RotationAngle="0" IsLargeArc="False" SweepDirection="Clockwise" Point="280,230" />
+            </PathFigure>
+            <PathFigure StartPoint="50,0">
+              <ArcSegment Size="50,50" RotationAngle="0" IsLargeArc="False" SweepDirection="Clockwise" Point="-50,0" />
+            </PathFigure>
+            <PathFigure StartPoint="-50,0">
+              <ArcSegment Size="50,50" RotationAngle="0" IsLargeArc="False" SweepDirection="Clockwise" Point="50,0" />
+            </PathFigure>
+            <PathFigure StartPoint="250,200">
+              <LineSegment Point="280,230"  />
+              <LineSegment Point="310,200"  />
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <TextBlock Text="S" FontFamily="Arial" FontWeight="Bold" FontSize="35" Foreground="#FF000000" Canvas.Left="200" Canvas.Top="48"/>
+    </Canvas>
+  </ControlTemplate>
+
+</ResourceDictionary>

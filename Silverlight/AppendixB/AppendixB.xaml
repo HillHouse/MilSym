@@ -1,0 +1,1646 @@
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!--Stroke thicknesses are
+				1
+				2
+				3
+				4
+				5
+				6
+				7
+				8
+				9
+				10
+				12
+				15
+				20
+				40
+	-->
+
+	<Style x:Key="BS10" TargetType="Shape" >
+		<Setter Property="StrokeMiterLimit" Value="2" />
+		<Setter Property="StrokeThickness" Value="10" />
+		<Setter Property="Stroke" Value="Black" />
+	</Style>
+
+	<ControlTemplate x:Key="G_TPN">
+		<Canvas>
+			<Polyline Points="-175,109 175,-109" StrokeDashOffset="-1" StrokeDashArray="6 2" Style="{Binding UnframedLine}" />
+			<Polyline Points="-184,-116 184,116" Style="{Binding UnframedLine}" />
+			<Polygon Points="-32,-32 -32,32 32,32 32,-32 -32,-32" Fill="White" />
+			<TextBlock Text="N" FontFamily="Arial" FontWeight="Bold" FontSize="70" Foreground="#FF000000" Canvas.Left="-22" Canvas.Top="-42" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_TPI">
+		<Canvas>
+			<Path Data="M148,-36 184,0 148,36 M120,-120 170,-120 170,-70 M-170,120 170,-120 M-184,0 184,0" Style="{Binding UnframedLine}" />
+			<Polygon Points="-22,-22 -22,22 22,22 22,-22 -22,-22" Fill="White" />
+			<TextBlock Text="I" FontFamily="Arial" FontWeight="Bold" FontSize="70" Foreground="#FF000000" Canvas.Left="-6" Canvas.Top="-42" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_TPD">
+		<Canvas>
+			<Path Data="M-186,-116 186,116 M186,-116 -186,116" Style="{Binding UnframedLine}" />
+			<Polygon Points="-36,-36 -36,36 36,36 36,-36 -36,-36" Fill="White" />
+			<TextBlock Text="D" FontFamily="Arial" FontWeight="Bold" FontSize="70" Foreground="#FF000000" Canvas.Left="-26" Canvas.Top="-40" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPSS">
+		<Canvas>
+			<Polyline Points="-150,-75 -100,-150 0,0 100,-150 150,-75" Style="{Binding UnframedLine}" />
+			<Polyline Points="-150,-25 -100,-100 0,50 100,-100 150,-25" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPSM">
+		<Canvas>
+			<Path Data="M 95,61 0,0 95,-61" Style="{Binding UnframedLineFill}"/>
+			<Path Data="M 110,-61 290,0 110,61 110,-61 ZM 346,23 290,0 346,-23" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPSB">
+		<Canvas>
+			<Polygon Points="190,0 -190,0 -120,-136 -67,-30 6,-229 58,-30 122,-173 190,0" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPSBW">
+		<Canvas>
+			<Polyline Points="-150,0 150,0" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-72 0,72" Style="{Binding UnframedLine}" />
+			<Polyline Points="-100,-52 -100,52" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-52 100,52" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPSBX">
+		<Canvas>
+			<Polyline Points="-150,0 150,0" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-72 0,72" Style="{Binding UnframedLine}" />
+			<Polyline Points="-100,-52 -100,52" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-52 100,52" Style="{Binding UnframedLine}" />
+			<Ellipse Width="322" Height="162" Style="{Binding UnframedLine}" StrokeDashArray="2 1" Canvas.Left="-161" Canvas.Top="-81" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPSBN">
+		<Canvas>
+			<Polygon Points="-150,0 150,0 100,-115 50,-15 0,-200 -50,-15 -100,-100 -150,0" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPSBM">
+		<Canvas>
+			<Polygon Points="-150,0 150,0 100,-115 50,-15 0,-200 -50,-15 -100,-100" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPHM">
+		<Canvas>
+			<Path Data="M 54,-128 128,-54 128,54 54,128 -54,128 -128,54 -128,-54 -54,-128" Style="{Binding UnframedLineFill}" />
+			<Path Data="M 179,-179 90,-90" Style="{Binding UnframedLine}" StrokeThickness="12" />
+			<Path Data="M -179,-179 -90,-90" Style="{Binding UnframedLine}" StrokeThickness="12" />
+			<Path Data="M 0,-128 0,-238" Style="{Binding UnframedLine}" StrokeThickness="12" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPHO">
+		<Canvas>
+			<Path Data="M-187,109 -187,0 187,0 M82,109 82,0 M150,109 150,0 M-120,0 -120,-109" Style="{Binding UnframedLine}" />
+			<Polygon Points="-120,0 -55,0 -55,-50 -120,-50" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPHI">
+		<Canvas>
+			<Polyline Points="-185,0 185,0" Style="{Binding UnframedLine}" />
+			<Polygon Points="-71,31 -107,76 -150,0 0,-150 150,0 107,76 71,31 0,150" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPFO">
+		<Canvas>
+			<Polyline Points="0,-150 0,150" Style="{Binding UnframedLine}" />
+			<Polyline Points="-150,-150 150,150" Style="{Binding UnframedLine}" />
+			<Polyline Points="150,-150 -150,150" Style="{Binding UnframedLine}" />
+			<Ellipse Width="250" Height="52" Style="{Binding UnframedLine}" Canvas.Left="-125" Canvas.Top="-26" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPFE">
+		<Canvas>
+			<Polyline Points="0,-150 0,150" Style="{Binding UnframedLine}" />
+			<Polyline Points="150,-150 -150,150" Style="{Binding UnframedLine}" />
+			<Polyline Points="-150,-150 150,150" Style="{Binding UnframedLine}" />
+			<Polyline Points="-25,-25 -50,25 -90,-25 -111,25 -150,-25" Style="{Binding UnframedLine}" />
+			<Polyline Points="25,25 50,-25 85,25 111,-25 150,25" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPFA">
+		<Canvas>
+			<Polyline Points="0,-150 0,150" Style="{Binding UnframedLine}" />
+			<Polyline Points="-150,-150 150,150" Style="{Binding UnframedLine}" />
+			<Polyline Points="150,-150 -150,150" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPEP">
+		<Canvas>
+			<Polyline Points="-150,0 -100,-50 -50,0 0,-50 50,0 100,-50 150,0" Style="{Binding UnframedLine}" />
+			<Polygon Points="20,-100 -20,-100 -49,-129 -49,-169 -20,-197 20,-197 48,-169 48,-129 20,-100" Style="{Binding UnframedLineFill}" />
+			<Polyline Points="0,-100 0,-50" Style="{Binding UnframedLine}" />
+			<Polygon Points="-125,-25 -150,-50 -150,-100 -125,-100 -125,-60 -108,-43 -125,-25" Style="{Binding UnframedLineFill}" />
+			<Polygon Points="125,-25 150,-50 150,-100 125,-100 125,-60 108,-43 125,-25" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPED">
+		<Canvas>
+			<Polyline Points="-150,0 -100,-50 -50,0 0,-50 50,0 100,-50 150,0" Style="{Binding UnframedLine}" />
+			<Polygon Points="-59,-13 60,-154 33,-208 49,-226 94,-170 50,0 0,-50 -50,0 -59,-13" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_OPEV">
+		<Canvas>
+			<Polyline Points="-150,0 -100,-50 -50,0 0,-50 50,0 100,-50 150,0" Style="{Binding UnframedLine}" />
+			<Polygon Points="-10,-40 -80,-110 -80,-190 80,-30 50,0 0,-50 -10,-40" Style="{Binding UnframedLineFill}" />
+			<Polyline Points="10,-100 120,-210" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPSU">
+		<Canvas>
+			<Polygon Points="-75,-75 -75,75 75,75 75,-75 -75,-75" Style="{Binding UnframedLineFill}" />
+			<!--<Polygon Points="-75,76 75,76 75,-74 -75,-74" Style="{Binding UnframedLine}" StrokeThickness="5" />-->
+			<Polyline Points="-100,-75 100,-75" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPSS">
+		<Canvas>
+			<Polygon Points="-75,-75 -75,75 75,75 75,-75 -75,-75" Style="{Binding UnframedLineFill}" />
+			<!--<Polygon Points="-75,75 75,75 75,-75 -75,-75" Style="{Binding UnframedLine}" />-->
+			<Polyline Points="-100,75 100,75" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPSF">
+		<Canvas>
+			<Polygon Points="-103,-104 -103,108 105,108 105,-104 -103,-104" Fill="#FFFFFFFF" />
+			<Polygon Points="-103,108 105,108 105,-104 -103,-104" Style="{Binding UnframedLine}" />
+			<Polyline Points="105,-104 169,-172" Style="{Binding UnframedLine}" />
+			<Polyline Points="-105,-106 -169,-174" Style="{Binding UnframedLine}" />
+			<Polyline Points="167,174 103,106" Style="{Binding UnframedLine}" />
+			<Polyline Points="-167,174 -103,106" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPSE">
+		<Canvas>
+			<Polygon Points="-75,-75 -75,75 75,75 75,-75 -75,-75" Style="{Binding UnframedLineFill}" />
+			<!--<Polygon Points="-75,75 75,75 75,-75 -75,-75" Style="{Binding UnframedLine}" />-->
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPBCP">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="ERP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-62" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOMW">
+		<Canvas>
+			<Ellipse Width="180" Height="180" Style="{Binding UnframedLineFill}" Canvas.Left="-90" Canvas.Top="-90" />
+			<Polyline Points="191,50 96,210 0,0 -96,210 -191,50 " Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOMU">
+		<Canvas>
+			<Ellipse Width="350" Height="350" Canvas.Left="-175" Canvas.Top ="-175" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOMD">
+		<Canvas>
+			<Polyline Points="0,90 0,270 40,220" Style="{Binding UnframedLine}" />
+			<Ellipse Width="180" Height="180" Style="{Binding UnframedLineFill}" Canvas.Left="-90" Canvas.Top="-90" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOME">
+		<Canvas>
+			<Ellipse Width="100" Height="100" Style="{Binding UnframedLineFill}" Canvas.Left="-50" Canvas.Top="-50" />
+			<Polyline Points="0,-50 0,-140" StrokeDashArray="2 1" Style="{Binding UnframedLine}" />
+			<Polyline Points="-10,-130 0,-140 10,-130" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOMT">
+		<Canvas>
+			<Ellipse Width="350" Height="350" Canvas.Left="-175" Canvas.Top ="-175" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOMP">
+		<Canvas>
+			<Polyline Points="180,-230 0,0 -180,-230" Style="{Binding UnframedLine}" />
+			<Ellipse Width="250" Height="250" Style="{Binding UnframedLineFill}" Canvas.Left="-125" Canvas.Top="-125" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOFS">
+		<Canvas>
+			<Polygon Points="-142,-80 -142,80 142,80 142,-80" Fill="#FFFFFFFF" Style="{Binding UnframedLine}" />
+			<Ellipse Width="60" Height="60" Canvas.Left="-30" Canvas.Top="-30" Style="{Binding UnframedLine}" />
+			<Ellipse Width="60" Height="60" Canvas.Left="-120" Canvas.Top="-30" Style="{Binding UnframedLine}" />
+			<Ellipse Width="60" Height="60" Canvas.Left="60" Canvas.Top="-30" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOB">
+		<Canvas>
+			<Polyline Points="-107,-56 0,-272 107,-56" Style="{Binding UnframedLine}" />
+			<Ellipse Width="280" Height="196" Canvas.Left="-140" Canvas.Top ="-98" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOHTL">
+		<Canvas>
+			<Polyline Points="-100,0 0,-250 100,0" Style="{Binding UnframedLine}" StrokeThickness="20" />
+			<Ellipse Width="50" Height="50" Canvas.Left="-25" Canvas.Top="-25" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOHTH">
+		<Canvas>
+			<Path Data="F0 M 0,-230 C-5,-173 -3,-6 -99,18" Style="{Binding UnframedLine}" StrokeThickness="15" />
+			<Path Data="F0 M 0,-230 C5,-173 3,-6 99,18" Style="{Binding UnframedLine}" StrokeThickness="15" />
+			<Path Data="F0 M -70,7 C-21,-20 -2,-57 -1,-105" Style="{Binding UnframedLine}" />
+			<Path Data="F0 M 70,7 C21,-20 2,-57 1,-105" Style="{Binding UnframedLine}" />
+			<Ellipse Width="40" Height="40" Canvas.Left="-20" Canvas.Top="-20" Style="{Binding Fill}" />
+			<Polyline Points="-25,-33 3,-138" Style="{Binding UnframedLine}" StrokeThickness="12" />
+			<Polyline Points="25,-33 -3,-138" Style="{Binding UnframedLine}" StrokeThickness="12" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOAOP">
+		<Canvas>
+			<Polygon Points="0,-150 -100,0 100,0" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOAOM">
+		<Canvas>
+			<Polyline Points="-177,0 0,-364 177,0" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPOAOF">
+		<Canvas>
+			<Polygon Points="0,-150 -100,0 100,0" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNEC">
+		<Canvas>
+			<Ellipse Width="168" Height="168" Canvas.Left="-84" Canvas.Top="-168" Fill="#FFFFFF00" Style="{Binding UnframedLine}" />
+			<Polyline Points="-30,-158 -30,-300 30,-300 30,-158" Fill="#FFFFFF00" Style="{Binding UnframedLine}" />
+			<TextBlock Text="C" FontFamily="Arial" FontSize="64" Foreground="#FF000000" Canvas.Left="-23" Canvas.Top="-120" />
+			<TextBlock Text="CML" FontFamily="Arial" FontSize="64" Foreground="#FF000000" Canvas.Left="-224" Canvas.Top="-200" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNEB">
+		<Canvas>
+			<Polygon Points="-100,0, 100,0 30,-150 30,-300 -30,-300 -30,-150" Fill="#FFFFFF00" Style="{Binding UnframedLine}" />
+			<TextBlock Text="B" FontFamily="Arial" FontSize="64" Foreground="#FF000000" Canvas.Left="-21" Canvas.Top="-120" />
+			<TextBlock Text="BIO" FontFamily="Arial" FontSize="64" Foreground="#FF000000" Canvas.Left="-220" Canvas.Top="-200" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNZ">
+		<Canvas>
+			<Polygon Points="-36,0 36,0 36,-200 -36,-200" Fill="#FFFFFF00" Style="{Binding UnframedLine}" />
+			<Path Data="F0 M-100,-200 A100,100 180 1 1 100,-200 Z" Fill="#FFFFFF00" Style="{Binding UnframedLine}" />
+			<TextBlock Text="N" FontFamily="Arial" FontSize="64" Foreground="#FF000000" Canvas.Left="-24" Canvas.Top="-144" Height="68" Width="48" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNF">
+		<Canvas>
+			<Path Data="F0 M-140,-200 A50,50 180 1 1 140,-200 Z" Style="{Binding UnframedLine}" />
+			<Polygon Points="-50,0 50,0 50,-200 -50,-200" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,0 50,-50" Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-50,0 50,-100" Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-50,-50 50,-150" Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-50,-100 50,-200" Style="{Binding UnframedLine}"  StrokeThickness="5"/>
+			<Polyline Points="-50,-150 0,-200" Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Rectangle Width="52" Height="83" Fill="#FFFFFFFF" Canvas.Left="-26" Canvas.Top="-151" />
+			<TextBlock Text="N" FontFamily="Arial" FontWeight="Bold" FontSize="72" Foreground="#FF000000" Canvas.Left="-26" Canvas.Top="-151" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNDP">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="DCN" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-65" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNDT">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="DCN" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-65" Canvas.Top="-270" />
+			<TextBlock Text="T" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-18" Canvas.Top="-215" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNDD">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="DCN" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-65" Canvas.Top="-270" />
+			<TextBlock Text="TH" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-40" Canvas.Top="-215" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNDO">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="DCN" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-65" Canvas.Top="-270" />
+			<TextBlock Text="O" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-23" Canvas.Top="-215" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNDB">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="DCN" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-65" Canvas.Top="-270" />
+			<TextBlock Text="E/T" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-47" Canvas.Top="-215" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNDE">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="DCN" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-65" Canvas.Top="-270" />
+			<TextBlock Text="E" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-20" Canvas.Top="-215" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_MPNDA">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="DCN" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-65" Canvas.Top="-270" />
+			<TextBlock Text="ALT" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-55" Canvas.Top="-215" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPPTS">
+		<Canvas>
+			<Polyline Points="0,-150 0,150" Style="{Binding UnframedLine}" />
+			<Polyline Points="-150,0 150,0" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPPTN">
+		<Canvas>
+			<Polyline Points="0,-150 0,150" Style="{Binding UnframedLine}" />
+			<Polyline Points="-150,0 150,0" Style="{Binding UnframedLine}" />
+			<Ellipse Width="30" Height="30" Canvas.Left="-15" Canvas.Top="-15" Style="{Binding Fill}" Stroke="#FFFFFFFF" StrokeThickness="5" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPPCS">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="SCP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-62" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPPCR">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="RLP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-58" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPPCL">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="LP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-36" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPPCH">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="HP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-42" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPPCB">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="FP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-38" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPPCF">
+		<Canvas>
+			<Polyline Points="-153,-150 147,150" Style="{Binding UnframedLine}" />
+			<Polyline Points="-153,150 147,-150" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPAXS">
+		<Canvas>
+			<Polyline Points="0,0 0,-320" Style="{Binding UnframedLine}" />
+			<Polygon Points="-10,-320 10,-320 0,-338 -10,-320" Style="{Binding Fill}" />
+			<Polyline Points="0,0 100,-200" Style="{Binding UnframedLine}" />
+			<Polyline Points="115,-191 150,-250" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,0 -132,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-85,-141 -150,-250" Style="{Binding UnframedLine}" />
+			<TextBlock Text="RG" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="-66" Canvas.Top="-75">
+		<TextBlock.RenderTransform><RotateTransform Angle="-30" /></TextBlock.RenderTransform>
+			</TextBlock>
+			<TextBlock Text="ALT" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="-48" Canvas.Top="-63">
+		<TextBlock.RenderTransform><RotateTransform Angle="-30" /></TextBlock.RenderTransform>
+			</TextBlock>
+			<TextBlock Text="RG" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="15" Canvas.Top="-211" />
+			<TextBlock Text="ALT" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="12" Canvas.Top="-197" />
+			<TextBlock Text="RG" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="13" Canvas.Top="-284" />
+			<TextBlock Text="ALT" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="13" Canvas.Top="-264" />
+			<TextBlock Text="RG" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="-101" Canvas.Top="-135">
+		<TextBlock.RenderTransform><RotateTransform Angle="-30" /></TextBlock.RenderTransform>
+			</TextBlock>
+			<TextBlock Text="ALT" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="-90" Canvas.Top="-117">
+		<TextBlock.RenderTransform><RotateTransform Angle="-30" /></TextBlock.RenderTransform>
+			</TextBlock>
+			<Path Data="M-80,-60 A100,100 90 0 1 45,-89" Style="{Binding UnframedLine}" />
+			<Path Data="M-132,-100 A168,168 90 0 1 73,-148" Style="{Binding UnframedLine}" />
+			<Path Data="M-115,-191 A226,226 90 0 1 115,-191" Style="{Binding UnframedLine}" />
+			<Path Data="M-150,-250 A294,294 90 0 1 150,-250" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPAXC">
+		<Canvas>
+			<TextBlock Text="MIN RG" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="-50" Canvas.Top="30" />
+			<TextBlock Text="MAX RG (1)" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="-83" Canvas.Top="101" />
+			<TextBlock Text="MAX RG (2) " FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="-78" Canvas.Top="155" />
+			<TextBlock Text="ALT" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="-31" Canvas.Top="178" />
+			<TextBlock Text="ALT" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="-32" Canvas.Top="125" />
+			<TextBlock Text="ALT" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FF000000" Canvas.Left="-29" Canvas.Top="55" />
+			<Ellipse Width="64" Height="64" Canvas.Left="-32" Canvas.Top="-32" Style="{Binding UnframedLine}" />
+			<Ellipse Width="204" Height="204" Canvas.Left="-102" Canvas.Top="-102" Style="{Binding UnframedLine}" />
+			<Ellipse Width="314" Height="314" Canvas.Left="-157" Canvas.Top="-157" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACVC">
+		<Canvas>
+			<Ellipse Width="270" Height="270" Canvas.Left="-135" Canvas.Top="-135" Style="{Binding UnframedLine}" />
+			<TextBlock Text="TVAR" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-44" Canvas.Top="-50" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACZC">
+		<Canvas>
+			<Ellipse Width="270" Height="270" Canvas.Left="-135" Canvas.Top="-135" Style="{Binding UnframedLine}" />
+			<TextBlock Text="ZOR" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-33" Canvas.Top="-50" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACBC">
+		<Canvas>
+			<Ellipse Width="270" Height="270" Canvas.Left="-135" Canvas.Top="-135" Style="{Binding UnframedLine}" />
+			<TextBlock Text="TBA" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-33" Canvas.Top="-50" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACEC">
+		<Canvas>
+			<Ellipse Width="270" Height="270" Canvas.Left="-135" Canvas.Top="-135" Style="{Binding UnframedLine}" />
+			<TextBlock Text="SENSOR" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-68" Canvas.Top="-80" />
+			<TextBlock Text="ZONE" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-44" Canvas.Top="-40" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACRC">
+		<Canvas>
+			<TextBlock Text="RFA" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-34" Canvas.Top="-60" />
+			<Ellipse Width="250" Height="250" Canvas.Left="-125" Canvas.Top="-125" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACPC">
+		<Canvas>
+			<Ellipse Width="250" Height="250" Canvas.Left="-125" Canvas.Top="-125" Style="{Binding UnframedLine}" />
+			<Rectangle Width="85" Height="37" Fill="#FFFFFFFF" Canvas.Left="-43" Canvas.Top="-140" />
+			<TextBlock Text=" PAA " FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-43" Canvas.Top="-140" />
+			<Rectangle Width="85" Height="37" Fill="#FFFFFFFF" Canvas.Left="-43" Canvas.Top="107" />
+			<TextBlock Text=" PAA " FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-43" Canvas.Top="107" />
+			<Rectangle Width="85" Height="37" Fill="#FFFFFFFF" Canvas.Left="91" Canvas.Top="-18" />
+			<TextBlock Text="PAA" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="91" Canvas.Top="-18" />
+			<Rectangle Width="85" Height="37" Fill="#FFFFFFFF" Canvas.Left="-159" Canvas.Top="-18" />
+			<TextBlock Text="PAA" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-159" Canvas.Top="-18" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACNC">
+		<Canvas>
+			<Canvas.Clip>
+				<EllipseGeometry Center="0,0" RadiusX="125" RadiusY="125" />
+			</Canvas.Clip>
+			<Polyline Points="15,125 125,55"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-5,125 125,40"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-25,125 125,25"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-45,125 125,10"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-65,125 125,-5"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-85,125 125,-20"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-105,125 125,-35"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,125 125,-50"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,110 125,-65"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,95 125,-80"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,80 125,-95"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,65 125,-110"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,50 125,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,35 105,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,20 85,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,5 65,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,-10 45,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,-25 25,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,-40 5,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Polyline Points="-125,-55 -15,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+			<Ellipse Width="250" Height="250" Canvas.Left="-125" Canvas.Top="-125" Style="{Binding UnframedLine}" />
+			<Rectangle Width="60" Height="34" Fill="#FFFFFFFF" Canvas.Left="-31" Canvas.Top="-42" />
+			<TextBlock Text="NFA" FontFamily="Arial" FontWeight="Bold" FontSize="29" Foreground="#FF000000" Canvas.Left="-31" Canvas.Top="-42" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACFC">
+		<Canvas>
+			<TextBlock Text="FFA" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-31" Canvas.Top="-62" />
+			<Ellipse Width="250" Height="250" Canvas.Left="-125" Canvas.Top="-125" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACSC">
+		<Canvas>
+			<Ellipse Width="250" Height="250" Canvas.Left="-125" Canvas.Top="-125" Style="{Binding UnframedLine}" />
+			<TextBlock Text="FSA" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-33" Canvas.Top="-46" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACDC">
+		<Canvas>
+			<Ellipse Width="270" Height="270" Canvas.Left="-135" Canvas.Top="-135" Style="{Binding UnframedLine}" />
+			<TextBlock Text="DA" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-24" Canvas.Top="-50" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPACAC">
+		<Canvas>
+			<Ellipse Width="360" Height="360" Canvas.Left="-180" Canvas.Top="-180" Style="{Binding UnframedLine}" />
+			<TextBlock Text="Grids" FontFamily="Arial" FontWeight="Bold" FontSize="26" Foreground="#FF000000" Canvas.Left="-133" Canvas.Top="17" />
+			<TextBlock Text="EFF" FontFamily="Arial" FontWeight="Bold" FontSize="26" Foreground="#FF000000" Canvas.Left="-130" Canvas.Top="54" />
+			<TextBlock Text=":" FontFamily="Arial" FontWeight="Bold" FontSize="26" Foreground="#FF000000" Canvas.Left="-81" Canvas.Top="54" />
+			<TextBlock Text="MAX ALT:" FontFamily="Arial" FontWeight="Bold" FontSize="26" Foreground="#FF000000" Canvas.Left="-132" Canvas.Top="-18" />
+			<TextBlock Text="MIN ALT:" FontFamily="Arial" FontWeight="Bold" FontSize="26" Foreground="#FF000000" Canvas.Left="-132" Canvas.Top="-53" />
+			<TextBlock Text="ACA" FontFamily="Arial" FontWeight="Bold" FontSize="28" Foreground="#FF000000" Canvas.Left="-130" Canvas.Top="-126" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPATR">
+		<Canvas>
+			<Polygon Points="-150,75 150,75 150,-75 -150,-75" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_FPATC">
+		<Canvas>
+			<Ellipse Width="300" Height="300" Canvas.Left="-150" Canvas.Top="-150" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPOPP">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="PD" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-42" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPWP">
+		<Canvas>
+			<Polygon Points="0,-175 30,-30 175,0 30,30 0,175 -30,30 -175,0 -30,-30" StrokeDashOffset="3" StrokeDashArray="5 2" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPWM">
+		<Canvas>
+			<Polyline Points="-177, 0 177, 0" Style="{Binding UnframedLine}" />
+			<Polygon Points="-15,0 15,0 15,-270 -15,-270" Style="{Binding UnframedLineFill}" />
+			<Path Data="M-70,-270, 70,-270 0,-380Z" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPWI">
+		<Canvas>
+			<Polygon Points="0,-175 30,-30 175,0 30,30 0,175 -30,30 -175,0 -30,-30 0,-175" Style="{Binding Fill}" />
+			<Polygon Points="0,-175 30,-30 175,0 30,30 0,175 -30,30 -175,0 -30,-30" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPWG">
+		<Canvas>
+			<Path Data="F0 M 0,-280 C83,-280 150,-217 150,-176 C150,-146 106,-114 70,-113 C35,-112 36,-175 0,-175 C-36,-176 -33,-112 -69,-113 C-106,-114 -150,-145 -150,-176 C-150,-217 -83,-280 0,-280 Z" Style="{Binding UnframedLineFill}" />
+			<Path Data="F0 M -75,-1 C-75,-1 -140,2 -125,-15 C-110,-34 -25,-34 -25,-34 L 0,-176 L 25,-34 C25,-34 110,-31 125,-15 C140,1 75,-1 75,-1 L-75,-1 Z" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPWE">
+		<Canvas>
+			<Polyline Points="-190,0 190,0" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,0 0,-235" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,0 165,-165" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,0 -165,-165" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPWD">
+		<Canvas>
+			<Path Data="F1 M -150,-210 L -150,-35 C-140,65,-10,65,0,-10 L 0,-210 L 0,-10 C10,65,140,65,150,-35 L 150,-210 " Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPWA">
+		<Canvas>
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+			<Ellipse Width="280" Height="280" Canvas.Left="-140" Canvas.Top="-140"  Style="{Binding UnframedLine}" />
+			<Ellipse Width="360" Height="360" Canvas.Left="-180" Canvas.Top="-180"  Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUUS">
+		<Canvas>
+			<Polygon Points="0,0 -125,-85 125,-85" Style="{Binding UnframedLineFill}" />
+			<Polyline Points="0,-85 0,-300" Style="{Binding UnframedLine}" />
+			<Polyline Points="-145,-300 -90,-360 0,-300 90,-360 145,-300" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUUL">
+		<Canvas>
+			<Polygon Points="0,0 -125,-85 125,-85" Style="{Binding UnframedLineFill}" />
+			<Polyline Points="0,-85 0,-320" Style="{Binding UnframedLine}" />
+			<Polyline Points="-100,-320 100,-320" Style="{Binding UnframedLine}" />
+			<TextBlock Text="L C" FontSize="110" FontFamily="Arial" Width="174" Canvas.Left="-78" Canvas.Top="-250" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUUD">
+		<Canvas>
+			<Ellipse Width="252" Height="252"	Canvas.Left="-126" Canvas.Top="-126"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Path Data="M0,0 0,-126 A126,126 90 0 1 126,0" Style="{Binding Fill}"/>
+			<Path Data="M0,0 0,126 A126,126 90 0 1 -126,0" Style="{Binding Fill}"/>
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUUB">
+		<Canvas>
+			<Polygon Points="0,0 -125,-85 125,-85" Style="{Binding UnframedLineFill}" />
+			<Polyline Points="0,-85 0,-320" Style="{Binding UnframedLine}" />
+			<Polyline Points="-100,-320 100,-320" Style="{Binding UnframedLine}" />
+			<TextBlock Text="B C" FontSize="110" FontFamily="Arial" Canvas.Left="-89" Canvas.Top="-250" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUY">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYV">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="V" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-37" Canvas.Top="-64" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYR">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="R" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-38" Canvas.Top="-64" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYP">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="P" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-38" Canvas.Top="-64" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYL">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="L" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-30" Canvas.Top="-64" Width="56" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYK">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="K" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-37" Canvas.Top="-64" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYX">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<Polyline Points="-135,-86 135,86" Style="{Binding UnframedLine}" />
+			<Polyline Points="-135,86 135,-86" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYD">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="D" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-38" Canvas.Top="-64" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYS">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="S" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-38" Canvas.Top="-64" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYC">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="C" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-38" Canvas.Top="-64" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYB">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="B" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-38" Canvas.Top="-64" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYT">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="T" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-34" Canvas.Top="-64" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUYA">
+		<Canvas>
+			<Ellipse Width="172" Height="172"	Canvas.Left="-86" Canvas.Top="-86"  Style="{Binding UnframedLine}"	StrokeMiterLimit="2" />
+			<Polyline Points="0,-86 0,-166 24,-138 24,-254" Style="{Binding UnframedLine}" />
+			<TextBlock Text="A" FontFamily="Arial" FontSize="110" Foreground="#FF000000" Canvas.Left="-37" Canvas.Top="-64" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUS">
+		<Canvas>
+			<Polyline Points="-175,175 175,-175" Style="{Binding UnframedLine}" />
+			<Polyline Points="-175,-175 175,175" Style="{Binding UnframedLine}" />
+			<Polygon Points="0,0 -70,-70 70,-70 0,0" Style="{Binding Fill}" />
+			<Polygon Points="0,0 -70,-70 70,-70" Style="{Binding UnframedLine}" />
+			<Polygon Points="0,0 70,70 -70,70 0,0" Style="{Binding Fill}" />
+			<Polygon Points="0,0 70,70 -70,70" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUSC">
+		<Canvas>
+			<Path Data="F0 M -179,-37 0,0 -179,37 -179,-37 ZM -37,179 0,0 37,179 -37,179 ZM 37,-179 0,0 -37,-179 37,-179 ZM 179,37 0,0 179,-37 179,37" Style="{Binding UnframedLineFill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUSA">
+		<Canvas>
+			<Polyline Points="-175,175 175,-175" Style="{Binding UnframedLine}" />
+			<Polyline Points="-175,-175 175,175" Style="{Binding UnframedLine}" />
+			<Polygon Points="0,0 -70,-70 70,-70 0,0" Style="{Binding Fill}" />
+			<Polygon Points="0,0 -70,-70 70,-70" Style="{Binding UnframedLine}" />
+			<Polygon Points="0,0 70,70 -70,70 0,0" Style="{Binding Fill}" />
+			<Polygon Points="0,0 70,70 -70,70" Style="{Binding UnframedLine}" />
+			<TextBlock Text="S" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-171" Canvas.Top="-83" />
+			<TextBlock Text="A" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="94" Canvas.Top="-83" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPUSD">
+		<Canvas>
+			<Polyline Points="-175,175 175,-175" Style="{Binding UnframedLine}" />
+			<Polyline Points="-175,-175 175,175" Style="{Binding UnframedLine}" />
+			<Polygon Points="0,0 -70,-70 70,-70 0,0" Style="{Binding Fill}" />
+			<Polygon Points="0,0 -70,-70 70,-70" Style="{Binding UnframedLine}" />
+			<Polygon Points="0,0 70,70 -70,70 0,0" Style="{Binding Fill}" />
+			<Polygon Points="0,0 70,70 -70,70" Style="{Binding UnframedLine}" />
+			<TextBlock Text="D" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-176" Canvas.Top="-83" />
+			<TextBlock Text="P" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="84" Canvas.Top="-83" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPB">
+		<Canvas>
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,-100 195,-100" StrokeDashArray="4 2" Style="{Binding UnframedLine}" />
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPBU">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" StrokeDashArray="4 2" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-100,-38 -100,2 0,62 100,2 100,-38 0,22 -100,-38" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPBUS">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" StrokeDashArray="4 2" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-100,-3 -100,37 0,97 100,37 100,-3 0,57 -100,-3" Style="{Binding Fill}" />
+			<TextBlock Text="SUW" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="-117" Canvas.Top="-104" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPBUM">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" StrokeDashArray="4 2" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-100,-3 -100,37 0,97 100,37 100,-3 0,57 -100,-3" Style="{Binding Fill}" />
+			<TextBlock Text="MIW" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="-103" Canvas.Top="-104" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPBUA">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" StrokeDashArray="4 2" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-100,-3 -100,37 0,97 100,37 100,-3 0,57 -100,-3" Style="{Binding Fill}" />
+			<TextBlock Text="ASW" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="-117" Canvas.Top="-104" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPBS">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" StrokeDashArray="4 2" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-65,-65 -65,6 65,6 65,-65 -65,-65" Style="{Binding Fill}" />
+			<!--<Polygon Points="-65,6 65,6 65,-65 -65,-65" Style="{Binding UnframedLine}" StrokeThickness="9" />-->
+			<Polyline Points="0,-84 0,26" Style="{Binding UnframedLine}" StrokeThickness="9" />
+			<TextBlock Text="SS" FontFamily="Arial" FontWeight="Bold" FontSize="70" Foreground="#FF000000" Canvas.Left="-47" Canvas.Top="20" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPBSA">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" StrokeDashArray="4 2" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-40,-64 -40,-27 40,-27 40,-64 -40,-64" Style="{Binding Fill}" />
+			<!--<Polygon Points="-40,-27 40,-27 40,-64 -40,-64" Style="{Binding UnframedLine}" />-->
+			<Polyline Points="2,-85 2,-1" Style="{Binding UnframedLine}" />
+			<Polygon Points="-110,39 -60,-8 60,-8 110,39 60,86 -60,86 -110,39" Style="{Binding Fill}" />
+			<!--<Polygon Points="-110,39 -60,-8 60,-8 110,39 60,86 -60,86" Style="{Binding UnframedLine}" StrokeThickness="1" />-->
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPC">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCU">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-100,-40 -100,0 0,60 100,0 100,-40 0,20 -100,-40" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCUS">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-100,-3 -100,37 0,97 100,37 100,-3 0,57 -100,-3" Style="{Binding Fill}" />
+			<TextBlock Text="SUW" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="-117" Canvas.Top="-104" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCUM">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-100,-3 -100,37 0,97 100,37 100,-3 0,57 -100,-3" Style="{Binding Fill}" />
+			<TextBlock Text="MIW" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="-103" Canvas.Top="-104" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCUR">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-100,-3 -100,37 0,97 100,37 100,-3 0,57 -100,-3" Style="{Binding Fill}" />
+			<TextBlock Text="RMV" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="-111" Canvas.Top="-104" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCUA">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<Polygon Points="-100,-3 -100,37 0,97 100,37 100,-3 0,57 -100,-3" Style="{Binding Fill}" />
+			<TextBlock Text="ASW" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="-117" Canvas.Top="-104" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCS">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<TextBlock Text="SUW" FontFamily="Arial" FontWeight="Bold" FontSize="130" Foreground="#FF000000" Canvas.Left="-152" Canvas.Top="-71" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCC">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<TextBlock Text="RS" FontFamily="Arial" FontWeight="Bold" FontSize="130" Foreground="#FF000000" Canvas.Left="-91" Canvas.Top="-71" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCE">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<TextBlock Text="RP" FontFamily="Arial" FontWeight="Bold" FontSize="130" Foreground="#FF000000" Canvas.Left="-91" Canvas.Top="-71" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCR">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<TextBlock Text="RZ" FontFamily="Arial" FontWeight="Bold" FontSize="130" Foreground="#FF000000" Canvas.Left="-87" Canvas.Top="-71" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCP">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<TextBlock Text="PK" FontFamily="Arial" FontWeight="Bold" FontSize="130" Foreground="#FF000000" Canvas.Left="-91" Canvas.Top="-71" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCN">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<TextBlock Text="NC" FontFamily="Arial" FontWeight="Bold" FontSize="130" Foreground="#FF000000" Canvas.Left="-94" Canvas.Top="-71" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCM">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<TextBlock Text="MIW" FontFamily="Arial" FontWeight="Bold" FontSize="130" Foreground="#FF000000" Canvas.Left="-134" Canvas.Top="-71" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPCA">
+		<Canvas>
+			<Polyline Points="-195,-100 195,-100" Style="{Binding UnframedLine}" />
+			<Polyline Points="-195,100 195,100" Style="{Binding UnframedLine}" />
+			<TextBlock Text="ASW" FontFamily="Arial" FontWeight="Bold" FontSize="130" Foreground="#FF000000" Canvas.Left="-152" Canvas.Top="-71" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPO">
+		<Canvas>
+			<Polyline Points="-175,0 175,0" Style="{Binding UnframedLine}" StrokeThickness="15" />
+			<Path Data="F1 M -175,-75 C-165,-115,-115,-115,-105,-75 C-95,-35,-45,-35,-35,-75 C-25,-115,25,-115,35,-75 C45,-35,95,-35,105,-75 C115,-115,165,-115,175,-75 " Style="{Binding UnframedLine}" />
+			<Path Data="F1 M -175,75 C-165,35,-115,35,-105,75 C-95,115,-45,115,-35,75 C-25,35,25,35,35,75 C45,115,95,115,105,75 C115,35,165,35,175,75 " Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPOW">
+		<Canvas>
+			<Polyline Points="-175,0 175,0" Style="{Binding UnframedLine}" StrokeThickness="15" />
+			<Path Data="F1 M -175,-75 C-165,-115,-115,-115,-105,-75 C-95,-35,-45,-35,-35,-75 C-25,-115,25,-115,35,-75 C45,-35,95,-35,105,-75 C115,-115,165,-115,175,-75 " Style="{Binding UnframedLine}" />
+			<Path Data="F1 M -175,75 C-165,35,-115,35,-105,75 C-95,115,-45,115,-35,75 C-25,35,25,35,35,75 C45,115,95,115,105,75 C115,35,165,35,175,75 " Style="{Binding UnframedLine}" />
+			<TextBlock Text="W" FontFamily="Arial" FontSize="90" Foreground="#FF000000" Canvas.Left="-43" Canvas.Top="89" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPOZ">
+		<Canvas>
+			<Polyline Points="-175,0 175,0" Style="{Binding UnframedLine}" StrokeThickness="15" />
+			<Path Data="F1 M -175,-75 C-165,-115,-115,-115,-105,-75 C-95,-35,-45,-35,-35,-75 C-25,-115,25,-115,35,-75 C45,-35,95,-35,105,-75 C115,-115,165,-115,175,-75 " Style="{Binding UnframedLine}" />
+			<Path Data="F1 M -175,75 C-165,35,-115,35,-105,75 C-95,115,-45,115,-35,75 C-25,35,25,35,35,75 C45,115,95,115,105,75 C115,35,165,35,175,75 " Style="{Binding UnframedLine}" />
+			<TextBlock Text="R" FontFamily="Arial" FontSize="90" Foreground="#FF000000" Canvas.Left="-30" Canvas.Top="89" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPOR">
+		<Canvas>
+			<Polyline Points="-175,0 175,0" Style="{Binding UnframedLine}" StrokeThickness="15" />
+			<Path Data="F1 M -175,-75 C-165,-115,-115,-115,-105,-75 C-95,-35,-45,-35,-35,-75 C-25,-115,25,-115,35,-75 C45,-35,95,-35,105,-75 C115,-115,165,-115,175,-75 " Style="{Binding UnframedLine}" />
+			<Path Data="F1 M -175,75 C-165,35,-115,35,-105,75 C-95,115,-45,115,-35,75 C-25,35,25,35,35,75 C45,115,95,115,105,75 C115,35,165,35,175,75 " Style="{Binding UnframedLine}" />
+			<TextBlock Text="P" FontFamily="Arial" FontSize="90" Foreground="#FF000000" Canvas.Left="-30" Canvas.Top="89" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPOP">
+		<Canvas>
+			<Polyline Points="-175,0 175,0" Style="{Binding UnframedLine}" StrokeThickness="15" />
+			<Path Data="F1 M -175,-75 C-165,-115,-115,-115,-105,-75 C-95,-35,-45,-35,-35,-75 C-25,-115,25,-115,35,-75 C45,-35,95,-35,105,-75 C115,-115,165,-115,175,-75 " Style="{Binding UnframedLine}" />
+			<Path Data="F1 M -175,75 C-165,35,-115,35,-105,75 C-95,115,-45,115,-35,75 C-25,35,25,35,35,75 C45,115,95,115,105,75 C115,35,165,35,175,75 " Style="{Binding UnframedLine}" />
+			<TextBlock Text="M" FontFamily="Arial" FontSize="90" Foreground="#FF000000" Canvas.Left="-38" Canvas.Top="89" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPOD">
+		<Canvas>
+			<Polyline Points="-175,0 175,0" Style="{Binding UnframedLine}" StrokeThickness="15" />
+			<Path Data="F1 M -175,-75 C-165,-115,-115,-115,-105,-75 C-95,-35,-45,-35,-35,-75 C-25,-115,25,-115,35,-75 C45,-35,95,-35,105,-75 C115,-115,165,-115,175,-75 " Style="{Binding UnframedLine}" />
+			<Path Data="F1 M -175,75 C-165,35,-115,35,-105,75 C-95,115,-45,115,-35,75 C-25,35,25,35,35,75 C45,115,95,115,105,75 C115,35,165,35,175,75 " Style="{Binding UnframedLine}" />
+			<TextBlock Text="D" FontFamily="Arial" FontSize="90" Foreground="#FF000000" Canvas.Left="-30" Canvas.Top="89" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPR">
+		<Canvas>
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+			<Polygon Points="-175,175 175,175 175,-175 -175,-175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPRW">
+		<Canvas>
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+			<Polygon Points="-175,175 175,175 175,-175 -175,-175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+			<TextBlock Text="W" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-57" Canvas.Top="48" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPRS">
+		<Canvas>
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+			<Polygon Points="-175,175 175,175 175,-175 -175,-175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+			<Polyline Points="-175,-175 175,175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+			<Polyline Points="175,-175 -175,175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPRI">
+		<Canvas>
+			<Polygon Points="-90,-195 90,-195 0,0" Style="{Binding UnframedLineFill}" StrokeThickness="1" />
+			<Ellipse Width="208" Height="208" Canvas.Left="-104" Canvas.Top="-350" Fill="White"  Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPRP">
+		<Canvas>
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+			<Polygon Points="-175,175 175,175 175,-175 -175,-175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+			<TextBlock Text="P" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-41" Canvas.Top="48" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPRN">
+		<Canvas>
+			<Polyline Points="-175,-175 175,175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+			<Polyline Points="175,-175 -175,175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+			<Polygon Points="-175,175 175,175 175,-175 -175,-175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPRM">
+		<Canvas>
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+			<Polygon Points="-175,175 175,175 175,-175 -175,-175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+			<TextBlock Text="M" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-50" Canvas.Top="48" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPRD">
+		<Canvas>
+			<TextBlock Text="D" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-44" Canvas.Top="48" />
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+			<Polyline Points="-175,-175 175,175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+			<Polyline Points="175,-175 -175,175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+			<Polygon Points="-175,175 175,175 175,-175 -175,-175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPRC">
+		<Canvas>
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+			<Polygon Points="-175,175 175,175 175,-175 -175,-175" Style="{Binding UnframedLine}" StrokeThickness="8" />
+			<TextBlock Text="C" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-44" Canvas.Top="48" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPH">
+		<Canvas>
+			<Polyline Points="-73,122 -163,-122 163,-122 73,122" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPHY">
+		<Canvas>
+			<Polyline Points="-73,122 -163,-122 163,-122 73,122" Style="{Binding UnframedLine}" />
+			<TextBlock Text="Y" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-48" Canvas.Top="-65" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPHX">
+		<Canvas>
+			<Polyline Points="-73,122 -163,-122 163,-122 73,122" Style="{Binding UnframedLine}" />
+			<TextBlock Text="X" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-48" Canvas.Top="-65" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPHQ">
+		<Canvas>
+			<Polyline Points="-73,122 -163,-122 163,-122 73,122" Style="{Binding UnframedLine}" />
+			<TextBlock Text="Q" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-48" Canvas.Top="-65" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPHA">
+		<Canvas>
+			<Polyline Points="-73,122 -163,-122 163,-122 73,122" Style="{Binding UnframedLine}" />
+			<TextBlock Text="A" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-48" Canvas.Top="-65" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPF">
+		<Canvas>
+			<Path Data="M-189,0 189,0 M0,-189 0,189" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPA">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAG">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<Polygon Points="-78,-81 -78,-50 0,-2 79,-50 79,-81 0,-34 -78,-81" Style="{Binding Fill}" />
+			<Polygon Points="1,8 -80,-37 -80,53 82,-37 82,53 1,8" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAF">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<Polygon Points="-88,-30 -88,5 0,59 89,5 89,-30 0,23 -88,-30" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAO">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="TC" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-80" Canvas.Top="-57" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAK">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="K" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-41" Canvas.Top="-57" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAT">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="T" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-37" Canvas.Top="-57" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAC">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="SUW" FontFamily="Arial" FontWeight="Bold" FontSize="60" Foreground="#FF000000" Canvas.Left="-70" Canvas.Top="-106" />
+			<Polygon Points="1,8 -80,-37 -80,53 82,-37 82,53 1,8" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAB">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="SUW" FontFamily="Arial" FontWeight="Bold" FontSize="60" Foreground="#FF000000" Canvas.Left="-70" Canvas.Top="-106" />
+			<Path Data="F0 M 4,-33 C5,-31,6,-30,6,-29 L 6,4 L 77,77 L 77,88 L 6,42 L 6,101 L 23,117 L 23,126 L 3,117 L 0,126 L -5,117 L -23,126 L -23,117 L -7,101 L -7,42 L -77,88 L -77,77 L -7,4 L -7,-29 L -6,-31 C-5,-35,-3,-37,0,-37 C1,-37,3,-35,4,-33 Z" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAS">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="S" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-41" Canvas.Top="-57" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAR">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="RS" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-84" Canvas.Top="-57" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAL">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="RP" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-84" Canvas.Top="-57" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAN">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="O" FontFamily="Arial" FontWeight="Bold" FontSize="120" Foreground="#FF000000" Canvas.Left="-47" Canvas.Top="-62" />
+			<TextBlock Text="RC" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="-73" Canvas.Top="42" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAM">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="O" FontFamily="Arial" FontWeight="Bold" FontSize="120" Foreground="#FF000000" Canvas.Left="-47" Canvas.Top="-62" />
+			<TextBlock Text="RT" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="-67" Canvas.Top="42" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAJ">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="O" FontFamily="Arial" FontWeight="Bold" FontSize="120" Foreground="#FF000000" Canvas.Left="-47" Canvas.Top="-62" />
+			<TextBlock Text="F" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="-59" Canvas.Top="42" />
+			<TextBlock Text="8" FontFamily="Arial" FontWeight="Bold" FontSize="100" Foreground="#FF000000" Canvas.Left="2" Canvas.Top="42" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAI">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="O" FontFamily="Arial" FontWeight="Bold" FontSize="120" Foreground="#FF000000" Canvas.Left="-47" Canvas.Top="-62" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAE">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="MIW" FontFamily="Arial" FontWeight="Bold" FontSize="60" Foreground="#FF000000" Canvas.Left="-62" Canvas.Top="-106" />
+			<Polygon Points="1,8 -80,-37 -80,53 82,-37 82,53 1,8" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAD">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<Path Data="F0 M 4,-33 C5,-31,6,-30,6,-29 L 6,4 L 77,77 L 77,88 L 6,42 L 6,101 L 23,117 L 23,126 L 3,117 L 0,126 L -5,117 L -23,126 L -23,117 L -7,101 L -7,42 L -77,88 L -77,77 L -7,4 L -7,-29 L -6,-31 C-5,-35,-3,-37,0,-37 C1,-37,3,-35,4,-33 Z" Style="{Binding Fill}" />
+			<TextBlock Text="MIW" FontFamily="Arial" FontWeight="Bold" FontSize="60" Foreground="#FF000000" Canvas.Left="-62" Canvas.Top="-106" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAP">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="C" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-46" Canvas.Top="-62" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAH">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<Polygon Points="1,8 -80,-37 -80,53 82,-37 82,53 1,8" Style="{Binding Fill}" />
+			<TextBlock Text="ASW" FontFamily="Arial" FontWeight="Bold" FontSize="60" Foreground="#FF000000" Canvas.Left="-70" Canvas.Top="-106" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAA">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="ASW" FontFamily="Arial" FontWeight="Bold" FontSize="60" Foreground="#FF000000" Canvas.Left="-70" Canvas.Top="-106" />
+			<Path Data="F0 M 4,-33 C5,-31,6,-30,6,-29 L 6,4 L 77,77 L 77,88 L 6,42 L 6,101 L 23,117 L 23,126 L 3,117 L 0,126 L -5,117 L -23,126 L -23,117 L -7,101 L -7,42 L -77,88 L -77,77 L -7,4 L -7,-29 L -6,-31 C-5,-35,-3,-37,0,-37 C1,-37,3,-35,4,-33 Z" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPAW">
+		<Canvas>
+			<Polyline Points="-100,-175 -100,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,-175 100,175" Style="{Binding UnframedLine}" />
+			<TextBlock Text="W" FontFamily="Arial" FontSize="120" Foreground="#FF000000" Canvas.Left="-57" Canvas.Top="-62" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPP">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPW">
+		<Canvas>
+			<Polyline Points="-150,150 150,-150" Style="{Binding UnframedLine}" />
+			<Polyline Points="-150,-150 150,150" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPS">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="SP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-40" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPE">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="RP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-41" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPR">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="RLY" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-58" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPP">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="PP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-40" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPL">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="LU" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-38" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPD">
+		<Canvas>
+			<Polygon Points="0,-150 35,-35 150,-35 57,35 93,150 0,79 -93,150 -57,35 -150,-35 -35,-35" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPO">
+		<Canvas>
+			<Path Data="F1 M 150,0 C150,-83,83,-150,0,-150 C-83,-150,-150,-83,-150,0 C-150,83,-83,150,0,150 C83,150,150,83,150,0 " Style="{Binding UnframedLine}" />
+			<Polyline Points="-106,106 106,-106" Style="{Binding UnframedLine}" />
+			<Polyline Points="-106,-106 106,106" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPC">
+		<Canvas>
+			<Polygon Points="-100,-75 100,-75 100,-275 -100,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,0 0,-75" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPK">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="CKP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-62" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPGPPA">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="AMN" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-66" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPDPT">
+		<Canvas>
+			<Polyline Points="0,-175 0,175" Style="{Binding UnframedLine}" />
+			<Polyline Points="-175,0 175,0" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPDPO">
+		<Canvas>
+			<Polygon Points="-140,82 0,-162 140,82" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPDPOS">
+		<Canvas>
+			<Polygon Points="-140,82 0,-162 140,82" Style="{Binding UnframedLine}" />
+			<Polygon Points="-75,4 75,4 50,57 -50,57" Style="{Binding UnframedLine}" />
+			<Polyline Points="-111,32 -63,32" Style="{Binding UnframedLine}" />
+			<Polyline Points="63,32 111,32" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPDPOR">
+		<Canvas>
+			<Polygon Points="-140,82 0,-162 140,82" Style="{Binding UnframedLine}" />
+			<Polyline Points="70,-40 -140,82" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPDPOF">
+		<Canvas>
+			<Polygon Points="-140,82 0,-162 140,82" Style="{Binding UnframedLine}" />
+			<Polyline Points="70,-40 -140,82" Style="{Binding UnframedLine}" />
+			<Ellipse Width="110" Height="110" Canvas.Left="-55" Canvas.Top="-55"  Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPDPOC">
+		<Canvas>
+			<Polygon Points="-140,82 0,-162 140,82" Style="{Binding UnframedLine}" />
+			<Polyline Points="-100,82 -100,122" Style="{Binding UnframedLine}" />
+			<Polyline Points="-60,82 -60,122" Style="{Binding UnframedLine}" />
+			<Polyline Points="-20,82 -20,122" Style="{Binding UnframedLine}" />
+			<Polyline Points="20,82 20,122" Style="{Binding UnframedLine}" />
+			<Polyline Points="60,82 60,122" Style="{Binding UnframedLine}" />
+			<Polyline Points="100,82 100,122" Style="{Binding UnframedLine}" />
+			<Polyline Points="54,-146 19,-126" Style="{Binding UnframedLine}" />
+			<Polyline Points="74,-111 39,-91" Style="{Binding UnframedLine}" />
+			<Polyline Points="94,-77 59,-57" Style="{Binding UnframedLine}" />
+			<Polyline Points="114,-42 79,-22" Style="{Binding UnframedLine}" />
+			<Polyline Points="134,-7 99,13" Style="{Binding UnframedLine}" />
+			<Polyline Points="154,27 119,47" Style="{Binding UnframedLine}" />
+			<Polyline Points="-154,27 -119,47" Style="{Binding UnframedLine}" />
+			<Polyline Points="-134,-7 -99,13" Style="{Binding UnframedLine}" />
+			<Polyline Points="-114,-42 -79,-22" Style="{Binding UnframedLine}" />
+			<Polyline Points="-94,-77 -59,-57" Style="{Binding UnframedLine}" />
+			<Polyline Points="-74,-111 -39,-91" Style="{Binding UnframedLine}" />
+			<Polyline Points="-54,-146 -19,-126" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPDPON">
+		<Canvas>
+			<Polygon Points="-140,82 0,-162 140,82" Style="{Binding UnframedLine}" />
+			<Polyline Points="70,-40 -140,82" Style="{Binding UnframedLine}" />
+			<Path Data="F0 M -41,-33 C0,-9,7,5,24,66 " Style="{Binding UnframedLine}" />
+			<Path Data="F0 M 41,-33 C0,-9,-7,5,-24,66 " Style="{Binding UnframedLine}" />
+			<Ellipse Width="32" Height="32" Canvas.Left="-64" Canvas.Top="-39"  Style="{Binding Fill}" />
+			<Ellipse Width="32" Height="32" Canvas.Left="32" Canvas.Top="-39"  Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPPN">
+		<Canvas>
+			<Polygon Points="-140,172 140,172 140,-11 -140,-11" Fill="#FFFFFFFF" Style="{Binding UnframedLine}" />
+			<Polyline Points="-140,-11 0,-172 140,-11" StrokeDashOffset="5.5" StrokeDashArray="6 2"  Style="{Binding UnframedLine}" />
+			<Ellipse Width="50" Height="50" Canvas.Left="-25" Canvas.Top="55"  Style="{Binding UnframedLine}" />
+			<Ellipse Width="50" Height="50" Canvas.Left="-100" Canvas.Top="55"  Style="{Binding UnframedLine}" />
+			<Ellipse Width="50" Height="50" Canvas.Left="50" Canvas.Top="55"  Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPAPU">
+		<Canvas>
+			<Path Data="F1 M 119,0 C119,-69,63,-125,-6,-125 C-75,-125,-131,-69,-131,0 C-131,69,-75,125,-6,125 C63,125,119,69,119,0 " Style="{Binding UnframedLine}" />
+			<Polygon Points="-71,35 -71,-35 69,35 69,-35" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPAPD">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-40,-110 40,-110" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-110 0,-195" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-195 50,-245" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-195 -50,-245" Style="{Binding UnframedLine}" />
+			<Ellipse Width="48" Height="48" Canvas.Left="-24" Canvas.Top="-265" 	Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPAPC">
+		<Canvas>
+			<Path Data="F1 M 125,0 C125,-69,69,-125,0,-125 C-69,-125,-125,-69,-125,0 C-125,69,-69,125,0,125 C69,125,125,69,125,0 " Style="{Binding UnframedLine}" />
+			<TextBlock Text="CCP" FontFamily="Arial" FontSize="72" Foreground="#FF000000" Canvas.Left="-75" Canvas.Top="-102" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_GPAPP">
+		<Canvas>
+			<Path Data="F1 M 125,0 C125,-69,69,-125,0,-125 C-69,-125,-125,-69,-125,0 C-125,69,-69,125,0,125 C69,125,125,69,125,0 " Style="{Binding UnframedLine}" />
+			<TextBlock Text="ACP" FontFamily="Arial" FontSize="72" Foreground="#FF000000" Canvas.Left="-72" Canvas.Top="-102" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPN">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="UMCP" FontFamily="Arial" FontSize="46" Foreground="#FF000000" Canvas.Left="-68" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPI">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="TTP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-57" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPO">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="TCP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-60" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSZ">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSJ">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+			<TextBlock Text="CA" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-42" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSH">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-125 0,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-200 70,-200" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSG">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+			<Path Data="F0 M -41,-207 C-14,-230,16,-230,42,-207 " Style="{Binding UnframedLine}" />
+			<Ellipse Width="34" Height="34" Canvas.Left="-62" Canvas.Top="-216" Style="{Binding Fill}" />
+			<Ellipse Width="34" Height="34" Canvas.Left="28" Canvas.Top="-216" Style="{Binding Fill}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSF">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+			<Polyline Points="-35,-210 35,-210" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-225 0,-170" Style="{Binding UnframedLine}" />
+			<Polyline Points="30,-140 0,-170 -30,-140" Style="{Binding UnframedLine}" />
+			<Ellipse Width="48" Height="48" Canvas.Left="-24" Canvas.Top="-270" 	Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSE">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+			<Path Data="F1 M -40,-140 L -40,-237 C-30,-272,30,-272,40,-237 L 40,-140 " Style="{Binding UnframedLine}" />
+			<Polyline Points="-55,-140 55,-140" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSI">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-240 0,-260" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-160 0,-140" Style="{Binding UnframedLine}" />
+			<Polyline Points="40,-200 60,-200" Style="{Binding UnframedLine}" />
+			<Polyline Points="-40,-200 -60,-200" Style="{Binding UnframedLine}" />
+			<Polyline Points="-30,-225 -45,-240" Style="{Binding UnframedLine}" />
+			<Polyline Points="30,-225 45,-240" Style="{Binding UnframedLine}" />
+			<Polyline Points="30,-175 45,-160" Style="{Binding UnframedLine}" />
+			<Polyline Points="-30,-175 -45,-160" Style="{Binding UnframedLine}" />
+			<Ellipse Width="80" Height="80" Canvas.Left="-40" Canvas.Top="-240"  Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSD">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+			<Polyline Points="-50,-175 -50,-225 50,-225 50,-175" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-225 0,-195" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSC">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+			<Polygon Points="0,-180 40,-255 -40,-255" Style="{Binding UnframedLine}" />
+			<Polyline Points="0,-180 0,-135" Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSB">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+			<TextBlock Text="II" FontFamily="Times New Roman" FontWeight="Bold" FontSize="90" Foreground="#FF000000" Canvas.Left="-35" Canvas.Top="-253" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPSA">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-126 70,-126" Style="{Binding UnframedLine}" />
+			<Path Data="F1 M 15,-260 C-45,-260,-45,-145,15,-145 " Style="{Binding UnframedLine}" />
+			<Path Data="F1 M 15,-260 C-15,-260,-15,-145,15,-145 " Style="{Binding UnframedLine}" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPU">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="ROM" FontFamily="Arial" FontSize="58" Foreground="#FF000000" Canvas.Left="-68" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPR">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="R3P" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-58" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPM">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="MCP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-67" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPL">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="LRP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-58" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPE">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="EPW" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-68" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPD">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="DET" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-60" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPT">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="CIV" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-50" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPY">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="CCP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-63" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPC">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="CAN" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-63" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPAT">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="ATP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-58" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPAS">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="ASP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-60" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+	<ControlTemplate x:Key="G_SPPX">
+		<Canvas>
+			<Polygon Points="-70,-95 70,-95 70,-275 -70,-275" Style="{Binding UnframedLine}" />
+			<Polyline Points="-70,-95 0,0 70,-95" Style="{Binding UnframedLine}" />
+			<TextBlock Text="AXP" FontFamily="Arial" FontSize="60" Foreground="#FF000000" Canvas.Left="-60" Canvas.Top="-270" />
+		</Canvas>
+	</ControlTemplate>
+
+</ResourceDictionary>

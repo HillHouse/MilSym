@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5350CE70-BBF5-48F9-9D2F-0070D6065DD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MilSym.MilSymbol</RootNamespace>
+    <AssemblyName>MilSym.MilSymbol.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>DoNotBuild</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MilSym.AppendixA.WPF">
+      <HintPath>..\Bin\MilSym.AppendixA.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MilSym.AppendixB.WPF">
+      <HintPath>..\Bin\MilSym.AppendixB.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MilSym.AppendixC.WPF">
+      <HintPath>..\Bin\MilSym.AppendixC.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MilSym.AppendixD.WPF">
+      <HintPath>..\Bin\MilSym.AppendixD.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MilSym.AppendixE.WPF">
+      <HintPath>..\Bin\MilSym.AppendixE.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MilSym.AppendixG.WPF">
+      <HintPath>..\Bin\MilSym.AppendixG.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MilSym.LoadResources.WPF">
+      <HintPath>..\Bin\MilSym.LoadResources.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Silverlight\MilSymbol\DescData.cs">
+      <Link>DescData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\DrawMobility.cs">
+      <Link>DrawMobility.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\ExtensionMethods.cs">
+      <Link>ExtensionMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\GlobalSuppressions.cs">
+      <Link>GlobalSuppressions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\MilAppendix.cs">
+      <Link>MilAppendix.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\MilBrush.cs">
+      <Link>MilBrush.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\MilHats.cs">
+      <Link>MilHats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\MilLabels.cs">
+      <Link>MilLabels.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\MilSymbol.cs">
+      <Link>MilSymbol.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\MilSymbolBase.cs">
+      <Link>MilSymbolBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\BattleDimension.cs">
+      <Link>Schemas\BattleDimension.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\Category.cs">
+      <Link>Schemas\Category.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\CategoryBattleDimension.cs">
+      <Link>Schemas\CategoryBattleDimension.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\CodingScheme.cs">
+      <Link>Schemas\CodingScheme.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\CombinedModifierCode.cs">
+      <Link>Schemas\CombinedModifierCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\Countries.cs">
+      <Link>Schemas\Countries.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\Echelon.cs">
+      <Link>Schemas\Echelon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\Mobility.cs">
+      <Link>Schemas\Mobility.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\ModifierCode.cs">
+      <Link>Schemas\ModifierCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\OrderOfBattle.cs">
+      <Link>Schemas\OrderOfBattle.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\Scaling.cs">
+      <Link>Schemas\Scaling.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\StandardIdentity.cs">
+      <Link>Schemas\StandardIdentity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\Schemas\StatusOperationalCapacity.cs">
+      <Link>Schemas\StatusOperationalCapacity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\SymbolData.cs">
+      <Link>SymbolData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilSymbol\WindBarb.cs">
+      <Link>WindBarb.cs</Link>
+    </Compile>
+    <Compile Include="ExtensionMethodsWpf.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Outlines.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="..\..\Silverlight\MilSymbol\Themes\MultipointAppendixB.xaml">
+      <Link>Themes\MultipointAppendixB.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="..\..\Silverlight\MilSymbol\Themes\LabelResources.xaml">
+      <Link>Themes\LabelResources.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkReference="63ffdf32-418d-42fd-992b-823ebf2a71f6" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
