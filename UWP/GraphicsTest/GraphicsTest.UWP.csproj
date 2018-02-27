@@ -130,11 +130,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MilSym.LoadResources.UWP">
-      <HintPath>..\..\Bin\MilSym.LoadResources.UWP.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\MilSymbol\MilSymbol.UWP.csproj">
       <Project>{7a4f4978-c324-48e3-9916-4ddde14be632}</Project>
       <Name>MilSymbol.UWP</Name>
@@ -146,6 +141,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MilSym.LoadResources.UWP">
+      <HintPath>..\Bin\MilSym.LoadResources.UWP.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

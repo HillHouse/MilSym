@@ -131,6 +131,36 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="..\..\Silverlight\AppendixA\AirSpaceAppendixA.xaml">
+      <Link>Assets\MilSym.AppendixA.UWP\AirSpaceAppendixA.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Silverlight\AppendixA\GroundEquipmentAppendixA.xaml">
+      <Link>Assets\MilSym.AppendixA.UWP\GroundEquipmentAppendixA.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Silverlight\AppendixA\GroundInstallationAppendixA.xaml">
+      <Link>Assets\MilSym.AppendixA.UWP\GroundInstallationAppendixA.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Silverlight\AppendixA\GroundUnitAppendixA.xaml">
+      <Link>Assets\MilSym.AppendixA.UWP\GroundUnitAppendixA.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Silverlight\AppendixA\SofWaterAppendixA.xaml">
+      <Link>Assets\MilSym.AppendixA.UWP\SofWaterAppendixA.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\Silverlight\AppendixA\SubsurfaceAppendixA.xaml">
+      <Link>Assets\MilSym.AppendixA.UWP\SubsurfaceAppendixA.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -163,6 +193,10 @@
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
