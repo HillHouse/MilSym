@@ -192,6 +192,28 @@ namespace MilSym.EsriSupport
         }
 
         /// <summary>
+        /// Returns whether or not this rectangle contains the passed in rectangle.
+        /// </summary>
+        /// <param name="lr">
+        /// The location rectangle to compare against the current instance.
+        /// </param>
+        /// <returns>
+        /// A boolean indicating if this rectangle contains the passed in rectangle.
+        /// </returns>
+        public bool Contains(ILocationRect lr)
+        {
+            if (lr.West >= West &&
+                lr.East <= East &&
+                lr.South >= South &&
+                lr.North <= North)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Returns whether the passed in ILocationRect intersects this ILocationRect.
         /// </summary>
         /// <param name="lr">

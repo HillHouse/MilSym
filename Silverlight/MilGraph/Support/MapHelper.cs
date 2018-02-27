@@ -18,7 +18,14 @@ namespace MilSym.MilGraph.Support
     using System;
     using System.Collections.Generic;
     using System.Linq;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Media;
+#else
     using System.Windows;
+#endif
 
     /// <summary>
     /// Helper functions to assist in map-based computations.
@@ -98,8 +105,8 @@ namespace MilSym.MilGraph.Support
         public static double RadToDeg(double x)
         {
             return x * 180 / Math.PI;
-        }
-
+        }        
+        
         /// <summary>
         /// Computes a new map location that is a given arc length (range) and bearing from another map location.
         /// </summary>

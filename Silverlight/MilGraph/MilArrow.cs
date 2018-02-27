@@ -17,9 +17,18 @@ namespace MilSym.MilGraph
 {
     using System.Collections.Generic;
     using System.Linq;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+    using PointHelper = MilSym.MilGraph.Support.PointHelper;
+#else
     using System.Windows;
     using System.Windows.Media;
     using System.Windows.Shapes;
+#endif
     using Support;
 
     /// <summary>
@@ -177,7 +186,7 @@ namespace MilSym.MilGraph
             anchors.RemoveAt(index);
 
             double newScaleFactor;
-            MilGraphic.FullTransformation(path, null, points, anchors, origin, out newScaleFactor);
+            MilGraphic.FullTransformation(mg, path, null, points, anchors, origin, out newScaleFactor);
 
             // We also need the oldScaleFactor - the scaleFactor that the rest of the graphic will be using. 
             double oldScaleFactor;

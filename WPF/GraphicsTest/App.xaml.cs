@@ -12,6 +12,7 @@
 //   http://milsym.codeplex.com
 // </homepage>
 // --------------------------------------------------------------------------------------------------------------------
+using System.Windows.Navigation;
 
 namespace GraphicsTest
 {
@@ -20,5 +21,18 @@ namespace GraphicsTest
     /// </summary>
     public partial class App
     {
+        private NavigationWindow navigationWindow;
+
+        private void Application_Startup(object sender, object e)
+        {
+            navigationWindow = new NavigationWindow
+            {
+                Height = 667,
+                Width = 657
+            };
+            var page = new MainPage();
+            navigationWindow.Navigate(page);
+            navigationWindow.Show();
+        }
     }
 }

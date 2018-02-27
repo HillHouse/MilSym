@@ -18,6 +18,20 @@ namespace MapTest
 // ReSharper restore CheckNamespace
 {
     using System;
+#if WINDOWS_UWP
+    using Windows.ApplicationModel.Core;
+    using Windows.UI.Core;
+    using Windows.UI.Xaml;
+
+    public static class SmartDispatcher
+    {
+        public static async void BeginInvoke(DispatchedHandler d)
+        {
+            var dis = (Window.Current == null) ? CoreApplication.MainView.CoreWindow.Dispatcher : CoreApplication.GetCurrentView().CoreWindow.Dispatcher;
+            await dis.RunAsync(CoreDispatcherPriority.Normal, d);
+        }
+    }
+#else
     using System.ComponentModel;
     using System.Windows;
     using System.Windows.Threading;
@@ -84,12 +98,7 @@ namespace MapTest
         /// <param name="dispatcher">The dispatcher instance.</param> 
         public static void Initialize(Dispatcher dispatcher)
         {
-            if (dispatcher == null)
-            {
-                throw new ArgumentNullException("dispatcher");
-            }
-
-            instance = dispatcher;
+            instance = dispatcher ?? throw new ArgumentNullException("dispatcher");
         }
 
         /// <summary> 
@@ -176,4 +185,5 @@ namespace MapTest
             }
         }
     }
+#endif
 } 

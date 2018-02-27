@@ -507,35 +507,37 @@
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="G_FPACNC">
-		<Canvas>
-			<Canvas.Clip>
-				<EllipseGeometry Center="0,0" RadiusX="125" RadiusY="125" />
-			</Canvas.Clip>
-			<Polyline Points="15,125 125,55"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-5,125 125,40"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-25,125 125,25"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-45,125 125,10"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-65,125 125,-5"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-85,125 125,-20"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-105,125 125,-35"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,125 125,-50"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,110 125,-65"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,95 125,-80"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,80 125,-95"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,65 125,-110"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,50 125,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,35 105,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,20 85,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,5 65,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,-10 45,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,-25 25,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,-40 5,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Polyline Points="-125,-55 -15,-125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
-			<Ellipse Width="250" Height="250" Canvas.Left="-125" Canvas.Top="-125" Style="{Binding UnframedLine}" />
-			<Rectangle Width="60" Height="34" Fill="#FFFFFFFF" Canvas.Left="-31" Canvas.Top="-42" />
-			<TextBlock Text="NFA" FontFamily="Arial" FontWeight="Bold" FontSize="29" Foreground="#FF000000" Canvas.Left="-31" Canvas.Top="-42" />
-		</Canvas>
-	</ControlTemplate>
+        <Canvas>
+            <Polyline Points="117.4,42.8 0,125"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="122,27.1 -16.3,123.9"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="124.3,13 -30.4,121.3"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="125,0 -42.8,117.4"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="124.4,-12.1 -53.9,112.8"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="122.8,-23.4 -64.1,107.3"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="120.2,-34.2 -73.3,101.3"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="116.9,-44.3 -81.6,94.7"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="112.8,-53.9 -89.3,87.5"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="107.9,-63.1 -96.2,79.8"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="102.4,-71.7 -102.4,71.7"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="96.2,-79.8 -107.9,63.1"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="89.3,-87.5 -112.8,53.9"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="81.6,-94.7 -116.9,44.3"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="73.3,-101.3 -120.2,34.2"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="64.1,-107.3 -122.8,23.4"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="53.9,-112.8 -124.4,12.1"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="42.8,-117.4 -125,0"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="30.4,-121.3 -124.3,-13"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="16.3,-123.9 -122,-27.1"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="0,-125 -117.4,-42.8"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="109,61.2 20.2,123.4"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="-20.2,-123.4 -109,-61.2"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="89.2,87.5 51.7,113.8"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Polyline Points="-51.7,-113.8 -89.2,-87.5"  Style="{Binding UnframedLine}" StrokeThickness="5" />
+            <Ellipse Width="250" Height="250" Canvas.Left="-125" Canvas.Top="-125" Style="{Binding UnframedLine}" />
+            <Rectangle Width="60" Height="34" Fill="#FFFFFFFF" Canvas.Left="-31" Canvas.Top="-42" />
+            <TextBlock Text="NFA" FontFamily="Arial" FontWeight="Bold" FontSize="29" Foreground="#FF000000" Canvas.Left="-31" Canvas.Top="-42" />
+        </Canvas>
+    </ControlTemplate>
 	<ControlTemplate x:Key="G_FPACFC">
 		<Canvas>
 			<TextBlock Text="FFA" FontFamily="Arial" FontWeight="Bold" FontSize="32" Foreground="#FF000000" Canvas.Left="-31" Canvas.Top="-62" />

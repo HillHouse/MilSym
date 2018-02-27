@@ -19,12 +19,23 @@ namespace MilSym.MilSymbol
     using System.Collections;
     using System.Collections.Generic;
     using System.Globalization;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Documents;
+    using Windows.UI.Xaml.Markup;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+#else
     using System.Windows;
     using System.Windows.Controls;
+    using System.Windows.Data;
     using System.Windows.Documents;
     using System.Windows.Markup;
     using System.Windows.Media;
     using System.Windows.Shapes;
+#endif
 
     using MilSym.LoadResources;
     using Schemas;
@@ -366,8 +377,11 @@ namespace MilSym.MilSymbol
             {
                 return null;
             }
-
+#if WINDOWS_UWP
+            string theString = theChar.ToString();
+#else
             string theString = theChar.ToString(Culture);
+#endif
             if (labels != null && labels.ContainsKey("F"))
             {
                 theString += " " + labels["F"];
@@ -1152,6 +1166,8 @@ namespace MilSym.MilSymbol
                     {
 #if SILVERLIGHT
                         var run = XamlReader.Load(XmlnsOpen + label.Substring(4)) as Run;   // #2
+#elif WINDOWS_UWP
+                        var run = XamlReader.Load(XmlnsOpen + label.Substring(4)) as Run;   // #2
 #else
                         var run = XamlReader.Parse(XmlnsOpen + label.Substring(4)) as Run;  // #2
 #endif
@@ -1206,10 +1222,17 @@ namespace MilSym.MilSymbol
             var count = tb.Inlines.Count;
             for (var i = count - 1; i > 0; i--)
             {
+#if WINDOWS_UWP
+                if (((InlineCollection)tb.Inlines)[i] is LineBreak)
+                {
+                    ((InlineCollection)tb.Inlines).RemoveAt(i);
+                }
+#else
                 if (((IList)tb.Inlines)[i] is LineBreak)
                 {
                     ((IList)tb.Inlines).RemoveAt(i);
                 }
+#endif
                 else
                 {
                     return;

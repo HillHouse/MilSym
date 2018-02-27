@@ -85,7 +85,7 @@
 	<ControlTemplate x:Key="IUUPSRU">
 		<Canvas>
 			<Path Data="{StaticResource UUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-74 C-59,-14,-26,8,30,3 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,-36 8,-80 8,-36 68,-80" Style="{StaticResource BS11}" />
 			<TextBlock Text="U" Style="{StaticResource BT60}" Canvas.Left="-105" Canvas.Top="-68" />
@@ -95,7 +95,7 @@
 	<ControlTemplate x:Key="IFUPSRU">
 		<Canvas>
 			<Path Data="{StaticResource FUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-62 C-59,-2,-26,20,29,15 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-24 7,-68 7,-24 67,-68" Style="{StaticResource BS11}" />
 			<TextBlock Text="U" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-56" />
@@ -105,7 +105,7 @@
 	<ControlTemplate x:Key="INUPSRU">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NUS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-63 C-59,-3,-26,19,29,14 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-25 7,-69 7,-25 67,-69" Style="{StaticResource BS11}" />
 			<TextBlock Text="U" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-57" />
@@ -115,7 +115,7 @@
 	<ControlTemplate x:Key="IHUPSRU">
 		<Canvas>
 			<Polygon Points="{StaticResource HUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-75 C-59,-15,-26,7,29,2 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-37 7,-81 7,-37 67,-81" Style="{StaticResource BS11}" />
 			<TextBlock Text="U" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-69" />
@@ -125,7 +125,7 @@
 	<ControlTemplate x:Key="IUUPSRT">
 		<Canvas>
 			<Path Data="{StaticResource UUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-74 C-59,-14,-26,8,30,3 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,-36 8,-80 8,-36 68,-80" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-105" Canvas.Top="-68" />
@@ -135,7 +135,7 @@
 	<ControlTemplate x:Key="IFUPSRT">
 		<Canvas>
 			<Path Data="{StaticResource FUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-62 C-59,-2,-26,20,29,15 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-24 7,-68 7,-24 67,-68" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-56" />
@@ -145,7 +145,7 @@
 	<ControlTemplate x:Key="INUPSRT">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NUS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-63 C-59,-3,-26,19,29,14 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-25 7,-69 7,-25 67,-69" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-57" />
@@ -155,7 +155,7 @@
 	<ControlTemplate x:Key="IHUPSRT">
 		<Canvas>
 			<Polygon Points="{StaticResource HUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-75 C-59,-15,-26,7,29,2 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-37 7,-81 7,-37 67,-81" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-69" />
@@ -165,7 +165,7 @@
 	<ControlTemplate x:Key="IUUPSRS">
 		<Canvas>
 			<Path Data="{StaticResource UUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-74 C-59,-14,-26,8,30,3 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,-36 8,-80 8,-36 68,-80" Style="{StaticResource BS11}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-115" Canvas.Top="-68" />
@@ -175,7 +175,7 @@
 	<ControlTemplate x:Key="IFUPSRS">
 		<Canvas>
 			<Path Data="{StaticResource FUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-62 C-59,-2,-26,20,29,15 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-24 7,-68 7,-24 67,-68" Style="{StaticResource BS11}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-116" Canvas.Top="-56" />
@@ -185,7 +185,7 @@
 	<ControlTemplate x:Key="INUPSRS">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NUS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-63 C-59,-3,-26,19,29,14 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-25 7,-69 7,-25 67,-69" Style="{StaticResource BS11}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-116" Canvas.Top="-57" />
@@ -195,7 +195,7 @@
 	<ControlTemplate x:Key="IHUPSRS">
 		<Canvas>
 			<Polygon Points="{StaticResource HUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-75 C-59,-15,-26,7,29,2 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-37 7,-81 7,-37 67,-81" Style="{StaticResource BS11}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-116" Canvas.Top="-69" />
@@ -205,7 +205,7 @@
 	<ControlTemplate x:Key="IUUPSRM">
 		<Canvas>
 			<Path Data="{StaticResource UUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-74 C-59,-14,-26,8,30,3 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,-36 8,-80 8,-36 68,-80" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="-68" />
@@ -215,7 +215,7 @@
 	<ControlTemplate x:Key="IFUPSRM">
 		<Canvas>
 			<Path Data="{StaticResource FUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-62 C-59,-2,-26,20,29,15 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-24 7,-68 7,-24 67,-68" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-56" />
@@ -225,7 +225,7 @@
 	<ControlTemplate x:Key="INUPSRM">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NUS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-63 C-59,-3,-26,19,29,14 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-25 7,-69 7,-25 67,-69" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-57" />
@@ -235,7 +235,7 @@
 	<ControlTemplate x:Key="IHUPSRM">
 		<Canvas>
 			<Polygon Points="{StaticResource HUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-75 C-59,-15,-26,7,29,2 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-37 7,-81 7,-37 67,-81" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-69" />
@@ -245,7 +245,7 @@
 	<ControlTemplate x:Key="IUUPSRE">
 		<Canvas>
 			<Path Data="{StaticResource UUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-74 C-59,-14,-26,8,30,3 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,-36 8,-80 8,-36 68,-80" Style="{StaticResource BS11}" />
 			<TextBlock Text="E" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="-68" />
@@ -255,7 +255,7 @@
 	<ControlTemplate x:Key="IFUPSRE">
 		<Canvas>
 			<Path Data="{StaticResource FUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-62 C-59,-2,-26,20,29,15 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-24 7,-68 7,-24 67,-68" Style="{StaticResource BS11}" />
 			<TextBlock Text="E" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-56" />
@@ -265,7 +265,7 @@
 	<ControlTemplate x:Key="INUPSRE">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NUS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-63 C-59,-3,-26,19,29,14 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-25 7,-69 7,-25 67,-69" Style="{StaticResource BS11}" />
 			<TextBlock Text="E" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-57" />
@@ -275,7 +275,7 @@
 	<ControlTemplate x:Key="IHUPSRE">
 		<Canvas>
 			<Polygon Points="{StaticResource HUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-75 C-59,-15,-26,7,29,2 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-37 7,-81 7,-37 67,-81" Style="{StaticResource BS11}" />
 			<TextBlock Text="E" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-69" />
@@ -285,7 +285,7 @@
 	<ControlTemplate x:Key="IUUPSRD">
 		<Canvas>
 			<Path Data="{StaticResource UUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-74 C-59,-14,-26,8,30,3 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,-36 8,-80 8,-36 68,-80" Style="{StaticResource BS11}" />
 			<TextBlock Text="D" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="-68" />
@@ -295,7 +295,7 @@
 	<ControlTemplate x:Key="IFUPSRD">
 		<Canvas>
 			<Path Data="{StaticResource FUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-62 C-59,-2,-26,20,29,15 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-24 7,-68 7,-24 67,-68" Style="{StaticResource BS11}" />
 			<TextBlock Text="D" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-56" />
@@ -305,7 +305,7 @@
 	<ControlTemplate x:Key="INUPSRD">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NUS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-63 C-59,-3,-26,19,29,14 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-25 7,-69 7,-25 67,-69" Style="{StaticResource BS11}" />
 			<TextBlock Text="D" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-57" />
@@ -315,7 +315,7 @@
 	<ControlTemplate x:Key="IHUPSRD">
 		<Canvas>
 			<Polygon Points="{StaticResource HUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HUS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-75 C-59,-15,-26,7,29,2 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,-37 7,-81 7,-37 67,-81" Style="{StaticResource BS11}" />
 			<TextBlock Text="D" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-69" />
@@ -325,7 +325,7 @@
 	<ControlTemplate x:Key="IUUPSCS">
 		<Canvas>
 			<Path Data="{StaticResource UUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,70 26,70" Style="{StaticResource BS10}" />
 			<Polyline Points="0,70 0,-55" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-74 -48,-87 -37,-104 -72,-115" Style="{StaticResource BS10}" />
@@ -339,7 +339,7 @@
 	<ControlTemplate x:Key="IFUPSCS">
 		<Canvas>
 			<Path Data="{StaticResource FUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,82 26,82" Style="{StaticResource BS10}" />
 			<Polyline Points="0,82 0,-43" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-62 -48,-75 -37,-92 -72,-103" Style="{StaticResource BS10}" />
@@ -353,7 +353,7 @@
 	<ControlTemplate x:Key="INUPSCS">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,81 26,81" Style="{StaticResource BS10}" />
 			<Polyline Points="0,81 0,-44" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-63 -48,-76 -37,-93 -72,-104" Style="{StaticResource BS10}" />
@@ -367,7 +367,7 @@
 	<ControlTemplate x:Key="IHUPSCS">
 		<Canvas>
 			<Polygon Points="{StaticResource HUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,69 26,69" Style="{StaticResource BS10}" />
 			<Polyline Points="0,69 0,-56" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-75 -48,-88 -37,-105 -72,-116" Style="{StaticResource BS10}" />
@@ -381,7 +381,7 @@
 	<ControlTemplate x:Key="IUUPSCP">
 		<Canvas>
 			<Path Data="{StaticResource UUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,70 26,70" Style="{StaticResource BS10}" />
 			<Polyline Points="0,70 0,-55" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-74 -48,-87 -37,-104 -72,-115" Style="{StaticResource BS10}" />
@@ -395,7 +395,7 @@
 	<ControlTemplate x:Key="IFUPSCP">
 		<Canvas>
 			<Path Data="{StaticResource FUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,82 26,82" Style="{StaticResource BS10}" />
 			<Polyline Points="0,82 0,-43" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-62 -48,-75 -37,-92 -72,-103" Style="{StaticResource BS10}" />
@@ -409,7 +409,7 @@
 	<ControlTemplate x:Key="INUPSCP">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,81 26,81" Style="{StaticResource BS10}" />
 			<Polyline Points="0,81 0,-44" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-63 -48,-76 -37,-93 -72,-104" Style="{StaticResource BS10}" />
@@ -423,7 +423,7 @@
 	<ControlTemplate x:Key="IHUPSCP">
 		<Canvas>
 			<Polygon Points="{StaticResource HUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,69 26,69" Style="{StaticResource BS10}" />
 			<Polyline Points="0,69 0,-56" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-75 -48,-88 -37,-105 -72,-116" Style="{StaticResource BS10}" />
@@ -437,7 +437,7 @@
 	<ControlTemplate x:Key="IUUPSCO">
 		<Canvas>
 			<Path Data="{StaticResource UUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,70 26,70" Style="{StaticResource BS10}" />
 			<Polyline Points="0,70 0,-55" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-74 -48,-87 -37,-104 -72,-115" Style="{StaticResource BS10}" />
@@ -451,7 +451,7 @@
 	<ControlTemplate x:Key="IFUPSCO">
 		<Canvas>
 			<Path Data="{StaticResource FUF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FUS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,82 26,82" Style="{StaticResource BS10}" />
 			<Polyline Points="0,82 0,-43" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-62 -48,-75 -37,-92 -72,-103" Style="{StaticResource BS10}" />
@@ -465,7 +465,7 @@
 	<ControlTemplate x:Key="INUPSCO">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,81 26,81" Style="{StaticResource BS10}" />
 			<Polyline Points="0,81 0,-44" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-63 -48,-76 -37,-93 -72,-104" Style="{StaticResource BS10}" />
@@ -479,7 +479,7 @@
 	<ControlTemplate x:Key="IHUPSCO">
 		<Canvas>
 			<Polygon Points="{StaticResource HUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HUS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HUS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,69 26,69" Style="{StaticResource BS10}" />
 			<Polyline Points="0,69 0,-56" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-75 -48,-88 -37,-105 -72,-116" Style="{StaticResource BS10}" />
@@ -493,7 +493,7 @@
 	<ControlTemplate x:Key="IUPPSRU">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-20" Canvas.Top="-94" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
@@ -504,7 +504,7 @@
 	<ControlTemplate x:Key="IFPPSRU">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-106" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -515,7 +515,7 @@
 	<ControlTemplate x:Key="INPPSRU">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-105" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -526,7 +526,7 @@
 	<ControlTemplate x:Key="IHPPSRU">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-93" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
@@ -537,7 +537,7 @@
 	<ControlTemplate x:Key="IUPPSRT">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-20" Canvas.Top="-94" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
@@ -548,7 +548,7 @@
 	<ControlTemplate x:Key="IFPPSRT">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-106" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -559,7 +559,7 @@
 	<ControlTemplate x:Key="INPPSRT">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-105" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -570,7 +570,7 @@
 	<ControlTemplate x:Key="IHPPSRT">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-93" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
@@ -581,7 +581,7 @@
 	<ControlTemplate x:Key="IUPPSRS">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-20" Canvas.Top="-94" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
@@ -592,7 +592,7 @@
 	<ControlTemplate x:Key="IFPPSRS">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-106" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -603,7 +603,7 @@
 	<ControlTemplate x:Key="INPPSRS">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-105" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -614,7 +614,7 @@
 	<ControlTemplate x:Key="IHPPSRS">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-93" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
@@ -625,7 +625,7 @@
 	<ControlTemplate x:Key="IUPPSRM">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-20" Canvas.Top="-94" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
@@ -636,7 +636,7 @@
 	<ControlTemplate x:Key="IFPPSRM">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-106" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -647,7 +647,7 @@
 	<ControlTemplate x:Key="INPPSRM">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-105" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -658,7 +658,7 @@
 	<ControlTemplate x:Key="IHPPSRM">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-93" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
@@ -669,7 +669,7 @@
 	<ControlTemplate x:Key="IUPPSRI">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-20" Canvas.Top="-94" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
@@ -680,7 +680,7 @@
 	<ControlTemplate x:Key="IFPPSRI">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-106" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -691,7 +691,7 @@
 	<ControlTemplate x:Key="INPPSRI">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-105" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -702,7 +702,7 @@
 	<ControlTemplate x:Key="IHPPSRI">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-93" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
@@ -713,7 +713,7 @@
 	<ControlTemplate x:Key="IUPPSRE">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-20" Canvas.Top="-94" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
@@ -724,7 +724,7 @@
 	<ControlTemplate x:Key="IFPPSRE">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-106" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -735,7 +735,7 @@
 	<ControlTemplate x:Key="INPPSRE">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-105" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -746,7 +746,7 @@
 	<ControlTemplate x:Key="IHPPSRE">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-93" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
@@ -757,7 +757,7 @@
 	<ControlTemplate x:Key="IUPPSRD">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-20" Canvas.Top="-94" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
@@ -768,7 +768,7 @@
 	<ControlTemplate x:Key="IFPPSRD">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-106" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -779,7 +779,7 @@
 	<ControlTemplate x:Key="INPPSRD">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-105" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
@@ -790,7 +790,7 @@
 	<ControlTemplate x:Key="IHPPSRD">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-93" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
@@ -801,7 +801,7 @@
 	<ControlTemplate x:Key="IUPPSCD">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-20" Canvas.Top="-94" />
 			<Polyline Points="-27,140 26,140" Style="{StaticResource BS10}" />
 			<Polyline Points="0,140 0,15" Style="{StaticResource BS10}" />
@@ -816,7 +816,7 @@
 	<ControlTemplate x:Key="IFPPSCD">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-106" />
 			<Polyline Points="-27,128 26,128" Style="{StaticResource BS10}" />
 			<Polyline Points="0,128 0,3" Style="{StaticResource BS10}" />
@@ -831,7 +831,7 @@
 	<ControlTemplate x:Key="INPPSCD">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-105" />
 			<Polyline Points="-27,129 26,129" Style="{StaticResource BS10}" />
 			<Polyline Points="0,129 0,4" Style="{StaticResource BS10}" />
@@ -846,7 +846,7 @@
 	<ControlTemplate x:Key="IHPPSCD">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<TextBlock Text="S" Style="{StaticResource BT60}" Canvas.Left="-21" Canvas.Top="-93" />
 			<Polyline Points="-27,141 26,141" Style="{StaticResource BS10}" />
 			<Polyline Points="0,141 0,16" Style="{StaticResource BS10}" />
@@ -2833,7 +2833,7 @@
 	<ControlTemplate x:Key="IUAPSRU">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-4 C-55,57,-22,79,34,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-49,35 12,-10 12,35 72,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="U" Style="{StaticResource BT60}" Canvas.Left="-105" Canvas.Top="2" />
@@ -2843,7 +2843,7 @@
 	<ControlTemplate x:Key="IFAPSRU">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-16 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="U" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-10" />
@@ -2853,7 +2853,7 @@
 	<ControlTemplate x:Key="INAPSRU">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -55,-15 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="U" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-9" />
@@ -2863,7 +2863,7 @@
 	<ControlTemplate x:Key="IHAPSRU">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-3 C-55,57,-22,79,33,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,35 11,-9 11,35 71,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="U" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="3" />
@@ -2873,7 +2873,7 @@
 	<ControlTemplate x:Key="IUAPSRTT">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-4 C-55,57,-22,79,34,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-49,35 12,-10 12,35 72,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-105" Canvas.Top="2" />
@@ -2883,7 +2883,7 @@
 	<ControlTemplate x:Key="IFAPSRTT">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-16 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-10" />
@@ -2893,7 +2893,7 @@
 	<ControlTemplate x:Key="INAPSRTT">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -55,-15 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-9" />
@@ -2903,7 +2903,7 @@
 	<ControlTemplate x:Key="IHAPSRTT">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-3 C-55,57,-22,79,33,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,35 11,-9 11,35 71,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="3" />
@@ -2913,7 +2913,7 @@
 	<ControlTemplate x:Key="IUAPSRTI">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-105" Canvas.Top="2" />
@@ -2923,7 +2923,7 @@
 	<ControlTemplate x:Key="IFAPSRTI">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-16 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-104" Canvas.Top="-10" />
@@ -2933,7 +2933,7 @@
 	<ControlTemplate x:Key="INAPSRTI">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-9" />
@@ -2943,7 +2943,7 @@
 	<ControlTemplate x:Key="IHAPSRTI">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="3" />
@@ -2953,7 +2953,7 @@
 	<ControlTemplate x:Key="IUAPSRTA">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-105" Canvas.Top="2" />
@@ -2963,7 +2963,7 @@
 	<ControlTemplate x:Key="IFAPSRTA">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-16 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-10" />
@@ -2973,7 +2973,7 @@
 	<ControlTemplate x:Key="INAPSRTA">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-9" />
@@ -2983,7 +2983,7 @@
 	<ControlTemplate x:Key="IHAPSRTA">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="T" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="3" />
@@ -2993,7 +2993,7 @@
 	<ControlTemplate x:Key="IUAPSRMF">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-4 C-55,57,-22,79,34,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-49,35 12,-10 12,35 72,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="2" />
@@ -3003,7 +3003,7 @@
 	<ControlTemplate x:Key="IFAPSRMF">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-16 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-10" />
@@ -3013,7 +3013,7 @@
 	<ControlTemplate x:Key="INAPSRMF">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -55,-15 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-9" />
@@ -3023,7 +3023,7 @@
 	<ControlTemplate x:Key="IHAPSRMF">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-3 C-55,57,-22,79,33,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,35 11,-9 11,35 71,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="3" />
@@ -3033,7 +3033,7 @@
 	<ControlTemplate x:Key="IUAPSRMT">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-4 C-55,57,-22,79,34,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-49,35 12,-10 12,35 72,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="2" />
@@ -3043,7 +3043,7 @@
 	<ControlTemplate x:Key="IFAPSRMT">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-16 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-10" />
@@ -3053,7 +3053,7 @@
 	<ControlTemplate x:Key="INAPSRMT">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -55,-15 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-9" />
@@ -3063,7 +3063,7 @@
 	<ControlTemplate x:Key="IHAPSRMT">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-3 C-55,57,-22,79,33,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,35 11,-9 11,35 71,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="3" />
@@ -3073,7 +3073,7 @@
 	<ControlTemplate x:Key="IUAPSRMG">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-4 C-55,57,-22,79,34,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-49,35 12,-10 12,35 72,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="2" />
@@ -3083,7 +3083,7 @@
 	<ControlTemplate x:Key="IFAPSRMG">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-16 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-10" />
@@ -3093,7 +3093,7 @@
 	<ControlTemplate x:Key="INAPSRMG">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -55,-15 C-55,45,-22,67,33,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,23 11,-21 11,23 71,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-9" />
@@ -3103,7 +3103,7 @@
 	<ControlTemplate x:Key="IHAPSRMG">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -55,-3 C-55,57,-22,79,33,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-50,35 11,-9 11,35 71,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="3" />
@@ -3113,7 +3113,7 @@
 	<ControlTemplate x:Key="IUAPSRMD">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -52,-4 C-52,57,-19,79,36,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-47,35 14,-10 14,35 75,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="2" />
@@ -3123,7 +3123,7 @@
 	<ControlTemplate x:Key="IFAPSRMD">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -53,-16 C-53,45,-20,67,35,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-48,23 13,-21 13,23 74,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-10" />
@@ -3133,7 +3133,7 @@
 	<ControlTemplate x:Key="INAPSRMD">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -53,-15 C-53,45,-20,67,35,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-48,23 13,-21 13,23 74,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-9" />
@@ -3143,7 +3143,7 @@
 	<ControlTemplate x:Key="IHAPSRMD">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -53,-3 C-53,57,-20,79,35,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-48,35 13,-9 13,35 74,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="3" />
@@ -3153,7 +3153,7 @@
 	<ControlTemplate x:Key="IUAPSRMA">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -52,-4 C-52,57,-19,79,36,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-47,35 14,-10 14,35 75,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="2" />
@@ -3163,7 +3163,7 @@
 	<ControlTemplate x:Key="IFAPSRMA">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -53,-16 C-53,45,-20,67,35,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-48,23 13,-21 13,23 74,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-10" />
@@ -3173,7 +3173,7 @@
 	<ControlTemplate x:Key="INAPSRMA">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -53,-15 C-53,45,-20,67,35,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-48,23 13,-21 13,23 74,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-9" />
@@ -3183,7 +3183,7 @@
 	<ControlTemplate x:Key="IHAPSRMA">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -53,-3 C-53,57,-20,79,35,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-48,35 13,-9 13,35 74,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="M" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="3" />
@@ -3193,7 +3193,7 @@
 	<ControlTemplate x:Key="IUAPSRI">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="I" Style="{StaticResource BT60}" Canvas.Left="-95" Canvas.Top="2" />
@@ -3203,7 +3203,7 @@
 	<ControlTemplate x:Key="IFAPSRI">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="I" Style="{StaticResource BT60}" Canvas.Left="-96" Canvas.Top="-10" />
@@ -3213,7 +3213,7 @@
 	<ControlTemplate x:Key="INAPSRI">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="I" Style="{StaticResource BT60}" Canvas.Left="-96" Canvas.Top="-9" />
@@ -3223,7 +3223,7 @@
 	<ControlTemplate x:Key="IHAPSRI">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="I" Style="{StaticResource BT60}" Canvas.Left="-96" Canvas.Top="3" />
@@ -3233,7 +3233,7 @@
 	<ControlTemplate x:Key="IUAPSRF">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="F" Style="{StaticResource BT60}" Canvas.Left="-105" Canvas.Top="2" />
@@ -3243,7 +3243,7 @@
 	<ControlTemplate x:Key="IFAPSRF">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="F" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-10" />
@@ -3253,7 +3253,7 @@
 	<ControlTemplate x:Key="INAPSRF">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="F" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="-9" />
@@ -3263,7 +3263,7 @@
 	<ControlTemplate x:Key="IHAPSRF">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="F" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="3" />
@@ -3273,7 +3273,7 @@
 	<ControlTemplate x:Key="IUAPSRE">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="E" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="2" />
@@ -3283,7 +3283,7 @@
 	<ControlTemplate x:Key="IFAPSRE">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="E" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-10" />
@@ -3293,7 +3293,7 @@
 	<ControlTemplate x:Key="INAPSRE">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="E" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-9" />
@@ -3303,7 +3303,7 @@
 	<ControlTemplate x:Key="IHAPSRE">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="E" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="3" />
@@ -3313,7 +3313,7 @@
 	<ControlTemplate x:Key="IUAPSRD">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="D" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="2" />
@@ -3323,7 +3323,7 @@
 	<ControlTemplate x:Key="IFAPSRD">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="D" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-10" />
@@ -3333,7 +3333,7 @@
 	<ControlTemplate x:Key="INAPSRD">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="D" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-9" />
@@ -3343,7 +3343,7 @@
 	<ControlTemplate x:Key="IHAPSRD">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="D" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="3" />
@@ -3353,7 +3353,7 @@
 	<ControlTemplate x:Key="IUAPSRC">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="C" Style="{StaticResource BT60}" Canvas.Left="-110" Canvas.Top="2" />
@@ -3363,7 +3363,7 @@
 	<ControlTemplate x:Key="IFAPSRC">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="C" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-10" />
@@ -3373,7 +3373,7 @@
 	<ControlTemplate x:Key="INAPSRC">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="C" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="-9" />
@@ -3383,7 +3383,7 @@
 	<ControlTemplate x:Key="IHAPSRC">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="C" Style="{StaticResource BT60}" Canvas.Left="-111" Canvas.Top="3" />
@@ -3393,7 +3393,7 @@
 	<ControlTemplate x:Key="IUAPSRAS">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="A" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="2" />
@@ -3403,7 +3403,7 @@
 	<ControlTemplate x:Key="IFAPSRAS">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="A" Style="{StaticResource BT60}" Canvas.Left="-107" Canvas.Top="-10" />
@@ -3413,7 +3413,7 @@
 	<ControlTemplate x:Key="INAPSRAS">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="A" Style="{StaticResource BT60}" Canvas.Left="-107" Canvas.Top="-9" />
@@ -3423,7 +3423,7 @@
 	<ControlTemplate x:Key="IHAPSRAS">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="A" Style="{StaticResource BT60}" Canvas.Left="-107" Canvas.Top="3" />
@@ -3433,7 +3433,7 @@
 	<ControlTemplate x:Key="IUAPSRAI">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-4 C-59,57,-26,79,30,73 " Style="{StaticResource BS11}" />
 			<Polyline Points="-53,35 8,-10 8,35 68,-10" Style="{StaticResource BS11}" />
 			<TextBlock Text="A" Style="{StaticResource BT60}" Canvas.Left="-106" Canvas.Top="2" />
@@ -3443,7 +3443,7 @@
 	<ControlTemplate x:Key="IFAPSRAI">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-16 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="A" Style="{StaticResource BT60}" Canvas.Left="-107" Canvas.Top="-10" />
@@ -3453,7 +3453,7 @@
 	<ControlTemplate x:Key="INAPSRAI">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Path Data="F1 M -59,-15 C-59,45,-26,67,29,62 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,23 7,-21 7,23 67,-21" Style="{StaticResource BS11}" />
 			<TextBlock Text="A" Style="{StaticResource BT60}" Canvas.Left="-107" Canvas.Top="-9" />
@@ -3463,7 +3463,7 @@
 	<ControlTemplate x:Key="IHAPSRAI">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Path Data="F0 M -59,-3 C-59,57,-26,79,29,74 " Style="{StaticResource BS11}" />
 			<Polyline Points="-54,35 7,-9 7,35 67,-9" Style="{StaticResource BS11}" />
 			<TextBlock Text="A" Style="{StaticResource BT60}" Canvas.Left="-107" Canvas.Top="3" />
@@ -3473,7 +3473,7 @@
 	<ControlTemplate x:Key="IUAPSCS">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,140 26,140" Style="{StaticResource BS10}" />
 			<Polyline Points="0,140 0,15" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-4 -48,-17 -37,-34 -72,-45" Style="{StaticResource BS10}" />
@@ -3487,7 +3487,7 @@
 	<ControlTemplate x:Key="IFAPSCS">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,128 26,128" Style="{StaticResource BS10}" />
 			<Polyline Points="0,128 0,3" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-16 -48,-29 -37,-46 -72,-57" Style="{StaticResource BS10}" />
@@ -3501,7 +3501,7 @@
 	<ControlTemplate x:Key="INAPSCS">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,129 26,129" Style="{StaticResource BS10}" />
 			<Polyline Points="0,129 0,4" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-15 -48,-28 -37,-45 -72,-56" Style="{StaticResource BS10}" />
@@ -3515,7 +3515,7 @@
 	<ControlTemplate x:Key="IHAPSCS">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,141 26,141" Style="{StaticResource BS10}" />
 			<Polyline Points="0,141 0,16" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-3 -48,-16 -37,-33 -72,-44" Style="{StaticResource BS10}" />
@@ -3529,7 +3529,7 @@
 	<ControlTemplate x:Key="IUAPSCP">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,140 26,140" Style="{StaticResource BS10}" />
 			<Polyline Points="0,140 0,15" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-4 -48,-17 -37,-34 -72,-45" Style="{StaticResource BS10}" />
@@ -3543,7 +3543,7 @@
 	<ControlTemplate x:Key="IFAPSCP">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,128 26,128" Style="{StaticResource BS10}" />
 			<Polyline Points="0,128 0,3" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-16 -48,-29 -37,-46 -72,-57" Style="{StaticResource BS10}" />
@@ -3557,7 +3557,7 @@
 	<ControlTemplate x:Key="INAPSCP">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,129 26,129" Style="{StaticResource BS10}" />
 			<Polyline Points="0,129 0,4" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-15 -48,-28 -37,-45 -72,-56" Style="{StaticResource BS10}" />
@@ -3571,7 +3571,7 @@
 	<ControlTemplate x:Key="IHAPSCP">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,141 26,141" Style="{StaticResource BS10}" />
 			<Polyline Points="0,141 0,16" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-3 -48,-16 -37,-33 -72,-44" Style="{StaticResource BS10}" />
@@ -3585,7 +3585,7 @@
 	<ControlTemplate x:Key="IUAPSCO">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,140 26,140" Style="{StaticResource BS10}" />
 			<Polyline Points="0,140 0,15" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-4 -48,-17 -37,-34 -72,-45" Style="{StaticResource BS10}" />
@@ -3599,7 +3599,7 @@
 	<ControlTemplate x:Key="IFAPSCO">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,128 26,128" Style="{StaticResource BS10}" />
 			<Polyline Points="0,128 0,3" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-16 -48,-29 -37,-46 -72,-57" Style="{StaticResource BS10}" />
@@ -3613,7 +3613,7 @@
 	<ControlTemplate x:Key="INAPSCO">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,129 26,129" Style="{StaticResource BS10}" />
 			<Polyline Points="0,129 0,4" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-15 -48,-28 -37,-45 -72,-56" Style="{StaticResource BS10}" />
@@ -3627,7 +3627,7 @@
 	<ControlTemplate x:Key="IHAPSCO">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,141 26,141" Style="{StaticResource BS10}" />
 			<Polyline Points="0,141 0,16" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-3 -48,-16 -37,-33 -72,-44" Style="{StaticResource BS10}" />
@@ -3641,7 +3641,7 @@
 	<ControlTemplate x:Key="IUAPSCC">
 		<Canvas>
 			<Path Data="{StaticResource UAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource UAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource UAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,140 26,140" Style="{StaticResource BS10}" />
 			<Polyline Points="0,140 0,15" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-4 -48,-17 -37,-34 -72,-45" Style="{StaticResource BS10}" />
@@ -3655,7 +3655,7 @@
 	<ControlTemplate x:Key="IFAPSCC">
 		<Canvas>
 			<Path Data="{StaticResource FAF}" Style="{Binding Fill}" />
-			<Path Data="{StaticResource FAS}" Style="{Binding Line}" />
+			<Path Data="{StaticResource FAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,128 26,128" Style="{StaticResource BS10}" />
 			<Polyline Points="0,128 0,3" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-16 -48,-29 -37,-46 -72,-57" Style="{StaticResource BS10}" />
@@ -3669,7 +3669,7 @@
 	<ControlTemplate x:Key="INAPSCC">
 		<Canvas>
 			<Polygon Points="{StaticResource NUF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource NAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource NAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,129 26,129" Style="{StaticResource BS10}" />
 			<Polyline Points="0,129 0,4" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-15 -48,-28 -37,-45 -72,-56" Style="{StaticResource BS10}" />
@@ -3683,7 +3683,7 @@
 	<ControlTemplate x:Key="IHAPSCC">
 		<Canvas>
 			<Polygon Points="{StaticResource HAF}" Style="{Binding Fill}" />
-			<Polyline Points="{StaticResource HAS}" Style="{Binding Line}" />
+			<Polyline Points="{StaticResource HAS}" Style="{Binding Lines}" />
 			<Polyline Points="-27,141 26,141" Style="{StaticResource BS10}" />
 			<Polyline Points="0,141 0,16" Style="{StaticResource BS10}" />
 			<Polyline Points="-10,-3 -48,-16 -37,-33 -72,-44" Style="{StaticResource BS10}" />

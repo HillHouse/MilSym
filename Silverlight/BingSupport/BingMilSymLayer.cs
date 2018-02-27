@@ -15,8 +15,10 @@
 
 namespace MilSym.BingSupport
 {
+    using System.Collections.Generic;
     using System.Linq;
     using System.Windows;
+    using System.Windows.Input;
     using System.Windows.Media;
 #if SILVERLIGHT
     using Microsoft.Maps.MapControl;
@@ -117,6 +119,56 @@ namespace MilSym.BingSupport
         }
 
         /// <summary>
+        /// Finds some (but maybe not all) of the map elements associated with a point.
+        /// </summary>
+        /// <param name="pos">The point at which to check for associated map elements</param>
+        /// <returns>An enumerable list of associated map elements</returns>
+        public IEnumerable<UIElement> ElementsAtPoint(Point pos)
+        {
+            var htr = VisualTreeHelper.HitTest(this.TheMap, pos);
+            if (htr != null && htr.VisualHit is UIElement ele)
+            {
+                return new List<UIElement> { ele };
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Returns a list of children associated with the layer.
+        /// </summary>
+        public IList<DependencyObject> ChildList => base.Children.OfType<DependencyObject>().ToList<DependencyObject>();
+
+        /// <summary>
+        /// Returns the point associated with the passed in event
+        /// </summary>
+        /// <typeparam name="T">The type of the event argument</typeparam>
+        /// <param name="ea">The event argument</param>
+        /// <returns>The point associated with the passed in event</returns>
+        public Point EventToPoint<T>(T ea)
+        {
+            var prea = ea as MouseButtonEventArgs;
+            if (prea != null)
+            {
+                return prea.GetPosition(TheMap);
+            }
+            return new Point(double.NaN, double.NaN);
+        }
+
+        /// <summary>
+        /// Returns the latitude and longitude corresponding to a screen point.
+        /// </summary>
+        /// <param name="p">
+        /// The screen point.
+        /// </param>
+        /// <returns>The latitude and longitude corresponding to the screen point.</returns>
+        public ILocation PointToLocation(Point p)
+        {
+            TheMap.TryViewportPointToLocation(p, out Location loc);
+            return new BingLocation(loc.Latitude, loc.Longitude);
+        }
+
+
+        /// <summary>
         /// Gets the map's zoom level - assuming it is available and 0.0 otherwise.
         /// </summary>
         public double ZoomLevel
@@ -204,7 +256,7 @@ namespace MilSym.BingSupport
             }
 
             this.UpdateLocationRectangle(loc.Longitude, loc.Latitude);
-            if (!Children.Contains(ui))
+            if (!base.Children.Contains(ui))
             {
                 this.AddChild(ui, loc as Location);
             }
@@ -233,7 +285,7 @@ namespace MilSym.BingSupport
 // ReSharper disable RedundantNameQualifier
                 mg.SetValue(MapLayer.PositionProperty, mg.Origin);
 // ReSharper restore RedundantNameQualifier
-                Children.Add(mg);
+                base.Children.Add(mg);
             }
             else if (symbol is UIElement)
             {
@@ -257,7 +309,7 @@ namespace MilSym.BingSupport
                 this.UpdateLocationRectangle(loc.Longitude, loc.Latitude);
             }
 
-            Children.Add(new MapPolyline { Locations = lc as LocationCollection, Stroke = br });
+            base.Children.Add(new MapPolyline { Locations = lc as LocationCollection, Stroke = br });
         }
     }
 }

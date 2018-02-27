@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFE4E003-1988-457E-A410-403ECE52848A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MilSym.MilGraph</RootNamespace>
+    <AssemblyName>MilSym.MilGraph.UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Silverlight\MilGraph\MilArrow.cs">
+      <Link>MilArrow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilGraph\MilGraphic.cs">
+      <Link>MilGraphic.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilGraph\MilLine.cs">
+      <Link>MilLine.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Silverlight\MilGraph\MilZone.cs">
+      <Link>MilZone.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\numericalrecipes\Cyclic.cs">
+      <Link>NumericalRecipies\Cyclic.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\numericalrecipes\Tridiagonal.cs">
+      <Link>NumericalRecipies\Tridiagonal.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\BezierSpline.cs">
+      <Link>Support\BezierSpline.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\ClosedBezierSpline.cs">
+      <Link>Support\ClosedBezierSpline.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\ILocatable.cs">
+      <Link>Support\ILocatable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\ILocation.cs">
+      <Link>Support\ILocation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\ILocationCollection.cs">
+      <Link>Support\ILocationCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\ILocationRect.cs">
+      <Link>Support\ILocationRect.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\IMilSymFactory.cs">
+      <Link>Support\IMilSymFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\IMilSymLayer.cs">
+      <Link>Support\IMilSymLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\IPolyLayer.cs">
+      <Link>Support\IPolyLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\MapHelper.cs">
+      <Link>Support\MapHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\MapMilSymbol.cs">
+      <Link>Support\MapMilSymbol.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\Matrix33.cs">
+      <Link>Support\Matrix33.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\Offset.cs">
+      <Link>Support\Offset.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\Order.cs">
+      <Link>Support\Order.cs</Link>
+    </Compile>
+    <Compile Include="..\..\silverlight\milgraph\support\PointHelper.cs">
+      <Link>Support\PointHelper.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\MilGraph.UWP.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.0.7</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MilSymbol\MilSymbol.UWP.csproj">
+      <Project>{7a4f4978-c324-48e3-9916-4ddde14be632}</Project>
+      <Name>MilSymbol.UWP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MilSym.LoadResources.UWP">
+      <HintPath>..\Bin\MilSym.LoadResources.UWP.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

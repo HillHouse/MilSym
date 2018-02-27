@@ -58,11 +58,6 @@ namespace MilSym.EsriSupport
             {
                 return this.Y;
             }
-
-            set
-            {
-                this.Y = value;
-            }
         }
 
         /// <summary>
@@ -73,11 +68,6 @@ namespace MilSym.EsriSupport
             get
             {
                 return this.X;
-            }
-
-            set
-            {
-                this.X = value;
             }
         }
 

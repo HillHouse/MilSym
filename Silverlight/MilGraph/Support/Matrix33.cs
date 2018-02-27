@@ -18,8 +18,14 @@ namespace MilSym.MilGraph.Support
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI.Xaml.Media;
+#else
     using System.Windows;
     using System.Windows.Media;
+    using System.Windows.Shapes;
+#endif
 
     /// <summary>
     /// A useful 3x3 matrix class for transforming a set of three points to and from a map.

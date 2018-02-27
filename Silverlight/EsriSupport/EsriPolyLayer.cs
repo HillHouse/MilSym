@@ -21,6 +21,7 @@ namespace MilSym.EsriSupport
     using ESRI.ArcGIS.Client.Symbols;
     using MilGraph.Support;
     using PointCollection = ESRI.ArcGIS.Client.Geometry.PointCollection;
+    using Transform = ESRI.ArcGIS.Client.Bing.Transform;
 
     /// <summary>
     /// Methods supporting IPolyLayer for use by the Esri maps.
@@ -41,7 +42,7 @@ namespace MilSym.EsriSupport
             var pc = new PointCollection();
             foreach (var p in lc)
             {
-                pc.Add(ESRI.ArcGIS.Client.Bing.Transform.GeographicToWebMercator(p as MapPoint));
+                pc.Add(Transform.GeographicToWebMercator(p as MapPoint));
             }
 
             var polyline = new Polyline();

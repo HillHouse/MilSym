@@ -519,7 +519,7 @@
 	<ControlTemplate x:Key="S.XPXM">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Lines}" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="SUSPXMTU">
@@ -557,7 +557,7 @@
 	<ControlTemplate x:Key="S.XPXMTU">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<TextBlock Text="TU" Style="{StaticResource BT60}" Canvas.Left="-46" Canvas.Top="-7" />
 		</Canvas>
 	</ControlTemplate>
@@ -596,7 +596,7 @@
 	<ControlTemplate x:Key="S.XPXMTO">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<TextBlock Text="TW" Style="{StaticResource BT60}" Canvas.Left="-46" Canvas.Top="-7" />
 		</Canvas>
 	</ControlTemplate>
@@ -635,7 +635,7 @@
 	<ControlTemplate x:Key="S.XPXMR">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<TextBlock Text="RO" Style="{StaticResource BT60}" Canvas.Left="-46" Canvas.Top="-7" />
 		</Canvas>
 	</ControlTemplate>
@@ -674,7 +674,7 @@
 	<ControlTemplate x:Key="S.XPXMP">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<TextBlock Text="PA" Style="{StaticResource BT60}" Canvas.Left="-41" Canvas.Top="-7" />
 		</Canvas>
 	</ControlTemplate>
@@ -713,7 +713,7 @@
 	<ControlTemplate x:Key="S.XPXMO">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<TextBlock Text="OT" Style="{StaticResource BT60}" Canvas.Left="-46" Canvas.Top="-7" />
 		</Canvas>
 	</ControlTemplate>
@@ -752,7 +752,7 @@
 	<ControlTemplate x:Key="S.XPXMH">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<TextBlock Text="HZ" Style="{StaticResource BT60}" Canvas.Left="-41" Canvas.Top="-7" />
 		</Canvas>
 	</ControlTemplate>
@@ -791,7 +791,7 @@
 	<ControlTemplate x:Key="S.XPXMF">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<TextBlock Text="FE" Style="{StaticResource BT60}" Canvas.Left="-41" Canvas.Top="-7" />
 		</Canvas>
 	</ControlTemplate>
@@ -830,7 +830,7 @@
 	<ControlTemplate x:Key="S.XPXMC">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<TextBlock Text="CA" Style="{StaticResource BT60}" Canvas.Left="-46" Canvas.Top="-7" />
 		</Canvas>
 	</ControlTemplate>
@@ -877,10 +877,10 @@
 	<ControlTemplate x:Key="S.XPXR">
 		<Canvas>
 			<Polygon Points="-65,100 -105,20 105,20 65,100 -65,100" Style="{Binding Fill}" />
-			<Polygon Points="-65,100 -105,20 105,20 65,100" Style="{Binding Line}" />
-			<Polyline Points="0,20 0,-100" Style="{Binding Line}" />
+			<Polygon Points="-65,100 -105,20 105,20 65,100" Style="{Binding Lines}" />
+			<Polyline Points="0,20 0,-100" Style="{Binding Lines}" />
 			<Polygon Points="100,5 15,5 15,-85 100,5" Style="{Binding Fill}" />
-			<Polygon Points="100,5 15,5 15,-85" Style="{Binding Line}" />
+			<Polygon Points="100,5 15,5 15,-85" Style="{Binding Lines}" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="SUSPXL">
@@ -922,7 +922,7 @@
 	<ControlTemplate x:Key="S.XPXL">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -55,-8 -55,-73 55,-73 55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<Polygon Points="80,-8 40,72 15,72 55,-8 80,-8" Fill="#FF000000" />
 			<Polygon Points="80,-8 40,72 15,72 55,-8" Style="{StaticResource BS1}" />
 		</Canvas>
@@ -958,7 +958,7 @@
 	<ControlTemplate x:Key="S.XPXH">
 		<Canvas>
 			<Polygon Points="110,-5 80,60 -80,60 -110,-5 -90,-5 -90,-60 -80,-30 80,-30 90,-60 90,-5 110,-5" Style="{Binding Fill}" />
-			<Polygon Points="110,-5 80,60 -80,60 -110,-5 -90,-5 -90,-60 -80,-30 80,-30 90,-60 90,-5" Style="{Binding Line}" />
+			<Polygon Points="110,-5 80,60 -80,60 -110,-5 -90,-5 -90,-60 -80,-30 80,-30 90,-60 90,-5" Style="{Binding Lines}" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="SUSPXF">
@@ -1001,9 +1001,9 @@
 	<ControlTemplate x:Key="S.XPXF">
 		<Canvas>
 			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92 -65,92" Style="{Binding Fill}" />
-			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92" Style="{Binding Line}" />
-			<Polyline Points="14,13 14,-92" Style="{Binding Line}" />
-			<Polyline Points="14,12 94,-68" Style="{Binding Line}" />
+			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92" Style="{Binding Lines}" />
+			<Polyline Points="14,13 14,-92" Style="{Binding Lines}" />
+			<Polyline Points="14,12 94,-68" Style="{Binding Lines}" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="SUSPXFTR">
@@ -1049,9 +1049,9 @@
 	<ControlTemplate x:Key="S.XPXFTR">
 		<Canvas>
 			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92 -65,92" Style="{Binding Fill}" />
-			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92" Style="{Binding Line}" />
-			<Polyline Points="14,13 14,-92" Style="{Binding Line}" />
-			<Polyline Points="14,12 94,-68" Style="{Binding Line}" />
+			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92" Style="{Binding Lines}" />
+			<Polyline Points="14,13 14,-92" Style="{Binding Lines}" />
+			<Polyline Points="14,12 94,-68" Style="{Binding Lines}" />
 			<TextBlock Text="TR" Style="{StaticResource BT60}" Canvas.Left="-41" Canvas.Top="23" />
 		</Canvas>
 	</ControlTemplate>
@@ -1098,9 +1098,9 @@
 	<ControlTemplate x:Key="S.XPXFDF">
 		<Canvas>
 			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92 -65,92" Style="{Binding Fill}" />
-			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92" Style="{Binding Line}" />
-			<Polyline Points="14,13 14,-92" Style="{Binding Line}" />
-			<Polyline Points="14,12 94,-68" Style="{Binding Line}" />
+			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92" Style="{Binding Lines}" />
+			<Polyline Points="14,13 14,-92" Style="{Binding Lines}" />
+			<Polyline Points="14,12 94,-68" Style="{Binding Lines}" />
 			<TextBlock Text="DF" Style="{StaticResource BT60}" Canvas.Left="-41" Canvas.Top="23" />
 		</Canvas>
 	</ControlTemplate>
@@ -1147,9 +1147,9 @@
 	<ControlTemplate x:Key="S.XPXFDR">
 		<Canvas>
 			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92 -65,92" Style="{Binding Fill}" />
-			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92" Style="{Binding Line}" />
-			<Polyline Points="14,13 14,-92" Style="{Binding Line}" />
-			<Polyline Points="14,12 94,-68" Style="{Binding Line}" />
+			<Polygon Points="-65,92 -105,12 -70,12 -70,-23 -10,-23 -10,12 105,12 65,92" Style="{Binding Lines}" />
+			<Polyline Points="14,13 14,-92" Style="{Binding Lines}" />
+			<Polyline Points="14,12 94,-68" Style="{Binding Lines}" />
 			<TextBlock Text="DR" Style="{StaticResource BT60}" Canvas.Left="-41" Canvas.Top="23" />
 		</Canvas>
 	</ControlTemplate>
@@ -3380,7 +3380,7 @@
 	<ControlTemplate x:Key="S.XPXP">
 		<Canvas>
 			<Polygon Points="-80,72 -100,42 -30,-73 0,-73 0,-53 -15,-53 -35,27 100,27 100,72 -80,72" Style="{Binding Fill}" />
-			<Polygon Points="-80,72 -100,42 -30,-73 0,-73 0,-53 -15,-53 -35,27 100,27 100,72" Style="{Binding Line}" />
+			<Polygon Points="-80,72 -100,42 -30,-73 0,-73 0,-53 -15,-53 -35,27 100,27 100,72" Style="{Binding Lines}" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="SUSPXA">
@@ -3414,7 +3414,7 @@
 	<ControlTemplate x:Key="S.XPXA">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -85,-8 -55,-73 -25,-73 -55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -85,-8 -55,-73 -25,-73 -55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -85,-8 -55,-73 -25,-73 -55,-8 105,-8 65,72" Style="{Binding Lines}" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="SUSPXAS">
@@ -3452,7 +3452,7 @@
 	<ControlTemplate x:Key="S.XPXAS">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -85,-8 -55,-73 -25,-73 -55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -85,-8 -55,-73 -25,-73 -55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -85,-8 -55,-73 -25,-73 -55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<TextBlock Text="SP" Style="{StaticResource BT72}" Canvas.Left="-49" Canvas.Top="-11" />
 		</Canvas>
 	</ControlTemplate>
@@ -3491,7 +3491,7 @@
 	<ControlTemplate x:Key="S.XPXAR">
 		<Canvas>
 			<Polygon Points="-65,72 -105,-8 -85,-8 -55,-73 -25,-73 -55,-8 105,-8 65,72 -65,72" Style="{Binding Fill}" />
-			<Polygon Points="-65,72 -105,-8 -85,-8 -55,-73 -25,-73 -55,-8 105,-8 65,72" Style="{Binding Line}" />
+			<Polygon Points="-65,72 -105,-8 -85,-8 -55,-73 -25,-73 -55,-8 105,-8 65,72" Style="{Binding Lines}" />
 			<TextBlock Text="RB" Style="{StaticResource BT72}" Canvas.Left="-52" Canvas.Top="-11" />
 		</Canvas>
 	</ControlTemplate>

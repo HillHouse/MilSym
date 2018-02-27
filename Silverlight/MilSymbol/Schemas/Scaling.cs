@@ -15,7 +15,11 @@
 
 namespace MilSym.MilSymbol.Schemas
 {
+#if WINDOWS_UWP
+    using Windows.Foundation;
+#else
     using System.Windows;
+#endif
 
     /// <summary>
     /// A scaling class that contains a bounding rectangle and some scaling factors

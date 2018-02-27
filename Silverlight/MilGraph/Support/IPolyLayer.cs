@@ -15,7 +15,11 @@
 
 namespace MilSym.MilGraph.Support
 {
+#if WINDOWS_UWP
+    using Windows.UI.Xaml.Media;
+#else
     using System.Windows.Media;
+#endif
 
     /// <summary>
     /// Interface for a map-independent map polyline and polygon layer.

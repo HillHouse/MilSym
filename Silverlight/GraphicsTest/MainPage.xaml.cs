@@ -28,10 +28,24 @@ namespace GraphicsTest
     using System.Windows.Media.Imaging;
     using System.Windows.Resources;
     using System.Windows.Threading;
-
-    using MilSym.LoadResources;
-    using MilSym.MilSymbol;
-    using MilSym.MilSymbol.Schemas;
+#elif WINDOWS_UWP
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Runtime.InteropServices.WindowsRuntime;
+    using Windows.Security.Cryptography.Core;
+    using Windows.Foundation;
+    using Windows.Storage;
+    using Windows.UI;
+    using Windows.UI.ViewManagement;
+    using Windows.UI.Popups;
+    using Windows.UI.Text;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Media.Imaging;
 #else
     using System;
     using System.Collections.Generic;
@@ -46,16 +60,15 @@ namespace GraphicsTest
     using System.Windows.Media.Imaging;
     using System.Windows.Resources;
     using System.Windows.Threading;
-
+#endif
     using MilSym.LoadResources;
     using MilSym.MilSymbol;
     using MilSym.MilSymbol.Schemas;
-#endif
 
     /// <summary>
     /// This is a simple test to illustrate some of the features of the military symbols in Appendix D.
     /// </summary>
-    public partial class MainPage
+    public sealed partial class MainPage
     {
         /// <summary>
         /// A parameter value used for placing the symbols on the page.
@@ -103,11 +116,17 @@ namespace GraphicsTest
         /// </summary>
         private static readonly IsolatedStorageSettings AppSettings =
             IsolatedStorageSettings.ApplicationSettings;
+#elif WINDOWS_UWP
+        /// <summary>
+        /// The configuration settings for the application. Not currently used.
+        /// </summary>
+        private static readonly ApplicationDataContainer AppSettings =
+            ApplicationData.Current.LocalSettings;
 #else
         /// <summary>
         /// The configuration settings for the application. Not currently used.
         /// </summary>
-        private static readonly KeyValueConfigurationCollection AppSettings = 
+        private static readonly KeyValueConfigurationCollection AppSettings =
             ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None).AppSettings.Settings;
 #endif
 
@@ -141,7 +160,11 @@ namespace GraphicsTest
         /// </summary>
         public MainPage()
         {
-            InitializeComponent();
+            this.InitializeComponent();
+#if WINDOWS_UWP
+            ApplicationView.PreferredLaunchViewSize = new Size(640, 607);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+#endif
         }
 
         /// <summary>
@@ -161,23 +184,54 @@ namespace GraphicsTest
         /// </summary>
         /// <param name="lastKnownPlot">the hash to compare</param>
         /// <param name="source">the Canvas (or UIElement) to compare</param>
+#if WINDOWS_UWP
+        private async static void CheckHash(string lastKnownPlot, UIElement source)
+#else
         private static void CheckHash(string lastKnownPlot, UIElement source)
+#endif
         {
             if (lastKnownPlot == null || lastKnownPlot == "Check")
             {
+#if WINDOWS_UWP
+                                    var dialog = new MessageDialog("Pick a test before comparing its checksum");
+                                    await dialog.ShowAsync();
+#else
                 MessageBox.Show("Pick a test before comparing its checksum");
+#endif
                 return;
             }
 
+#if WINDOWS_UWP
+            var imageArray = await GetByteArray(source);
+#else
             var imageArray = GetByteArray(source);
+#endif
             string hash = ComputeHash(imageArray);
 
             if (hash == Hashes[lastKnownPlot])
             {
+#if WINDOWS_UWP
+                                    var dialog = new MessageDialog("Checksum is OK", "Match");
+                                    dialog.Commands.Clear();
+                                    dialog.Commands.Add(new UICommand { Label = "OK", Id = 0 });
+                                    await dialog.ShowAsync();
+#else
                 MessageBox.Show("Checksum is OK", "Match", MessageBoxButton.OK);
+#endif
             }
             else
             {
+#if WINDOWS_UWP
+                                    var mb = new MessageDialog("Checksum doesn't match, which is normal for the first invocation only. Make this the new checksum?", "Mismatch");
+                                    mb.Commands.Clear();
+                                    mb.Commands.Add(new UICommand { Label = "OK", Id = 0 });
+                                    mb.Commands.Add(new UICommand { Label = "Cancel", Id = 1 });
+                                    var res = await mb.ShowAsync();
+                                    if ((int)res.Id == 0)
+                                    {
+                                        AppSettings.Values[lastPlot] = Hashes[lastPlot] = hash;
+                                    }
+#else
                 var mb =
                     MessageBox.Show(
                         "Checksum doesn't match, which is normal for the first invocation only. Make this the new checksum?",
@@ -186,11 +240,12 @@ namespace GraphicsTest
                 if (mb == MessageBoxResult.OK)
                 {
 #if SILVERLIGHT
-                    AppSettings[lastKnownPlot] = Hashes[lastKnownPlot] = hash;
+                                        AppSettings[lastKnownPlot] = Hashes[lastKnownPlot] = hash;
 #else
                     AppSettings[lastPlot].Value = Hashes[lastPlot] = hash;
 #endif
                 }
+#endif
             }
         }
 
@@ -204,10 +259,16 @@ namespace GraphicsTest
         /// <returns>the hash string</returns>
         private static string ComputeHash(byte[] message)
         {
+#if WINDOWS_UWP
+            var hap = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Sha256);
+            var hashValue = hap.HashData(message.AsBuffer());
+            return hashValue.ToArray().Aggregate(string.Empty, (current, x) => current + string.Format("{0:x2}", x));
+#else
             var hashString = new SHA256Managed();
 
             byte[] hashValue = hashString.ComputeHash(message);
             return hashValue.Aggregate(string.Empty, (current, x) => current + string.Format("{0:x2}", x));
+#endif
         }
 
         /// <summary>
@@ -224,6 +285,11 @@ namespace GraphicsTest
             }
 
             return uc.FindName("Symbols") as Canvas;
+#elif WINDOWS_UWP
+            return Window.Current.Content
+                .GetVisuals().OfType<Canvas>()
+                .Where<Canvas>(c => c.Name == "Symbols")
+                .FirstOrDefault<Canvas>();
 #else
             return LogicalTreeHelper.FindLogicalNode(Application.Current.MainWindow, "Symbols") as Canvas;
 #endif
@@ -277,20 +343,25 @@ namespace GraphicsTest
             linBrush.GradientStops.Add(CreateGradientStop(Color.FromArgb(255, 160, 160, 255), 0.6));
             linBrush.GradientStops.Add(CreateGradientStop(Color.FromArgb(255, 160, 255, 160), 1.0));
 
+#if WINDOWS_UWP
+            var uri = new Uri("ms-appx:///Assets/IcelandFlag64.png", UriKind.Absolute);
+            var bmi = new BitmapImage(uri);
+#else
             StreamResourceInfo sr = Application.GetResourceStream(
-                    new Uri("Resources/IcelandFlag64.png", UriKind.Relative));
+                new Uri("Resources/IcelandFlag64.png", UriKind.Relative));
             if (sr == null)
             {
                 Log.WriteMessage(
-                    LogLevel.Error, 
+                    LogLevel.Error,
                     "Cannot find the IcelandFlag64.png resource. Should be in GraphicsTest/Resources.");
                 return;
             }
-
             var bmi = new BitmapImage();
+#endif
+
 #if SILVERLIGHT
             bmi.SetSource(sr.Stream);
-#else
+#elif !WINDOWS_UWP
             bmi.BeginInit();
             bmi.StreamSource = sr.Stream;
             bmi.EndInit();
@@ -340,10 +411,10 @@ namespace GraphicsTest
 
                 sc = "I" + ee + "ZASRU----B**C";
                 ms = new MilSymbol(sc, Scale, null, new SolidColorBrush(Colors.Green));
-                
+
                 // ReSharper disable RedundantAssignment
                 DrawSymbol(cv, ms, x += 50, y);
-                
+
                 // ReSharper restore RedundantAssignment
                 x = 50;
                 y += 75;
@@ -399,10 +470,10 @@ namespace GraphicsTest
             }
 
             var dms = new MilSymbol("WOS-HDS---P----", Scale, "X=67.8");
-            
+
             // ReSharper disable RedundantAssignment
             DrawSymbol(cv, dms, x += 50, y);
-            
+
             // ReSharper restore RedundantAssignment
         }
 
@@ -415,15 +486,15 @@ namespace GraphicsTest
             // Example using Run: <Run Foreground='Purple'>KK</Run> 
             var labels = new[]
              {
-                 "C=12345;F=±", "G=GG;H=HH", "J=JJ;K=KK", "L=LL;M=MM", "N=NN;P=PP",
-                 "Q=30.6;T=TT", "V=VV;W=WW", "X=XX;Y=YY", "Z=ZZ;AA=ABCDEF",
+                                     "C=12345;F=±", "G=GG;H=HH", "J=JJ;K=KK", "L=LL;M=MM", "N=NN;P=PP",
+                                     "Q=30.6;T=TT", "V=VV;W=WW", "X=XX;Y=YY", "Z=ZZ;AA=ABCDEF",
 
-                 // Can't use = as separator in this string because of Foreground='Green', etc.
-                 "C:12345;F:±;G:Staff comments;H:H;J:J;" +
-                 "K:<Run Foreground='Green' FontWeight='Bold' FontStyle='Italic'>KK</Run>;" +
-                 "L:L;M:M;N:N;P:P;Q:30.6;" +
-                 "T:T;V:VvV;W:WwW;X:X;Y:Y;Z:ZzZzZ;AA:ABCDEF"
-             };
+                                     // Can't use = as separator in this string because of Foreground='Green', etc.
+                                     "C:12345;F:±;G:Staff comments;H:H;J:J;" +
+                                     "K:<Run Foreground='Green' FontWeight='Bold' FontStyle='Italic'>KK</Run>;" +
+                                     "L:L;M:M;N:N;P:P;Q:30.6;" +
+                                     "T:T;V:VvV;W:WwW;X:X;Y:Y;Z:ZzZzZ;AA:ABCDEF"
+                                 };
             Canvas cv = GetCanvas();
             if (cv == null)
             {
@@ -509,10 +580,10 @@ namespace GraphicsTest
             var categoryBattleDimension = new[] { "A", "G", "U", "F" };
             var mob = new[]
               {
-                  "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY",
-                  "NS", "NL",
-                  "H-", "HB", "AA", "BC", "CE", "DG", "EI", "FK", "GM"
-              };
+                                      "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY",
+                                      "NS", "NL",
+                                      "H-", "HB", "AA", "BC", "CE", "DG", "EI", "FK", "GM"
+                                  };
 
             foreach (string bd in categoryBattleDimension)
             {
@@ -661,6 +732,15 @@ namespace GraphicsTest
             {
                 return (string)AppSettings[setting];
             }
+            AppSettings.Add(setting, null);
+            return null;
+#elif WINDOWS_UWP
+            //if (AppSettings.Values.ContainsKey(setting))
+            //{
+            //    return (string)AppSettings.Values[setting];
+            //}
+            //AppSettings.Values[setting] = null;
+            return null;
 #else
             int len = AppSettings.AllKeys.GetLength(0);
             for (int i = 0; i < len; i++)
@@ -670,9 +750,9 @@ namespace GraphicsTest
                     return AppSettings[setting].Value;
                 }
             }
-#endif
             AppSettings.Add(setting, null);
             return null;
+#endif
         }
 
 #if SILVERLIGHT
@@ -699,6 +779,22 @@ namespace GraphicsTest
                 }
             }
             return imageArray;
+        }
+#elif WINDOWS_UWP
+        /// <summary>
+        /// Returns a byte array representative of the image associated with the UIElement.
+        /// </summary>
+        /// <param name="source">The UIElement whose image is to be returned.</param>
+        /// <returns>the hash stringThe byte array representing the image.</returns>
+        private async static Task<byte[]> GetByteArray(UIElement source)
+        {
+            var height = (int)source.RenderSize.Height;
+            var width = (int)source.RenderSize.Width;
+
+            RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap();
+            await renderTargetBitmap.RenderAsync(source, width, height);
+            var buffer = await renderTargetBitmap.GetPixelsAsync();
+            return buffer.ToArray();
         }
 #else
         /// <summary>
@@ -733,7 +829,7 @@ namespace GraphicsTest
             }
 
             return imageArray;
-        } 
+        }
 #endif
 
         /// <summary>
@@ -780,15 +876,15 @@ namespace GraphicsTest
         /// </summary>
         /// <param name="sender">This parameter is not used.</param>
         /// <param name="e">This parameter is also not used.</param>
-        private void TimerTick(object sender, EventArgs e)
+        private void TimerTick(object sender, object e)
         {
             if (this.milSymbol == null)
             {
                 this.milSymbol = new MilSymbol(
                     "IUGPSRU---DKCAE", labelString: "X=The default;V= label font;T=is Arial;H=World", scale: 2 * Scale)
-                    {
-                        LabelG = "Hello" 
-                    };
+                {
+                    LabelG = "Hello"
+                };
                 DrawSymbol(GetCanvas(), this.milSymbol, 300, 300);
                 return;
             }
@@ -797,7 +893,7 @@ namespace GraphicsTest
             int count = (int)(this.milSymbol.Angle % 360) / 36;
             this.milSymbol.SymbolCode = "I" + CommonAffiliation[count % 4] + "GPSRU---DKCAE";
             this.milSymbol.LabelString = "F=" + this.milSymbol.Angle + "°";
-            
+
             // Should be changing tooltip here too
             this.milSymbol.SetValue(Canvas.TopProperty, 300 + (100 * Math.Sin(this.milSymbol.Angle * Math.PI / 180.0)));
             this.milSymbol.SetValue(Canvas.LeftProperty, 300 + (100 * Math.Cos(this.milSymbol.Angle * Math.PI / 180.0)));
@@ -843,7 +939,11 @@ namespace GraphicsTest
 
             cv.Height = 4400;
             cv.Children.Clear();
+#if WINDOWS_UWP
+                                sv.ChangeView(0.0d, 0.0d, 1.0f);
+#else
             sv.ScrollToVerticalOffset(0.0);
+#endif
 
             switch (choice)
             {

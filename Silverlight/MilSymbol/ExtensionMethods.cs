@@ -16,8 +16,14 @@
 namespace MilSym.MilSymbol
 {
     using System.Collections.Generic;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Media;
+#else
     using System.Windows;
     using System.Windows.Media;
+#endif
 
     /// <summary>
     /// ExtensionMethods is a static class with some common extension methods for all components.

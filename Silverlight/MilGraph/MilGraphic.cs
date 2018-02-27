@@ -18,11 +18,21 @@ namespace MilSym.MilGraph
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Data;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+#else
+    using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Controls;
+    using System.Windows.Data;
     using System.Windows.Media;
     using System.Windows.Shapes;
-
+#endif
     using MilSym.LoadResources;
     using MilSym.MilGraph.Support;
     using MilSym.MilSymbol;
@@ -148,6 +158,12 @@ namespace MilSym.MilGraph
             "SymbolCode", typeof(string), typeof(MilGraphic), new PropertyMetadata(null, OnPropertyChanged));
 
         /// <summary>
+        /// The DependencyProperty for TextVisibility.
+        /// </summary>
+        private static readonly DependencyProperty TextVisibilityProperty = DependencyProperty.Register(
+            "TextVisibility", typeof(Visibility), typeof(MilGraphic), new PropertyMetadata(Visibility.Collapsed, OnPropertyChanged));
+
+        /// <summary>
         /// The DependencyProperty for MilSymFactory.
         /// </summary>
         private static IMilSymFactory milsymFactory;
@@ -261,6 +277,7 @@ namespace MilSym.MilGraph
         {
             try
             {
+                this.TextVisibility = Visibility.Collapsed;
                 this.suppressRefresh = true;
                 this.IsSpline = isSpline;
                 this.LabelOffset = labelOffset ?? new Offset();
@@ -340,6 +357,15 @@ namespace MilSym.MilGraph
         }
 
         /// <summary>
+        /// Gets or sets the text visibility for a multipoint graphic
+        /// </summary>
+        public Visibility TextVisibility
+        {
+            get { return (Visibility)GetValue(TextVisibilityProperty); }
+            set { this.SetValue(TextVisibilityProperty, value); }
+        }
+
+        /// <summary>
         /// Gets or sets the Anchors for the military graphic.
         /// </summary>
         public ILocationCollection Anchors
@@ -375,6 +401,11 @@ namespace MilSym.MilGraph
         /// same element is displayed on multiple maps. This might change in the future.
         /// </summary>
         public IMilSymLayer Layer { get; set; }
+
+        /// <summary>
+        /// Gets or sets the symbol's parent on the map.
+        /// </summary>
+        public FrameworkElement MapParent { get; set; }
 
         /// <summary>
         /// Gets "LocationRect" - the bounding box for the graphic.
@@ -558,8 +589,7 @@ namespace MilSym.MilGraph
         /// </param>
         public static void OnPropertyChanged(DependencyObject dp, DependencyPropertyChangedEventArgs e)
         {
-            var mg = dp as MilGraphic;
-            if (mg != null && mg.SymbolCode != null)
+            if (dp is MilGraphic mg && mg.SymbolCode != null)
             {
                 mg.GenerateGraphic();
             }
@@ -580,9 +610,15 @@ namespace MilSym.MilGraph
         public static Point ComputeTextAngles(GeneralTransform mt, Point point)
         {
             // We need the text angle so we know whether to reverse the text
+#if WINDOWS_UWP
+            var offset = mt.TransformPoint(point);
+            var horOffset = mt.TransformPoint(new Point(point.X + ArbitraryDistance, point.Y));
+            var verOffset = mt.TransformPoint(new Point(point.X, point.Y - ArbitraryDistance)); // pointing in the positive y direction
+#else
             var offset = mt.Transform(point);
             var horOffset = mt.Transform(new Point(point.X + ArbitraryDistance, point.Y));
             var verOffset = mt.Transform(new Point(point.X, point.Y - ArbitraryDistance)); // pointing in the positive y direction
+#endif
             var horAngle = Math.Atan2(horOffset.Y - offset.Y, horOffset.X - offset.X) * 180.0 / Math.PI;
             var verAngle = Math.Atan2(verOffset.Y - offset.Y, verOffset.X - offset.X) * 180.0 / Math.PI;
             return new Point(horAngle, verAngle);
@@ -723,8 +759,11 @@ namespace MilSym.MilGraph
         /// <summary>
         /// Computes the full transformation needed to take the graphic object to the map.
         /// </summary>
+        /// <param name="mg">
+        /// The MilGraphic.
+        /// </param>
         /// <param name="dowe">
-        /// The DependencyObject that represents the MilGraphic.
+        /// The DependencyObject that represents the MilGraphic's ContentControl.
         /// </param>
         /// <param name="indices">
         /// The indices are a collection of reference point pairs that are used to define
@@ -750,6 +789,7 @@ namespace MilSym.MilGraph
         /// The location of the origin, but now in map coordinates.
         /// </returns>
         internal static ILocation FullTransformation(
+            MilGraphic mg,
             DependencyObject dowe,
             string[] indices,
             IList<Point> points,
@@ -789,7 +829,7 @@ namespace MilSym.MilGraph
             // Apply the matrix transform(s) to the content control's contents.
             // Since this method can be called multiple times, we need to make sure
             // we're not improperly modifying an earlier matrix transform.
-            SetElementTransforms(dowe, matrices, angles);
+            SetElementTransforms(mg, dowe, matrices, angles);
             matrices.Clear();
             angles.Clear();
 
@@ -861,7 +901,7 @@ namespace MilSym.MilGraph
 
             if (name != "Base")
             {
-                ue.IsHitTestVisible = false;
+//                ue.IsHitTestVisible = false;
             }
 
             // Not updating the bounding box with changes to the symbol, yet
@@ -1101,7 +1141,11 @@ namespace MilSym.MilGraph
 
             // Transform a reference (origin) point to get the translation.
             // Any point will do here as long as it is used for the PositionProperty too.
+#if WINDOWS_UWP
+            var offset = mt.TransformPoint(origin);
+#else
             var offset = mt.Transform(origin);
+#endif
             var mat = new Matrix(final.M11, final.M12, final.M21, final.M22, -offset.X, -offset.Y);
             return mat;
         }
@@ -1111,6 +1155,9 @@ namespace MilSym.MilGraph
         /// elements in the same control. This is not very efficient. Alternatives include generating the elements
         /// via code or doing some type of binding in the control templates.
         /// </summary>
+        /// <param name="mg">
+        /// The MilGraphic whose transforms are to be set - needed for binding.
+        /// </param>
         /// <param name="contentControl">
         /// The content control whose transforms are to be set.
         /// </param>
@@ -1121,6 +1168,7 @@ namespace MilSym.MilGraph
         /// The list of keys to the other transforms.
         /// </param>
         private static void SetElementTransforms(
+            MilGraphic mg,
             DependencyObject contentControl,
             IDictionary<string, Matrix> final,
             IDictionary<string, Point> angles)
@@ -1132,8 +1180,7 @@ namespace MilSym.MilGraph
                 return;
             }
 
-            var canvas = VisualTreeHelper.GetChild(contentControl, 0) as Canvas;
-            if (canvas != null)
+            if (VisualTreeHelper.GetChild(contentControl, 0) is Canvas canvas)
             {
                 foreach (FrameworkElement child in canvas.Children)
                 {
@@ -1143,13 +1190,15 @@ namespace MilSym.MilGraph
                         continue;
                     }
 
-                    if (child is Path)
+                    if (child is Path path)
                     {
-                        (child as Path).SetTransform(final[key]);
+                        path.SetTransform(final[key]);
                     }
-                    else if (child is TextBlock)
+                    else if (child is TextBlock tb)
                     {
-                        SetTextTransform(child, final[key], angles[key]);
+                        SetTextTransform(tb, final[key], angles[key]);
+                        tb.SetBinding(UIElement.VisibilityProperty, 
+                            new Binding { Source = mg.TextVisibility, Mode = BindingMode.OneWay });
                     }
                 }
             }
@@ -1613,13 +1662,15 @@ namespace MilSym.MilGraph
                     ExtendPoints(ref points, ref anchors, right);
                 }
 
-                this.origin = FullTransformation(
+                /*this.origin =*/ FullTransformation(
+                    this,
                     this.ContentControl,
                     indices,
                     points,
                     anchors,
                     points[0],
                     out this.scaleFactor);
+                this.origin = anchors[0];
 
                 // Create a placeholder RenderTransformation.
                 //
@@ -1649,52 +1700,53 @@ namespace MilSym.MilGraph
         /// <param name="e">
         /// This parameter is also ignored.
         /// </param>
-        private void CanvasLayoutUpdated(object sender, EventArgs e)
+        public void CanvasLayoutUpdated(object sender, object e)
         {
-            if (this.Layer == null)
+            try
             {
-                return;
-            }
+                if (this.Layer == null)
+                {
+                    return;
+                }
 
-            if (!this.Layer.CanBeSeen)
+                var mapExtent = this.Layer.MapExtent;
+                if (!this.Layer.CanBeSeen ||
+                    mapExtent == null ||
+                    !mapExtent.Intersects(this.locationRect) || // if graphic is not visible (roughly speaking since these bounds are not precise), then return
+                    (!this.isDirty && this.lastZoomLevel == this.Layer.ZoomLevel)) // don't recompute if we have the same zoom value
+                {
+                    return;
+                }
+
+                this.isDirty = false;
+                this.lastZoomLevel = this.Layer.ZoomLevel;
+
+                // The ScaleFactor was computed in ComputeMapScales
+                var scale = this.scaleFactor * MapHelper.MapSize(this.lastZoomLevel) / ConvenienceScaleFactor;
+
+                // Don't draw text below a certain size
+                if (scale > 0.3 && this.TextVisibility == Visibility.Collapsed)
+                {
+                    this.TextVisibility = Visibility.Visible;
+                }
+                else if (scale < 0.3 && this.TextVisibility == Visibility.Visible)
+                {
+                    this.TextVisibility = Visibility.Collapsed;
+                }
+
+                // Need to scale the line thickness
+                if (Children[0] is MilSymbolBase contentControl)
+                {
+                    contentControl.LineThickness = 3.0 / scale;     // 3.0 is arbitrary and should be further investigated
+                }
+
+                // Need to change the scale transformation
+                this.scaleTransform.ScaleX = this.scaleTransform.ScaleY = scale;
+            }
+            catch (Exception ex)
             {
-                return;
+                Log.WriteMessage(LogLevel.Warn, "Error updating layout", ex);
             }
-
-            // If graphic is not visible (roughly speaking since these bounds are not precise), then return
-            var extent = this.Layer.MapExtent;
-            if (extent == null)
-            {
-                return;
-            }
-
-            if (!extent.Intersects(this.locationRect))
-            {
-                return;
-            }
-
-            // Get the zoom so we can compute the map scale
-            double zoom = this.Layer.ZoomLevel;
-            if (!this.isDirty && this.lastZoomLevel == zoom) 
-            {
-                return;     // don't recompute if we have the same zoom value
-            }
-
-            this.isDirty = false;
-            this.lastZoomLevel = zoom;
-
-            // The ScaleFactor was computed in ComputeMapScales
-            var scale = this.scaleFactor * MapHelper.MapSize(zoom) / ConvenienceScaleFactor;
-
-            // Need to scale the line thickness
-            var contentControl = Children[0] as MilSymbolBase;
-            if (contentControl != null)
-            {
-                contentControl.LineThickness = 3.0 / scale;     // 3.0 is arbitrary and should be further investigated
-            }
-
-            // Need to change the scale transformation
-            this.scaleTransform.ScaleX = this.scaleTransform.ScaleY = scale;
         }
     }
 }

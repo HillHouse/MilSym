@@ -4,9 +4,9 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Outlines.xaml"></ResourceDictionary>
-    </ResourceDictionary.MergedDictionaries>    
-    
-	<!-- First letter is color or standard identity (affiliation)
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- First letter is color or standard identity (affiliation)
 		A = Assumed friend		(blue)
 		B = Black				(for lines and text)
 	    D = Don't care			(for outlines only)

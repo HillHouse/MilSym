@@ -39,7 +39,7 @@ namespace MilSym.BingSupport
         /// </param>
         public void AddPolyline(ILocationCollection lc, Brush br)
         {
-            Children.Add(new MapPolyline { Locations = lc as LocationCollection, Stroke = br });
+            base.Children.Add(new MapPolyline { Locations = lc as LocationCollection, Stroke = br });
         }
     }
 }

@@ -17,22 +17,39 @@
 namespace MilSym.MilGraph.Support
 {
     using System;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI;
+    using Windows.UI.Core;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+#else
+    using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Media;
     using System.Windows.Shapes;
+#endif
+    using MilSym.LoadResources;
+    using MilSym.MilSymbol;
 
     /// <summary>
     /// A sample wrapper class around MilSymbol to draw bounding boxes on the map thus 
     /// allowing the symbol to be offset as the map is zoomed.
     /// </summary>
-    public class MapMilSymbol : MilSymbol.MilSymbol, ILocatable
+    public class MapMilSymbol : MilSymbol, ILocatable
     {
+        /// <summary>
+        /// The message logger
+        /// </summary>
+        private static readonly ILogger Log = LoggerFactory<MapMilSymbol>.GetLogger();
+
         /// <summary>
         /// The DependencyProperty for Origin.
         /// </summary>
         private static readonly DependencyProperty OriginProperty = DependencyProperty.Register(
             "Origin", typeof(ILocation), typeof(MapMilSymbol), new PropertyMetadata(null, OnOriginChanged));        
-        
+
         /// <summary>
         /// The scaleTransform to apply to the symbol to place it correctly on the map.
         /// </summary>
@@ -88,7 +105,13 @@ namespace MilSym.MilGraph.Support
         }
 
         /// <summary>
-        /// Gets or sets the extent of the symbol in pixel coordinate space.
+        /// Gets or sets the symbol's parent on the map.
+        /// </summary>
+        public FrameworkElement MapParent { get; set; }
+
+        /// <summary>
+        /// Gets or sets the extent of the symbol in lat-lon coordinate space.
+        /// Uses an arbitrary width/height for point-based symbols.
         /// </summary>
         public ILocationRect SymbolExtent { get; set; }
 
@@ -182,53 +205,55 @@ namespace MilSym.MilGraph.Support
         /// <param name="e">
         /// This parameter is also ignored.
         /// </param>
-        public void SymbolLayoutUpdated(object sender, EventArgs e)
+        public void SymbolLayoutUpdated(object sender, object e)
         {
-            if (this.Layer == null)
+            try
             {
-                return;
+                if (this.Layer == null)
+                {
+                    return;
+                }
+
+                var mapExtent = this.Layer.MapExtent;
+                if (!this.Layer.CanBeSeen ||
+                    mapExtent == null ||
+                    !mapExtent.Intersects(this.SymbolExtent) || // if graphic is not visible (roughly speaking since these bounds are not precise), then return
+                    (!this.IsDirty && this.lastZoomLevel == this.Layer.ZoomLevel)) // don't recompute if we have the same zoom value
+                {
+                    return;
+                }
+
+                this.IsDirty = false;
+                this.lastZoomLevel = this.Layer.ZoomLevel;
+
+                // Get the scale transform the first time, 
+                // shouldn't actually be necessary 
+                if (this.scaleTransform == null)
+                {
+                    TransformGroup tg = null;
+                    this.FindScaleTransformIndex(ref tg);
+                }
+
+                // Any old scale scheme will work here
+                if (this.scaleTransform != null)
+                {
+                    var scale = this.Scale * Math.Pow(this.lastZoomLevel, 1.2) / 16.0;
+                    this.scaleTransform.ScaleX = this.scaleTransform.ScaleY = scale;
+
+                    // Don't draw text below a certain size
+                    if (scale > 0.139 && this.TextVisibility == Visibility.Collapsed)
+                    {
+                        this.TextVisibility = Visibility.Visible;
+                    }
+                    else if (scale < 0.139 && this.TextVisibility == Visibility.Visible)
+                    {
+                        this.TextVisibility = Visibility.Collapsed;
+                    }
+                }
             }
-
-            if (!this.Layer.CanBeSeen)
+            catch (Exception ex)
             {
-                return;
-            }
-
-            // If graphic is not visible (roughly speaking since these bounds are not precise), then return
-            var extent = this.Layer.MapExtent;
-            if (extent == null)
-            {
-                return;
-            }
-
-            if (!extent.Intersects(this.SymbolExtent))
-            {
-                return;
-            }
-
-            // Get the zoom so we can compute the map scale
-            double zoom = this.Layer.ZoomLevel;
-            if (!this.IsDirty && this.lastZoomLevel == zoom)
-            {
-                return;     // don't recompute if we have the same zoom value
-            }
-
-            this.IsDirty = false;
-            this.lastZoomLevel = zoom;
-
-            // Get the scale transform the first time, 
-            // shouldn't actually be necessary 
-            if (this.scaleTransform == null)
-            {
-                TransformGroup tg = null;
-                this.FindScaleTransformIndex(ref tg);
-            }
-
-            // Any old scale scheme will work here
-            if (this.scaleTransform != null)
-            {
-                this.scaleTransform.ScaleX =
-                this.scaleTransform.ScaleY = Scale * Math.Pow(this.lastZoomLevel, 1.2) / 16.0;
+                Log.WriteMessage(LogLevel.Error, "Error updating layout", ex);
             }
         }
 

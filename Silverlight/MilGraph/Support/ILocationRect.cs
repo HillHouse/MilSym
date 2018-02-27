@@ -51,5 +51,17 @@ namespace MilSym.MilGraph.Support
         /// A boolean indicating whether or not the passed in rectangle intersects the current rectangle.
         /// </returns>
         bool Intersects(ILocationRect rect);
+
+        /// <summary>
+        /// This is a simple comparison of latitude and longitude values of "rectangles"
+        /// whose sides are parallel to lines of latitude and longitude.
+        /// </summary>
+        /// <param name="rect">
+        /// The rectangle to be compared against the current rectangle.
+        /// </param>
+        /// <returns>
+        /// A boolean indicating whether or not the passed in rectangle is contained in the current rectangle.
+        /// </returns>
+        bool Contains(ILocationRect rect);
     }
 }

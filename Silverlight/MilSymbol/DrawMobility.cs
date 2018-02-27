@@ -15,9 +15,15 @@
 
 namespace MilSym.MilSymbol
 {
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+#else
     using System.Windows;
     using System.Windows.Media;
     using System.Windows.Shapes;
+#endif
     using Schemas;
 
     /// <summary>

@@ -17,12 +17,24 @@ namespace MilSym.MilGraph
 {
     using System;
     using System.Collections.Generic;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Data;
+    using Windows.UI.Xaml.Documents;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+    using PointHelper = MilSym.MilGraph.Support.PointHelper;
+#else
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Data;
     using System.Windows.Documents;
     using System.Windows.Media;
     using System.Windows.Shapes;
+#endif
 
     using MilSym.MilGraph.Support;
     using MilSym.MilSymbol;
@@ -300,6 +312,8 @@ namespace MilSym.MilGraph
                 Foreground = mg.ContentControl.Brush,
                 Name = "Skip" + counter++
             };
+            tb.SetBinding(UIElement.VisibilityProperty, 
+                new Binding { Source = mg.TextVisibility, Mode = BindingMode.OneWay });
 
             var count = labels.Length;
             for (int i = 0; i < count; i++)
@@ -362,6 +376,8 @@ namespace MilSym.MilGraph
                 Foreground = mg.ContentControl.Brush,
                 Name = "Skip" + counter++
             };
+            tb.SetBinding(UIElement.VisibilityProperty, 
+                new Binding { Source = mg.TextVisibility, Mode = BindingMode.OneWay });
 
             var count = labels.Length;
             for (int i = 0; i < count; i++)
@@ -638,8 +654,11 @@ namespace MilSym.MilGraph
                 Data = new PathGeometry { Figures = figures },
                 Style = style
             };
-
+#if WINDOWS_UWP
+            path.SetBinding(Shape.StrokeThicknessProperty, new Binding() { Path = new PropertyPath("LineThickness"), Source = mg.ContentControl });
+#else
             path.SetBinding(Shape.StrokeThicknessProperty, new Binding("LineThickness") { Source = mg.ContentControl });
+#endif
             return path;
         }
 

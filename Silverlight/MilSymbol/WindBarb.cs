@@ -18,8 +18,13 @@ namespace MilSym.MilSymbol
     using System;
     using System.Collections.Generic;
     using System.Text;
+#if WINDOWS_UWP
+    using Windows.UI.Xaml.Markup;
+    using Windows.UI.Xaml.Shapes;
+#else
     using System.Windows.Markup;
     using System.Windows.Shapes;
+#endif
 
     /// <summary>
     /// Generates the wind barbs for weather symbology
@@ -163,7 +168,9 @@ namespace MilSym.MilSymbol
             sb.AppendFormat("</TransformGroup></Path.RenderTransform></Path>");
 #if SILVERLIGHT
             return XamlReader.Load(sb.ToString()) as Shape;
-#else 
+#elif WINDOWS_UWP
+            return XamlReader.Load(sb.ToString()) as Shape;
+#else
             return XamlReader.Parse(sb.ToString()) as Shape; 
 #endif
         }
@@ -196,6 +203,8 @@ namespace MilSym.MilSymbol
                 "<RotateTransform Angle='{0}'/></TransformGroup></Path.RenderTransform></Path>",
                 (int)Math.Round(direction));
 #if SILVERLIGHT
+            return XamlReader.Load(sb.ToString()) as Shape;
+#elif WINDOWS_UWP
             return XamlReader.Load(sb.ToString()) as Shape;
 #else
             return XamlReader.Parse(sb.ToString()) as Shape;

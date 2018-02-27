@@ -20,8 +20,9 @@ namespace EsriMapTest
     using System.Windows;
     
     using ESRI.ArcGIS.Client;
-    using ESRI.ArcGIS.Client.Bing;
-    
+    using OpenStreetMapLayer = ESRI.ArcGIS.Client.Toolkit.DataSources.OpenStreetMapLayer;
+
+
     using MapTest;
     
     using MilSym.EsriSupport;
@@ -37,11 +38,6 @@ namespace EsriMapTest
         /// The map factory for generating layers and locations.
         /// </summary>
         private readonly IMilSymFactory milsymFactory;
-
-        /// <summary>
-        /// The Bing map token string required to support the Bing map layer backgrounds.
-        /// </summary>
-        private const string TokenString = "AtkLTSqCB4ENRmBqIL4UGVv_scxX0Bl6JNA4c8VXpHSaguSEw2UyfQRNsSNfZolk";
 
         /// <summary>
         /// The contents for the map layers.
@@ -70,18 +66,11 @@ namespace EsriMapTest
         {
             try
             {
-                // Load a background layer
-                var bingLayer = new TileLayer
+                // Add the OpenStreetMapLayer to the Map's Layer Collection. 
+                Esri.Layers.Add(new OpenStreetMapLayer
                 {
-                    LayerStyle = TileLayer.LayerType.Road,
-                    ServerType = ServerType.Production,
-                    Visible = true,
-                    Token = TokenString
-                };
-                if (!string.IsNullOrEmpty(TokenString))
-                {
-                    Esri.Layers.Add(bingLayer);
-                }
+                    Style = OpenStreetMapLayer.MapStyle.CycleMap
+                });
 
                 var ml = this.milsymFactory.MilSymLayer();
                 if (ml is ElementLayer)
@@ -96,6 +85,7 @@ namespace EsriMapTest
                 }
 
                 this.tdm = new TestMapDrawing(this.milsymFactory, ml, pl);
+                Esri.MouseLeftButtonUp += this.tdm.MsMouseLeftButtonUp;
                 this.tdm.DrawStuff();
             }
             catch (Exception ex)

@@ -17,7 +17,11 @@ namespace MilSym.MilGraph.Support
 {
     using System;
     using System.Collections.Generic;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+#else
     using System.Windows;
+#endif
 
     /// <summary>
     /// Methods to simplify Point-based computations.

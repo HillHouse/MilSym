@@ -18,10 +18,21 @@ namespace MilSym.MilSymbol
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Data;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+#else
     using System.Windows;
     using System.Windows.Controls;
+    using System.Windows.Data;
     using System.Windows.Media;
     using System.Windows.Shapes;
+#endif
 
     using MilSym.LoadResources;
     using MilSym.MilSymbol.Schemas;
@@ -261,6 +272,12 @@ namespace MilSym.MilSymbol
         /// </summary>
         private static readonly DependencyProperty SymbolCodeProperty = DependencyProperty.Register(
             "SymbolCode", typeof(string), typeof(MilSymbol), new PropertyMetadata(null, OnSymbolChanged));
+
+        /// <summary>
+        /// The backing store for TextVisiblity, defaults to Visiblity.Visible
+        /// </summary>
+        private static readonly DependencyProperty TextVisibilityProperty = DependencyProperty.Register(
+            "TextVisibility", typeof(Visibility), typeof(MilSymbol), new PropertyMetadata(Visibility.Visible, OnVisibilityChanged));
 
         /// <summary>
         /// A convenience dictionary that tracks elements with a label that can be used to replace that
@@ -857,6 +874,22 @@ namespace MilSym.MilSymbol
         }
 
         /// <summary>
+        /// Gets or sets the text visibility for a symbol
+        /// </summary>
+        public Visibility TextVisibility
+        {
+            get
+            {
+                return (Visibility)this.GetValue(TextVisibilityProperty);
+            }
+
+            set
+            {
+                this.SetValue(TextVisibilityProperty, value);
+            }
+        }
+
+        /// <summary>
         /// Gets a value indicating whether the requested military symbol is
         /// not available for whatever reason.
         /// If no symbol is generated, the Empty flag will be set to
@@ -885,10 +918,21 @@ namespace MilSym.MilSymbol
         /// </param>
         public void NotifyPropertyChanged(string propertyName)
         {
-            if (this.PropertyChanged != null)
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Gets MilSymbol elements by name.
+        /// </summary>
+        /// <param name="name">The name of the element, e.g., "Base."</param>
+        /// <returns>The UIElement corresponding to the name.</returns>
+        public UIElement GetChild(string name)
+        {
+            if (this.elements.ContainsKey(name))
             {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                return this.elements[name];
             }
+            return null;
         }
 
         /// <summary>
@@ -977,6 +1021,43 @@ namespace MilSym.MilSymbol
         }
 
         /// <summary>
+        /// Brute force event handler for when the symbol's text visibility needs changing.
+        /// </summary>
+        /// <param name="dp">
+        /// The symbol whose text visibility needs changing.
+        /// </param>
+        /// <param name="ea">
+        /// This parameter is ignored.
+        /// </param>
+        private static void OnVisibilityChanged(DependencyObject dp, DependencyPropertyChangedEventArgs ea)
+        {
+            if (dp is MilSymbol ms)
+            {
+                var vis = ms.TextVisibility;
+
+                // Enumerate all of the children and adjust the text blocks
+                foreach (var element in ms.Children)
+                {
+                    if (element is TextBlock textBlock)
+                    {
+                        textBlock.Visibility = vis;
+                    }
+                    else if (element is MilSymbolBase msb &&
+                        VisualTreeHelper.GetChild(msb, 0) is Canvas canvas)
+                    {
+                        foreach (var ele in canvas.Children)
+                        {
+                            if (ele is TextBlock tb)
+                            {
+                                tb.Visibility = vis;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         /// Event handler for when the symbols transform matrix needs changing.
         /// </summary>
         /// <param name="dp">
@@ -987,8 +1068,7 @@ namespace MilSym.MilSymbol
         /// </param>
         private static void OnTransformChanged(DependencyObject dp, DependencyPropertyChangedEventArgs ea)
         {
-            var ms = dp as MilSymbol;
-            if (ms != null)
+            if (dp is MilSymbol ms)
             {
                 ms.SetTransform();
             }
@@ -1005,34 +1085,31 @@ namespace MilSym.MilSymbol
         /// </param>
         private static void OnLabelsChanged(DependencyObject dp, DependencyPropertyChangedEventArgs ea)
         {
-            var ms = dp as MilSymbol;
-            if (ms == null)
-            {
-                return;
-            }
-
             if (!Dependencies.ContainsKey(ea.Property))
             {
                 return;
             }
 
-            string key = Dependencies[ea.Property];
-            if (ms.labels == null)
+            if (dp is MilSymbol ms)
             {
-                ms.labels = new Dictionary<string, string>();
-            }
+                string key = Dependencies[ea.Property];
+                if (ms.labels == null)
+                {
+                    ms.labels = new Dictionary<string, string>();
+                }
 
-            var label = ea.NewValue as string;
-            if (ms.labels.ContainsKey(key))
-            {
-                ms.labels[key] = label;
-            }
-            else if (label != null)
-            {
-                ms.labels.Add(key, label);
-            }
+                var label = ea.NewValue as string;
+                if (ms.labels.ContainsKey(key))
+                {
+                    ms.labels[key] = label;
+                }
+                else if (label != null)
+                {
+                    ms.labels.Add(key, label);
+                }
 
-            ms.GenerateLabels(null);
+                ms.GenerateLabels(null);
+            }
         }
 
         /// <summary>
@@ -1046,8 +1123,7 @@ namespace MilSym.MilSymbol
         /// </param>
         private static void OnSymbolChanged(DependencyObject dp, DependencyPropertyChangedEventArgs ea)
         {
-            var ms = dp as MilSymbol;
-            if (ms != null)
+            if (dp is MilSymbol ms)
             {
                 ms.GenerateSymbol();
             }
@@ -1064,13 +1140,10 @@ namespace MilSym.MilSymbol
         /// </param>
         private static void OnLabelStyleChanged(DependencyObject dp, DependencyPropertyChangedEventArgs ea)
         {
-            var ms = dp as MilSymbol;
-            if (ms == null)
+            if (dp is MilSymbol ms)
             {
-                return;
+                ms.GenerateLabels(null);
             }
-
-            ms.GenerateLabels(null);
         }
 
         /// <summary>
@@ -1084,14 +1157,11 @@ namespace MilSym.MilSymbol
         /// </param>
         private static void OnLabelStringChanged(DependencyObject dp, DependencyPropertyChangedEventArgs ea)
         {
-            var ms = dp as MilSymbol;
-            if (ms == null)
+            if (dp is MilSymbol ms)
             {
-                return;
+                ms.labels = MilLabels.Generate(ms.LabelString, ms.labels);
+                ms.GenerateLabels(null);
             }
-
-            ms.labels = MilLabels.Generate(ms.LabelString, ms.labels);
-            ms.GenerateLabels(null);
         }
 
         /// <summary>

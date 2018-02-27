@@ -15,7 +15,15 @@
 
 namespace MilSym.MilGraph.Support
 {
+    using System.Collections.Generic;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+#else
     using System.Windows;
+    using System.Windows.Controls;
+#endif
 
     /// <summary>
     /// Interface for a map-independent map symbology layer.
@@ -46,6 +54,35 @@ namespace MilSym.MilGraph.Support
         /// Gets the bounding rectangle that contains the elements drawn on the map.
         /// </summary>
         ILocationRect MapExtent { get; }    // the rectangle containing the map
+
+        /// <summary>
+        /// Returns the point associated with the passed in event
+        /// </summary>
+        /// <typeparam name="T">The type of the event argument</typeparam>
+        /// <param name="ea">The event argument</param>
+        /// <returns>The point associated with the passed in event</returns>
+        Point EventToPoint<T>(T ea);
+
+        /// <summary>
+        /// Returns a list of children associated with the layer.
+        /// </summary>
+        IList<DependencyObject> ChildList { get; }
+
+        /// <summary>
+        /// Finds some (but maybe not all) of the map elements associated with a point.
+        /// </summary>
+        /// <param name="pos">The point at which to check for associated map elements</param>
+        /// <returns></returns>
+        IEnumerable<UIElement> ElementsAtPoint(Point pos);
+
+        /// <summary>
+        /// Returns the latitude and longitude corresponding to a screen point.
+        /// </summary>
+        /// <param name="p">
+        /// The screen point.
+        /// </param>
+        /// <returns>The latitude and longitude corresponding to the screen point.</returns>
+        ILocation PointToLocation(Point p);
 
         /// <summary>
         /// Adds a locatable UIElement to the map layer.

@@ -16,9 +16,15 @@
 namespace MilSym.MilSymbol.Schemas
 {
     using System.Collections.Generic;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+#else
     using System.Windows;
     using System.Windows.Media;
     using System.Windows.Shapes;
+#endif
 
     /// <summary>
     /// Support methods for managing the Standard Operation Capacity code portion of symbols in MIL STD-2525C

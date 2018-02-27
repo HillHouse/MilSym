@@ -2401,7 +2401,7 @@
 	<ControlTemplate x:Key="S.XPEVCU">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-15,-10 16,-10 16,-53 -15,-53" Style="{StaticResource BS5}" />
@@ -2454,7 +2454,7 @@
 	<ControlTemplate x:Key="S.XPEVCUL">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-15,-10 16,-10 16,-53 -15,-53" Style="{StaticResource BS5}" />
@@ -2512,7 +2512,7 @@
 	<ControlTemplate x:Key="S.XPEVCUM">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-15,-10 16,-10 16,-53 -15,-53" Style="{StaticResource BS5}" />
@@ -2575,7 +2575,7 @@
 	<ControlTemplate x:Key="S.XPEVCUH">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 75,-63 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-15,-10 16,-10 16,-53 -15,-53" Style="{StaticResource BS5}" />
@@ -2635,7 +2635,7 @@
 	<ControlTemplate x:Key="S.XPEVCF">
 		<Canvas>
 			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37 -87,37" Style="{Binding Fill}" />
-			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37" Style="{Binding Line}" />
+			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 58,42 C58,31,49,22,38,22 C27,22,18,31,18,42 C18,53,27,62,38,62 C49,62,58,53,58,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -42,42 C-42,31,-51,22,-62,22 C-73,22,-82,31,-82,42 C-82,53,-73,62,-62,62 C-51,62,-42,53,-42,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-77,-10 -47,-10 -47,-53 -77,-53" Style="{StaticResource BS5}" />
@@ -2698,7 +2698,7 @@
 	<ControlTemplate x:Key="S.XPEVCFL">
 		<Canvas>
 			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37 -87,37" Style="{Binding Fill}" />
-			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37" Style="{Binding Line}" />
+			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 58,42 C58,31,49,22,38,22 C27,22,18,31,18,42 C18,53,27,62,38,62 C49,62,58,53,58,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -42,42 C-42,31,-51,22,-62,22 C-73,22,-82,31,-82,42 C-82,53,-73,62,-62,62 C-51,62,-42,53,-42,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-77,-10 -47,-10 -47,-53 -77,-53" Style="{StaticResource BS5}" />
@@ -2766,7 +2766,7 @@
 	<ControlTemplate x:Key="S.XPEVCFM">
 		<Canvas>
 			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37 -87,37" Style="{Binding Fill}" />
-			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37" Style="{Binding Line}" />
+			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 58,42 C58,31,49,22,38,22 C27,22,18,31,18,42 C18,53,27,62,38,62 C49,62,58,53,58,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -42,42 C-42,31,-51,22,-62,22 C-73,22,-82,31,-82,42 C-82,53,-73,62,-62,62 C-51,62,-42,53,-42,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-77,-10 -47,-10 -47,-53 -77,-53" Style="{StaticResource BS5}" />
@@ -2839,7 +2839,7 @@
 	<ControlTemplate x:Key="S.XPEVCFH">
 		<Canvas>
 			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37 -87,37" Style="{Binding Fill}" />
-			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37" Style="{Binding Line}" />
+			<Polygon Points="-87,37 -87,-63 -37,-63 -37,-13 63,-13 63,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 58,42 C58,31,49,22,38,22 C27,22,18,31,18,42 C18,53,27,62,38,62 C49,62,58,53,58,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -42,42 C-42,31,-51,22,-62,22 C-73,22,-82,31,-82,42 C-82,53,-73,62,-62,62 C-51,62,-42,53,-42,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-77,-10 -47,-10 -47,-53 -77,-53" Style="{StaticResource BS5}" />
@@ -2901,7 +2901,7 @@
 	<ControlTemplate x:Key="S.XPEVCT">
 		<Canvas>
 			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37 -87,37" Style="{Binding Fill}" />
-			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37" Style="{Binding Line}" />
+			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 58,42 C58,31,49,22,38,22 C27,22,18,31,18,42 C18,53,27,62,38,62 C49,62,58,53,58,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -42,42 C-42,31,-51,22,-62,22 C-73,22,-82,31,-82,42 C-82,53,-73,62,-62,62 C-51,62,-42,53,-42,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-27,-10 4,-10 4,-53 -27,-53" Style="{StaticResource BS5}" />
@@ -2964,7 +2964,7 @@
 	<ControlTemplate x:Key="S.XPEVCTL">
 		<Canvas>
 			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37 -87,37" Style="{Binding Fill}" />
-			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37" Style="{Binding Line}" />
+			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 58,42 C58,31,49,22,38,22 C27,22,18,31,18,42 C18,53,27,62,38,62 C49,62,58,53,58,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -42,42 C-42,31,-51,22,-62,22 C-73,22,-82,31,-82,42 C-82,53,-73,62,-62,62 C-51,62,-42,53,-42,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-27,-10 4,-10 4,-53 -27,-53" Style="{StaticResource BS5}" />
@@ -3032,7 +3032,7 @@
 	<ControlTemplate x:Key="S.XPEVCTM">
 		<Canvas>
 			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37 -87,37" Style="{Binding Fill}" />
-			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37" Style="{Binding Line}" />
+			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 58,42 C58,31,49,22,38,22 C27,22,18,31,18,42 C18,53,27,62,38,62 C49,62,58,53,58,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -42,42 C-42,31,-51,22,-62,22 C-73,22,-82,31,-82,42 C-82,53,-73,62,-62,62 C-51,62,-42,53,-42,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-27,-10 4,-10 4,-53 -27,-53" Style="{StaticResource BS5}" />
@@ -3105,7 +3105,7 @@
 	<ControlTemplate x:Key="S.XPEVCTH">
 		<Canvas>
 			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37 -87,37" Style="{Binding Fill}" />
-			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37" Style="{Binding Line}" />
+			<Polygon Points="-87,37 -87,-13 -37,-13 -37,-63 63,-63 63,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 58,42 C58,31,49,22,38,22 C27,22,18,31,18,42 C18,53,27,62,38,62 C49,62,58,53,58,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -42,42 C-42,31,-51,22,-62,22 C-73,22,-82,31,-82,42 C-82,53,-73,62,-62,62 C-51,62,-42,53,-42,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-27,-10 4,-10 4,-53 -27,-53" Style="{StaticResource BS5}" />
@@ -3159,7 +3159,7 @@
 	<ControlTemplate x:Key="S.XPEVCO">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-65,-10 -35,-10 -35,-53 -65,-53" Style="{StaticResource BS5}" />
@@ -3216,7 +3216,7 @@
 	<ControlTemplate x:Key="S.XPEVCOM">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-65,-10 -35,-10 -35,-53 -65,-53" Style="{StaticResource BS5}" />
@@ -3271,7 +3271,7 @@
 	<ControlTemplate x:Key="S.XPEVCOL">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-65,-10 -35,-10 -35,-53 -65,-53" Style="{StaticResource BS5}" />
@@ -3333,7 +3333,7 @@
 	<ControlTemplate x:Key="S.XPEVCOH">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-63 -25,-63 -25,-13 75,-13 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-65,-10 -35,-10 -35,-53 -65,-53" Style="{StaticResource BS5}" />
@@ -3393,7 +3393,7 @@
 	<ControlTemplate x:Key="S.XPEVCM">
 		<Canvas>
 			<Polygon Points="-75,-63 -75,37 75,37 75,-63 -75,-63" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-63 75,-63 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-63 75,-63 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-58,-10 -27,-10 -27,-53 -58,-53" Style="{StaticResource BS5}" />
@@ -3456,7 +3456,7 @@
 	<ControlTemplate x:Key="S.XPEVCML">
 		<Canvas>
 			<Polygon Points="-75,-63 -75,37 75,37 75,-63 -75,-63" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-63 75,-63 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-63 75,-63 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-58,-10 -27,-10 -27,-53 -58,-53" Style="{StaticResource BS5}" />
@@ -3524,7 +3524,7 @@
 	<ControlTemplate x:Key="S.XPEVCMM">
 		<Canvas>
 			<Polygon Points="-75,-63 -75,37 75,37 75,-63 -75,-63" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-63 75,-63 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-63 75,-63 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-58,-10 -27,-10 -27,-53 -58,-53" Style="{StaticResource BS5}" />
@@ -3597,7 +3597,7 @@
 	<ControlTemplate x:Key="S.XPEVCMH">
 		<Canvas>
 			<Polygon Points="-75,-63 -75,37 75,37 75,-63 -75,-63" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-63 75,-63 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-63 75,-63 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-58,-10 -27,-10 -27,-53 -58,-53" Style="{StaticResource BS5}" />
@@ -3651,7 +3651,7 @@
 	<ControlTemplate x:Key="S.XPEVCJ">
 		<Canvas>
 			<Polygon Points="-75,-10 -75,40 75,40 75,-10 -75,-10" Style="{Binding Fill}" />
-			<Polygon Points="-75,40 -75,-10 75,-10 75,40" Style="{Binding Line}" />
+			<Polygon Points="-75,40 -75,-10 75,-10 75,40" Style="{Binding Lines}" />
 			<Path Data="F0 M -30,40 C-30,29,-39,20,-50,20 C-61,20,-70,29,-70,40 C-70,51,-61,60,-50,60 C-39,60,-30,51,-30,40 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M 70,40 C70,29,61,20,50,20 C39,20,30,29,30,40 C30,51,39,60,50,60 C61,60,70,51,70,40 Z" Style="{Binding LineFill}"  />
 			<Polyline Points="-25,-10 -10,-60" Style="{StaticResource BS10}" />
@@ -3704,7 +3704,7 @@
 	<ControlTemplate x:Key="S.XPEVCJL">
 		<Canvas>
 			<Polygon Points="-75,-10 -75,40 75,40 75,-10 -75,-10" Style="{Binding Fill}" />
-			<Polygon Points="-75,40 -75,-10 75,-10 75,40" Style="{Binding Line}" />
+			<Polygon Points="-75,40 -75,-10 75,-10 75,40" Style="{Binding Lines}" />
 			<Path Data="F0 M -30,40 C-30,29,-39,20,-50,20 C-61,20,-70,29,-70,40 C-70,51,-61,60,-50,60 C-39,60,-30,51,-30,40 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M 70,40 C70,29,61,20,50,20 C39,20,30,29,30,40 C30,51,39,60,50,60 C61,60,70,51,70,40 Z" Style="{Binding LineFill}"  />
 			<Polyline Points="-25,-10 -10,-60" Style="{StaticResource BS10}" />
@@ -3762,7 +3762,7 @@
 	<ControlTemplate x:Key="S.XPEVCJM">
 		<Canvas>
 			<Polygon Points="-75,-10 -75,40 75,40 75,-10 -75,-10" Style="{Binding Fill}" />
-			<Polygon Points="-75,40 -75,-10 75,-10 75,40" Style="{Binding Line}" />
+			<Polygon Points="-75,40 -75,-10 75,-10 75,40" Style="{Binding Lines}" />
 			<Path Data="F0 M -30,40 C-30,29,-39,20,-50,20 C-61,20,-70,29,-70,40 C-70,51,-61,60,-50,60 C-39,60,-30,51,-30,40 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M 70,40 C70,29,61,20,50,20 C39,20,30,29,30,40 C30,51,39,60,50,60 C61,60,70,51,70,40 Z" Style="{Binding LineFill}"  />
 			<Polyline Points="-25,-10 -10,-60" Style="{StaticResource BS10}" />
@@ -3825,7 +3825,7 @@
 	<ControlTemplate x:Key="S.XPEVCJH">
 		<Canvas>
 			<Polygon Points="-75,-10 -75,40 75,40 75,-10 -75,-10" Style="{Binding Fill}" />
-			<Polygon Points="-75,40 -75,-10 75,-10 75,40" Style="{Binding Line}" />
+			<Polygon Points="-75,40 -75,-10 75,-10 75,40" Style="{Binding Lines}" />
 			<Path Data="F0 M -30,40 C-30,29,-39,20,-50,20 C-61,20,-70,29,-70,40 C-70,51,-61,60,-50,60 C-39,60,-30,51,-30,40 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M 70,40 C70,29,61,20,50,20 C39,20,30,29,30,40 C30,51,39,60,50,60 C61,60,70,51,70,40 Z" Style="{Binding LineFill}"  />
 			<Polyline Points="-25,-10 -10,-60" Style="{StaticResource BS10}" />
@@ -3877,7 +3877,7 @@
 	<ControlTemplate x:Key="S.XPEVCA">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-15,-11 14,-11 14,-53 -15,-53" Style="{StaticResource BS5}" />
@@ -3938,7 +3938,7 @@
 	<ControlTemplate x:Key="S.XPEVCAH">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-15,-11 14,-11 14,-53 -15,-53" Style="{StaticResource BS5}" />
@@ -3998,7 +3998,7 @@
 	<ControlTemplate x:Key="S.XPEVCAM">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-15,-11 14,-11 14,-53 -15,-53" Style="{StaticResource BS5}" />
@@ -4053,7 +4053,7 @@
 	<ControlTemplate x:Key="S.XPEVCAL">
 		<Canvas>
 			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37 -75,37" Style="{Binding Fill}" />
-			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37" Style="{Binding Line}" />
+			<Polygon Points="-75,37 -75,-13 -25,-13 -25,-63 25,-63 25,-13 75,-13 75,37" Style="{Binding Lines}" />
 			<Path Data="F0 M 70,42 C70,31,61,22,50,22 C39,22,30,31,30,42 C30,53,39,62,50,62 C61,62,70,53,70,42 Z" Style="{Binding LineFill}"  />
 			<Path Data="F0 M -30,42 C-30,31,-39,22,-50,22 C-61,22,-70,31,-70,42 C-70,53,-61,62,-50,62 C-39,62,-30,53,-30,42 Z" Style="{Binding LineFill}"  />
 			<Polygon Points="-15,-11 14,-11 14,-53 -15,-53" Style="{StaticResource BS5}" />
@@ -7461,34 +7461,34 @@
 		<Canvas>
 			<Path Data="{StaticResource USB}" Style="{Binding LineFill}" />
 			<Path Data="M0,75 -75,-75 75,-75Z" Style="{StaticResource BS10}" />
-			<TextBlock Text="M" Canvas.Left="-30" Canvas.Top="-68" FontWeight="800" FontSize="64" FontFamily="Arial" Foreground="Black" />
+			<TextBlock Text="M" Canvas.Left="-30" Canvas.Top="-68" FontWeight="ExtraBold" FontSize="64" FontFamily="Arial" Foreground="Black" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="SFGPEXM">
 		<Canvas>
 			<Path Data="{StaticResource FSBC}" Style="{Binding LineFill}" />
 			<Path Data="M0,75 -75,-75 75,-75Z" Style="{StaticResource BS10}" />
-			<TextBlock Text="M" Canvas.Left="-30" Canvas.Top="-68" FontWeight="800" FontSize="64" FontFamily="Arial" Foreground="Black" />
+			<TextBlock Text="M" Canvas.Left="-30" Canvas.Top="-68" FontWeight="ExtraBold" FontSize="64" FontFamily="Arial" Foreground="Black" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="SNGPEXM">
 		<Canvas>
 			<Polygon Points="{StaticResource NSF}" Style="{Binding LineFill}" />
 			<Path Data="M0,75 -75,-75 75,-75Z" Style="{StaticResource BS10}" />
-			<TextBlock Text="M" Canvas.Left="-30" Canvas.Top="-68" FontWeight="800" FontSize="64" FontFamily="Arial" Foreground="Black" />
+			<TextBlock Text="M" Canvas.Left="-30" Canvas.Top="-68" FontWeight="ExtraBold" FontSize="64" FontFamily="Arial" Foreground="Black" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="SHGPEXM">
 		<Canvas>
 			<Polygon Points="{StaticResource HSF}" Style="{Binding LineFill}" />
 			<Path Data="M0,75 -75,-75 75,-75Z" Style="{StaticResource BS10}" />
-			<TextBlock Text="M" Canvas.Left="-30" Canvas.Top="-68" FontWeight="800" FontSize="64" FontFamily="Arial" Foreground="Black" />
+			<TextBlock Text="M" Canvas.Left="-30" Canvas.Top="-68" FontWeight="ExtraBold" FontSize="64" FontFamily="Arial" Foreground="Black" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="S.XPEXM">
 		<Canvas>
 			<Path Data="M0,75 -75,-75 75,-75Z" Style="{Binding UnframedLine}" />
-			<TextBlock Text="M" Canvas.Left="-30" Canvas.Top="-68" FontWeight="800" FontSize="64" FontFamily="Arial" Foreground="{Binding Brush}" />
+			<TextBlock Text="M" Canvas.Left="-30" Canvas.Top="-68" FontWeight="ExtraBold" FontSize="64" FontFamily="Arial" Foreground="{Binding Brush}" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="SUGPEXML">

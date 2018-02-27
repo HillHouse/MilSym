@@ -18,8 +18,14 @@ namespace MilSym.MilSymbol
     using System;
     using System.Collections.Generic;
     using System.Globalization;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+ #else
     using System.Windows;
     using System.Windows.Controls;
+ #endif
 
     using MilSym.LoadResources;
     using MilSym.MilSymbol.Schemas;
@@ -167,7 +173,7 @@ namespace MilSym.MilSymbol
                 return false;
             }
 
-            symbolCode = symbolCode.ToUpper(CultureInfo.InvariantCulture);
+            symbolCode = symbolCode.ToUpperInvariant();
             return true;
         }
 
@@ -449,12 +455,20 @@ namespace MilSym.MilSymbol
         /// </returns>
         internal static ControlTemplate GetControlTemplate(string template)
         {
-            if (Leads.Contains(template[0]))
+            try
             {
-                LoadMissingData(template[0]);
-            }
+                if (Leads.Contains(template[0]))
+                {
+                    LoadMissingData(template[0]);
+                }
 
-            return Stencils[template] as ControlTemplate;
+                return Stencils[template] as ControlTemplate;
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage(LogLevel.Error, ex.Message);
+                return null;
+            }
         }
 
         /// <summary>
@@ -627,6 +641,10 @@ namespace MilSym.MilSymbol
 #if SILVERLIGHT
                 LoadDictionary("/MilSym.MilSymbol;component/Themes/LabelResources.xaml");
                 LoadDictionary("/MilSym.MilSymbol;component/Themes/Outlines.xaml");
+#elif WINDOWS_UWP
+                // https://stackoverflow.com/questions/338056/resourcedictionary-in-a-separate-assembly - the last answer
+                LoadDictionary("ms-appx:///MilSym.MilSymbol.UWP/Themes/LabelResources.xaml");
+                LoadDictionary("ms-appx:///MilSym.MilSymbol.UWP/Themes/Outlines.xaml");
 #else
 ////            LoadDictionary("/MilSym.MilSymbol.WPF;component/LabelResources.xaml");
                 LoadDictionary("/MilSym.MilSymbol.WPF;component/Themes/LabelResources.xaml");
@@ -650,9 +668,12 @@ namespace MilSym.MilSymbol
             if (lead == 'G')
             {
 #if SILVERLIGHT
-                LoadDictionary("/MilSym.MilSymbol;component/Themes/MultiPointAppendixB.xaml");
+                LoadDictionary("/MilSym.MilSymbol;component/Themes/MultipointAppendixB.xaml");
+#elif WINDOWS_UWP
+                // https://stackoverflow.com/questions/338056/resourcedictionary-in-a-separate-assembly - the last answer
+                LoadDictionary("ms-appx:///MilSym.MilSymbol.UWP/Themes/MultipointAppendixB.xaml");
 #else
-                LoadDictionary("/MilSym.MilSymbol.WPF;component/Themes/MultiPointAppendixB.xaml");
+                LoadDictionary("/MilSym.MilSymbol.WPF;component/Themes/MultipointAppendixB.xaml");
 #endif
             }
         }
@@ -665,7 +686,11 @@ namespace MilSym.MilSymbol
         /// </param>
         private static void LoadDictionary(string dictionary)
         {
+#if WINDOWS_UWP
+            var rd = new ResourceDictionary { Source = new Uri(dictionary, UriKind.Absolute) };
+#else
             var rd = new ResourceDictionary { Source = new Uri(dictionary, UriKind.Relative) };
+#endif
             Stencils.MergedDictionaries.Add(rd);
         }
 

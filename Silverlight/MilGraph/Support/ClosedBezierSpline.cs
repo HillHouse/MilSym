@@ -9,7 +9,11 @@
 namespace MilSym.MilGraph.Support
 {
     using System.Collections.Generic;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+#else
     using System.Windows;
+#endif
     using NumericalRecipes;
 
     /// <summary>

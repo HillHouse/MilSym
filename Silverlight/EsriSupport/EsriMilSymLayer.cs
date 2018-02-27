@@ -18,12 +18,16 @@ namespace MilSym.EsriSupport
     using System;
     using System.Linq;
     using System.Windows;
+    using System.Windows.Input;
+    using System.Windows.Controls;
     using ESRI.ArcGIS.Client;
     using ESRI.ArcGIS.Client.Bing;
     using ESRI.ArcGIS.Client.Geometry;
     using MilGraph;
     using MilGraph.Support;
     using MilSymbol;
+    using System.Collections.Generic;
+    using System.Windows.Media;
 
     /// <summary>
     /// Methods supporting IMilSymLayer for use by the Esri maps.
@@ -176,6 +180,61 @@ namespace MilSym.EsriSupport
         }
 
         /// <summary>
+        /// Finds some (but maybe not all) of the map elements associated with a point.
+        /// </summary>
+        /// <param name="pos">The point at which to check for associated map elements</param>
+        /// <returns>An enumerable list of associated map elements</returns>
+        public IEnumerable<UIElement> ElementsAtPoint(Point pos)
+        {
+            var htr = VisualTreeHelper.HitTest(this.TheMap, pos);
+            if (htr != null && htr.VisualHit is UIElement ele)
+            {
+                return new List<UIElement> { ele };
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Returns a list of children associated with the layer.
+        /// </summary>
+        public IList<DependencyObject> ChildList
+        {
+            get
+            {
+                return base.Children.ToList<DependencyObject>();
+            }
+        }
+
+        /// <summary>
+        /// Returns the point associated with the passed in event
+        /// </summary>
+        /// <typeparam name="T">The type of the event argument</typeparam>
+        /// <param name="ea">The event argument</param>
+        /// <returns>The point associated with the passed in event</returns>
+        public Point EventToPoint<T>(T ea)
+        {
+            var prea = ea as MouseButtonEventArgs;
+            if (prea != null)
+            {
+                return prea.GetPosition(TheMap);
+            }
+            return new Point(double.NaN, double.NaN);
+        }
+
+        /// <summary>
+        /// Returns the latitude and longitude corresponding to a screen point.
+        /// </summary>
+        /// <param name="p">
+        /// The screen point.
+        /// </param>
+        /// <returns>The latitude and longitude corresponding to the screen point.</returns>
+        public ILocation PointToLocation(Point p)
+        {
+            var loc = TheMap.ScreenToMap(p);
+            return new EsriLocation(loc.Y, loc.X);
+        }
+
+        /// <summary>
         /// Gets the zoom level for the Esri map.
         /// </summary>
         public double ZoomLevel
@@ -276,9 +335,9 @@ namespace MilSym.EsriSupport
                 ((MilGraphic)ue).Layer = this;
             }
 
-            if (!Children.Contains(ue))
+            if (!base.Children.Contains(ue))
             {
-                Children.Add(ue);
+                base.Children.Add(ue);
             }
         }
 

@@ -715,26 +715,26 @@
 		<!--Color was "#FFC61021"-->
 		<Canvas>
 			<Path Data="F0 M -66,29 C-114,-59,-19,-167,50,-189 C50,-189,0,-114,-1,-71 L -66,29 Z" Style="{Binding Fill}" />
-			<Path Data="F0 M -66,29 C-114,-59,-19,-167,50,-189 C50,-189,0,-114,-1,-71 " Style="{Binding Line}" />
+			<Path Data="F0 M -66,29 C-114,-59,-19,-167,50,-189 C50,-189,0,-114,-1,-71 " Style="{Binding Lines}" />
 			<Path Data="F0 M 65,-29 C113,58,19,166,-51,188 C-51,188,0,113,0,71 L 65,-29 Z" Style="{Binding Fill}" />
-			<Path Data="F0 M 65,-29 C113,58,19,166,-51,188 C-51,188,0,113,0,71 " Style="{Binding Line}" />
-			<Path Data="F0 M 70,0 C70,-39,38,-70,0,-70 C-39,-70,-70,-39,-70,0 C-70,38,-39,70,0,70 C38,70,70,38,70,0 Z" Fill="White" Style="{Binding Line}" />
+			<Path Data="F0 M 65,-29 C113,58,19,166,-51,188 C-51,188,0,113,0,71 " Style="{Binding Lines}" />
+			<Path Data="F0 M 70,0 C70,-39,38,-70,0,-70 C-39,-70,-70,-39,-70,0 C-70,38,-39,70,0,70 C38,70,70,38,70,0 Z" Fill="White" Style="{Binding Lines}" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="WAS-WSTSD-P----">
 		<!--Color was "#FFC61021"-->
 		<Canvas>
-			<Path Data="F1 M 70,0 C70,-39,38,-70,0,-70 C-39,-70,-70,-39,-70,0 C-70,38,-39,70,0,70 C38,70,70,38,70,0 " Style="{Binding Line}" />
-			<Polyline Points="-50,-50 50,50" Style="{Binding Line}" />
-			<Polyline Points="50,-50 -50,50" Style="{Binding Line}" />
+			<Path Data="F1 M 70,0 C70,-39,38,-70,0,-70 C-39,-70,-70,-39,-70,0 C-70,38,-39,70,0,70 C38,70,70,38,70,0 " Style="{Binding Lines}" />
+			<Polyline Points="-50,-50 50,50" Style="{Binding Lines}" />
+			<Polyline Points="50,-50 -50,50" Style="{Binding Lines}" />
 		</Canvas>
 	</ControlTemplate>
 	<ControlTemplate x:Key="WAS-WSTSH-P----">
 		<Canvas>
 			<Path Data="F0 M -66,29 C-114,-59,-19,-167,50,-189 C50,-189,0,-114,-1,-71 L -66,29 Z" Style="{Binding Fill}" />
-			<Path Data="F0 M -66,29 C-114,-59,-19,-167,50,-189 C50,-189,0,-114,-1,-71 " Style="{Binding Line}" />
+			<Path Data="F0 M -66,29 C-114,-59,-19,-167,50,-189 C50,-189,0,-114,-1,-71 " Style="{Binding Lines}" />
 			<Path Data="F0 M 65,-29 C113,58,19,166,-51,188 C-51,188,0,113,0,71 L 65,-29 Z" Style="{Binding Fill}" />
-			<Path Data="F0 M 65,-29 C113,58,19,166,-51,188 C-51,188,0,113,0,71 " Style="{Binding Line}" />
+			<Path Data="F0 M 65,-29 C113,58,19,166,-51,188 C-51,188,0,113,0,71 " Style="{Binding Lines}" />
 			<Path Data="F0 M 70,0 C70,-39,38,-70,0,-70 C-39,-70,-70,-39,-70,0 C-70,38,-39,70,0,70 C38,70,70,38,70,0 Z" Style="{Binding LineFill}" />
 		</Canvas>
 	</ControlTemplate>

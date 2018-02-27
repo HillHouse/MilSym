@@ -17,10 +17,16 @@ namespace MilSym.MilSymbol
 {
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
+#if WINDOWS_UWP
+    using Windows.UI;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+#else
     using System.Windows;
     using System.Windows.Media;
     using System.Windows.Shapes;
-
+#endif
     using Schemas;
 
     /// <summary>

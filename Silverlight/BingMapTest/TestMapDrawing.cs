@@ -19,15 +19,23 @@ namespace MapTest
 {
     using System;
     using System.Collections.Generic;
-    using System.Diagnostics;
     using System.Globalization;
     using System.Linq;
+#if WINDOWS_UWP
+    using System.Diagnostics;
+    using Windows.Foundation;
+    using Windows.UI;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Input;
+    using Windows.UI.Xaml.Media;
+#else
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Input;
     using System.Windows.Media;
     using System.Windows.Threading;
-
+#endif
     using MilSym.MilGraph;
     using MilSym.MilGraph.Support;
     using MilSym.MilSymbol;
@@ -79,28 +87,32 @@ namespace MapTest
         /// <summary>
         /// A list of point symbols to be animated
         /// </summary>
-        private readonly string[] singlePointSymbolCodes = new[]
+        private readonly string[] singlePointSymbolCodes = new string[]
         {
-            "SUPPS-----*****", "SFPPS-----*****", "SNPPS-----*****", "SHPPS-----*****", "SUAPMF----*****",
-            "SFAPMF----*****", "SNAPMF----*****", "SHAPMF----*****", "SUGPUCVC--*****", "SFGPUCVC--*****",
-            "SNGPUCVC--*****", "SHGPUCVC--*****", "SUGPUH----*****", "SFGPUH----*****", "SNGPUH----*****",
-            "SHGPUH----*****", "SUGPEWDHS-*****", "SFGPEWDHS-*****", "SNGPEWDHS-*****", "SHGPEWDHS-*****",
-            "SUGPIMFPW-H****", "SFGPIMFPW-H****", "SNGPIMFPW-H****", "SHGPIMFPW-H****", "SUSPCL----*****",
-            "SFSPCL----*****", "SNSPCL----*****", "SHSPCL----*****", "SUUPSK----*****", "SFUPSK----*****",
-            "SNUPSK----*****", "SHUPSK----*****", "SUUPWMMX--*****", "SFUPWMMX--*****", "SNUPWMMX--*****",
-            "SHUPWMMX--*****", "SUFPNB----*****", "SFFPNB----*****", "SNFPNB----*****", "SHFPNB----*****",
-            "IUPPSRE-----***", "IFPPSRE-----***", "INPPSRE-----***", "IHPPSRE-----***", "IUAPSRE-----***",
-            "IFAPSRE-----***", "INAPSRE-----***", "IHAPSRE-----***", "IUGPSCP-----***", "IFGPSCP-----***",
-            "INGPSCP-----***", "IHGPSCP-----***", "IUUPSCS-----***", "IFUPSCS-----***", "INUPSCS-----***",
-            "IHUPSCS-----***", "OUGPA-----*****", "OFGPA-----*****", "ONGPA-----*****", "OHGPA-----*****",
-            "EUOPAA----*****", "EFOPAA----*****", "ENOPAA----*****", "EHOPAA----*****", "EUOPAB----*****",
-            "EFOPAB----*****", "ENOPAB----*****", "EHOPAB----*****", "EUOPAC----H****", "EFOPAC----H****",
-            "ENOPAC----H****", "EHOPAC----H****", "SUXPEVCAM-*****", "SFXPEVCAM-*****", "SNXPEVCAM-*****",
-            "SHXPEVCAM-*****", "SUFPGPA---*****", "SFFPGPA---*****", "SNFPGPA---*****", "SHFPGPA---*****",
-            "EUFPMA----*****", "EFFPMA----*****", "ENFPMA----*****", "EHFPMA----*****", "OUVPA-----*****",
-            "OFVPA-----*****", "ONVPA-----*****", "OHVPA-----*****", "SUUPSB----*****", "SFUPSB----*****",
-            "SNUPSB----*****", "SHUPSB----*****", "SUXPEVUR--*****", "SFXPEVUR--*****", "SNXPEVUR--*****",
-            "SHXPEVUR--*****"
+            "SUPAS-----*****", "SFPPS-----*****", "SNPPS-----*****", "SHPPS-----*****",
+            "SUAPMF----*****", "SFAPMF----*****", "SNAPMF----*****", "SHAPMF----*****",
+            "SUGPUCVC--*****", "SFGPUCVC--*****", "SNGPUCVC--*****", "SHGPUCVC--*****",
+            "SUGPUH----*****", "SFGPUH----*****", "SNGPUH----*****", "SHGPUH----*****",
+            "SUGPEWDHS-*****", "SFGPEWDHS-*****", "SNGPEWDHS-*****", "SHGPEWDHS-*****",
+            "SUGPIMFPW-H****", "SFGPIMFPW-H****", "SNGPIMFPW-H****", "SHGPIMFPW-H****",
+            "SUSPCL----*****", "SFSPCL----*****", "SNSPCL----*****", "SHSPCL----*****",
+            "SUUPSK----*****", "SFUPSK----*****", "SNUPSK----*****", "SHUPSK----*****",
+            "SUUPWMMX--*****", "SFUPWMMX--*****", "SNUPWMMX--*****", "SHUPWMMX--*****",
+            "SUFPNB----*****", "SFFPNB----*****", "SNFPNB----*****", "SHFPNB----*****",
+            "IUPPSRE-----***", "IFPPSRE-----***", "INPPSRE-----***", "IHPPSRE-----***",
+            "IUAPSRE-----***", "IFAPSRE-----***", "INAPSRE-----***", "IHAPSRE-----***",
+            "IUGPSCP-----***", "IFGPSCP-----***", "INGPSCP-----***", "IHGPSCP-----***",
+            "IUUPSCS-----***", "IFUPSCS-----***", "INUPSCS-----***", "IHUPSCS-----***",
+            "OUGPA-----*****", "OFGPA-----*****", "ONGPA-----*****", "OHGPA-----*****",
+            "EUOPAA----*****", "EFOPAA----*****", "ENOPAA----*****", "EHOPAA----*****",
+            "EUOPAB----*****", "EFOPAB----*****", "ENOPAB----*****", "EHOPAB----*****",
+            "EUOPAC----H****", "EFOPAC----H****", "ENOPAC----H****", "EHOPAC----H****",
+            "SUXPEVCAM-*****", "SFXPEVCAM-*****", "SNXPEVCAM-*****", "SHXPEVCAM-*****",
+            "SUFPGPA---*****", "SFFPGPA---*****", "SNFPGPA---*****", "SHFPGPA---*****",
+            "EUFPMA----*****", "EFFPMA----*****", "ENFPMA----*****", "EHFPMA----*****",
+            "OUVPA-----*****", "OFVPA-----*****", "ONVPA-----*****", "OHVPA-----*****",
+            "SUUPSB----*****", "SFUPSB----*****", "SNUPSB----*****", "SHUPSB----*****",
+            "SUXPEVUR--*****", "SFXPEVUR--*****", "SNXPEVUR--*****", "SHXPEVUR--*****"
         };
 
         /// <summary>
@@ -158,7 +170,7 @@ namespace MapTest
             var triads = this.PointsToCollection(triadLatLons);
             this.RotateCollection(triads, new RotateTransform { Angle = 90, CenterX = 24.45, CenterY = -70.14 });
 
-            var qgs = new[] // quadruple point symbols
+            var qgs = new string[] // quadruple point symbols
             {
                 "GUGPGLB---****X", "GUMPOAR---****X", "GUMPOADC--****X", "GUMPOADU--****X", "GUMPOGR---****X",
                 "GUMPOGF---****X", "GUMPOGZ---****X", "GUMPOGL---****X", "GUMPOGB---****X", "GUGPOAA---****X",
@@ -167,8 +179,8 @@ namespace MapTest
                 "GHGPAAW---****X", "GNGPGAD---****X", "GFGPGAF---****X", "GFGPAAF---****X", "GFGPGLL---****X",
                 "GFGPGLP---****X", "GFGPGLF---****X", "GHTPK-----****X", "GHTPKF----****X", "GHGPGAD---****X",
                 "GHGPGAG---****X", "GHGPGAA---****X", "GHGPGAE---****X", "GHGPGAX---****X", "GHGPGAL---****X",
-                "GHGPGAP---****X", "GHTPR-----****X", "GHTPUS----****X", "GHSPASB---****X", "GHSPASD---****X", 
-                "GHSPAD----****X", "GHSPAE----****X", "GHSPAH----****X", "GHSPAR----****X", "GHSPASR---****X" 
+                "GHGPGAP---****X", "GHTPR-----****X", "GHTPUS----****X", "GHSPASB---****X", "GHSPASD---****X",
+                "GHSPAD----****X", "GHSPAE----****X", "GHSPAH----****X", "GHSPAR----****X", "GHSPASR---****X"
             };
             var tgs = new string[] // triple point symbols
             {
@@ -216,17 +228,14 @@ namespace MapTest
                 // The labels will work too
                 var ms = new MapMilSymbol(
                     sim,
-                    opacity: 0.9, 
-                    origin: origin /*, labels:"W=Hello;Q=135;X=World;H=Testing 1 2 3"*/);
+                    opacity: 0.9,
+                    origin: origin //, 
+                    //labelString:"W=Hello;Q=135;X=World;H=Testing 1 2 3"
+                    );
                 if (ms.Bounds.IsEmpty)
                 {
                     continue;
                 }
-
-                // Enable this event handler for more efficient element detection.
-                // Works on Silverlight Bing/ESRI and WPF ESRI - does not work on WPF Bing.
-                //
-                ////ms.MouseLeftButtonUp += new System.Windows.Input.MouseButtonEventHandler(MsMouseLeftButtonUp);
 
                 this.milsymLayer.AddSymbol(ms);
                 this.mapMilSymbols.Add(new Tuple<MapMilSymbol, ILocation>(ms, origin));
@@ -252,10 +261,15 @@ namespace MapTest
         /// <param name="ea">
         /// The event args associated with the mouse up event.
         /// </param>
+#if WINDOWS_UWP
+        public void MsMouseLeftButtonUp(object sender, PointerRoutedEventArgs ea)
+#else
         public void MsMouseLeftButtonUp(object sender, MouseButtonEventArgs ea)
+#endif
         {
-            var mms = sender as MapMilSymbol;
-            if (mms == null)
+            var mapMilSymbol = sender as MapMilSymbol;
+            var milGraphic = sender as MilGraphic;
+            if (mapMilSymbol == null && milGraphic == null)
             {
 #if SILVERLIGHT
                 var ui = Application.Current.RootVisual;
@@ -263,36 +277,80 @@ namespace MapTest
                     VisualTreeHelper.FindElementsInHostCoordinates(ea.GetPosition(ui), ui);
                 foreach (MapMilSymbol ele in elements.OfType<MapMilSymbol>())
                 {
-                    mms = ele;
-                    break;
+                    mapMilSymbol = ele;
                 }
-#else
-                Point p = ea.GetPosition((IInputElement)sender);
-                var ele = ((UIElement)sender).InputHitTest(p) as FrameworkElement;
-                while (ele != null)
+#elif WINDOWS_UWP
+                var set = new HashSet<string>();
+                var layer = this.milsymLayer;
+                var pos = layer.EventToPoint<PointerRoutedEventArgs>(ea);
+                var loc = layer.PointToLocation(pos);
+
+                // First we use the conventional approach to find point elements
+                // This will also work when selecting MilGraphics near their Origin
+                // but not elsewhere.
+                var elements = layer.ElementsAtPoint(pos);
+                if (elements == null)
                 {
-                    if (ele is MapMilSymbol)
+                    return;
+                }
+                foreach (var element in elements)
+                {
+                    if (element is MapMilSymbol mms)
                     {
-                        mms = ele as MapMilSymbol;
-                        break;
+                        set.Add(mms.SymbolCode);
                     }
-
-                    if (ele is Canvas && ele.TemplatedParent is MilSymbolBase)
+                    else if (element is MilGraphic mg)
                     {
-                        var tp = ele.TemplatedParent as MilSymbolBase;
-                        mms = tp.Parent as MapMilSymbol;
-                        break;
+                        set.Add(mg.SymbolCode);
                     }
+                    else if (element is FrameworkElement hit)
+                    {
+                        var ele = (hit.DataContext != null) ? hit.DataContext as FrameworkElement : hit;
+                        if (ele != null)
+                        {
+                            if (ele.Parent is MapMilSymbol mls)
+                            {
+                                set.Add(mls.SymbolCode);
+                            }
+                            else if (ele.Parent is MilGraphic mlg)
+                            {
+                                set.Add(mlg.SymbolCode);
+                            }
+                        }
+                    }
+                }
 
-                    ele = ele.Parent as FrameworkElement;
+                foreach (var code in set)
+                {
+                    Debug.Write(code + " ");
+                }
+                Debug.WriteLine(" ");
+#else
+                var p = this.milsymLayer.EventToPoint<MouseButtonEventArgs>(ea);
+                var elements = this.milsymLayer.ElementsAtPoint(p);
+                if (elements == null)
+                {
+                    return;
+                }
+                foreach (var uie in elements)
+                {
+                    if (uie is FrameworkElement fe)
+                    {
+                        var ele = (fe.DataContext != null) ? fe.DataContext as FrameworkElement : fe;
+                        if (ele != null)
+                        {
+                            if (ele.Parent is MapMilSymbol mms)
+                            {
+                                Console.WriteLine(mms.SymbolCode);
+                            }
+                            else if (ele.Parent is MilGraphic mg)
+                            {
+                                Console.WriteLine(mg.SymbolCode);
+                            }
+                        }
+                    }
                 }
 #endif
-            }
-
-            if (mms != null)
-            {
-                // Pretend that this is some UI event handling.
-                SmartDispatcher.BeginInvoke(() => Debug.WriteLine(mms.SymbolCode));
             }
         }
 
@@ -348,12 +406,12 @@ namespace MapTest
                     labelW1: new DateTime(2010, 12, 19).ToString(CultureInfo.InvariantCulture),
                     isSpline: spline);
 
-                ToolTipService.SetToolTip(pg, symbolCode);
+                ToolTipService.SetToolTip(pg, sc);
                 this.milsymLayer.AddSymbol(pg);
 
                 // Draw the base and transformed base vectors
-                this.polyLayer.AddPolyline(saveLoc, new SolidColorBrush(Colors.Blue));
-                this.polyLayer.AddPolyline(lc, new SolidColorBrush(Colors.Red));
+                //this.polyLayer.AddPolyline(saveLoc, new SolidColorBrush(Colors.Orange));
+                //this.polyLayer.AddPolyline(lc, new SolidColorBrush(Colors.Purple));
             }
         }
 
@@ -366,7 +424,12 @@ namespace MapTest
         /// <param name="ea">
         /// This parameter is not used.
         /// </param>
+        /// 
+#if WINDOWS_UWP
+        public void UpdateMapMilSymbols(object sender, object ea)
+#else
         public void UpdateMapMilSymbols(object sender, EventArgs ea)
+#endif
         {
             var dtick = sender as DispatcherTimer;
             if (dtick != null)
@@ -503,7 +566,11 @@ namespace MapTest
                 // Rotate around three times.
                 var locOut = this.milsymFactory.LocationCollection();
                 var locIn = quads[i];
+#if WINDOWS_UWP
+                foreach (Point pointOut in locIn.Select(q => new Point(q.Latitude, q.Longitude)).Select(rt.TransformPoint))
+#else
                 foreach (Point pointOut in locIn.Select(q => new Point(q.Latitude, q.Longitude)).Select(rt.Transform))
+#endif
                 {
                     locOut.Add(this.milsymFactory.Location(Order.LatLon, pointOut.X, pointOut.Y));
                 }

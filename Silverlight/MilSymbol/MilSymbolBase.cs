@@ -17,10 +17,21 @@ namespace MilSym.MilSymbol
 {
     using System.ComponentModel;
     using System.Globalization;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Data;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+#else
     using System.Windows;
     using System.Windows.Controls;
+    using System.Windows.Data;
     using System.Windows.Media;
     using System.Windows.Shapes;
+#endif
     using Schemas;
 
     /// <summary>
@@ -44,7 +55,7 @@ namespace MilSym.MilSymbol
         /// The framed line style.
         /// </summary>
         private Style line;
-        
+
         /// <summary>
         /// The framed line and fill style.
         /// </summary>
@@ -96,6 +107,11 @@ namespace MilSym.MilSymbol
             }
 
             string stencil = CodeToStencil(symbolCode);
+            if (MilAppendix.NoTemplate(stencil))
+            {
+                this.empty = true;
+                return;
+            }
 
             this.DataContext = this;
 
@@ -207,6 +223,19 @@ namespace MilSym.MilSymbol
             get { return this.fill; }
         }
 
+        public Style Lines
+        {
+            get
+            {
+                if (!this.needDashed)
+                {
+                    return this.line;
+                }
+
+                return GetAnticipated(this.line);
+            }
+        }
+
         /// <summary>
         /// Gets the current default line style for framed symbols.
         /// </summary>
@@ -315,7 +344,7 @@ namespace MilSym.MilSymbol
                 return symbolCode;
             }
 
-            string stencil = symbolCode.Substring(0, 10).ToUpper(CultureInfo.InvariantCulture);
+            string stencil = symbolCode.Substring(0, 10).ToUpperInvariant();
 
             int dash = stencil.IndexOf('-', 4);
             if (dash > 0)
@@ -368,10 +397,7 @@ namespace MilSym.MilSymbol
         /// </param>
         public void NotifyPropertyChanged(string propertyName)
         {
-            if (this.PropertyChanged != null)
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         /// <summary>
@@ -523,9 +549,8 @@ namespace MilSym.MilSymbol
 
             if (this.ApplyTemplate())
             {
-                var canvas = VisualTreeHelper.GetChild(this, 0) as Canvas;
-
-                if (canvas != null && !double.IsNaN(canvas.Height))
+                if (VisualTreeHelper.GetChild(this, 0) is Canvas canvas &&
+                    !double.IsNaN(canvas.Height))
                 {
                     this.Height = canvas.Height;
                     this.Width = canvas.Width;

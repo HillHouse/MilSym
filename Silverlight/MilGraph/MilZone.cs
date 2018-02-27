@@ -18,12 +18,23 @@ namespace MilSym.MilGraph
     using System;
     using System.Collections.Generic;
     using System.Linq;
+#if WINDOWS_UWP
+    using Windows.Foundation;
+    using Windows.UI;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Data;
+    using Windows.UI.Xaml.Documents;
+    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Shapes;
+#else
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Data;
     using System.Windows.Documents;
     using System.Windows.Media;
     using System.Windows.Shapes;
+#endif
 
     using MilSym.MilGraph.Support;
     using MilSym.MilSymbol;
@@ -93,7 +104,7 @@ namespace MilSym.MilGraph
             var labels = new[]
             {
                 mg.LabelT,
-                "Min Alt: " + mg.LabelX, 
+                "Min Alt: " + mg.LabelX,
                 "Max Alt: " + mg.LabelX1,
                 "Time from: " + mg.LabelW,
                 "Time to: " + mg.LabelW1
@@ -279,7 +290,7 @@ namespace MilSym.MilGraph
                     {
                         new PathFigure
                         {
-                            Segments = GenerateBezierSegments(count, pointAnchors, pointCp1, pointCp2, isClosed) 
+                            Segments = GenerateBezierSegments(count, pointAnchors, pointCp1, pointCp2, isClosed)
                         }
                     };
             }
@@ -350,8 +361,11 @@ namespace MilSym.MilGraph
             {
                 path.Fill = HatchBrush(mg.ContentControl.Brush);
             }
-
+#if WINDOWS_UWP
+            path.SetBinding(Shape.StrokeThicknessProperty, new Binding() { Path = new PropertyPath("LineThickness"), Source = mg.ContentControl });
+#else
             path.SetBinding(Shape.StrokeThicknessProperty, new Binding("LineThickness") { Source = mg.ContentControl });
+#endif
             return path;
         }
 
@@ -399,11 +413,14 @@ namespace MilSym.MilGraph
         /// </returns>
         private static TextBlock GenerateLabels(MilGraphic mg, string[] labels)
         {
+
             var tb = new TextBlock
             {
                 Style = SymbolData.GetStyle("BT20"),
-                Foreground = mg.ContentControl.Brush
+                Foreground = mg.ContentControl.Brush,
             };
+            tb.SetBinding(UIElement.VisibilityProperty, 
+                new Binding { Source = mg.TextVisibility, Mode = BindingMode.OneWay });
 
             var count = labels.Length;
             for (int i = 0; i < count; i++)

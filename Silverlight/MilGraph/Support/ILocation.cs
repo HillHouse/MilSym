@@ -23,16 +23,16 @@ namespace MilSym.MilGraph.Support
         /// <summary>
         /// Gets or sets the latitude value for the interface.
         /// </summary>
-        double Latitude { get; set; }
+        double Latitude { get; }
 
         /// <summary>
         /// Gets or sets the longitude value for the interface.
         /// </summary>
-        double Longitude { get; set; }
+        double Longitude { get; }
         
         /// <summary>
         /// Gets or sets the altitude value for the interface.
         /// </summary>
-        double Altitude { get; set; }
+        double Altitude { get; }
     }
 }

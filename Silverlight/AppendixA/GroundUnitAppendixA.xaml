@@ -1980,7 +1980,7 @@
 	<ControlTemplate x:Key="SFGPUUACC">
 		<Canvas>
 			<Polygon Points="-180,-118 -180,122 180,122 180,-118 -180,-118" Style="{Binding Fill}" />
-			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Line}" />
+			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Lines}" />
 			<Path Data="F0 M -52,-38 C-52,-48,-60,-56,-70,-56 C-80,-56,-88,-48,-88,-38 C-88,-28,-80,-20,-70,-20 C-60,-20,-52,-28,-52,-38 Z" Fill="#FF000000" Style="{StaticResource BS10}" />
 			<Path Data="F0 M 88,-38 C88,-48,80,-56,70,-56 C60,-56,52,-48,52,-38 C52,-28,60,-20,70,-20 C80,-20,88,-28,88,-38 Z" Fill="#FF000000" Style="{StaticResource BS10}" />
 			<Path Data="F0 M -60,-53 C0,-18,10,2,35,92 " Style="{StaticResource BS10}" />
@@ -2194,7 +2194,7 @@
 	<ControlTemplate x:Key="SFGPUUACSA">
 		<Canvas>
 			<Polygon Points="-180,-117 -180,123 180,123 180,-117 -180,-117" Style="{Binding Fill}" />
-			<Polygon Points="-180,123 180,123 180,-117 -180,-117" Style="{Binding Line}" />
+			<Polygon Points="-180,123 180,123 180,-117 -180,-117" Style="{Binding Lines}" />
 			<Path Data="F0 M -47,-23 C-47,-32,-54,-40,-63,-40 C-72,-40,-80,-32,-80,-23 C-80,-14,-72,-7,-63,-7 C-54,-7,-47,-14,-47,-23 Z" Fill="#FF000000" Style="{StaticResource BS9}" />
 			<Path Data="F0 M 79,-23 C79,-32,72,-40,63,-40 C54,-40,46,-32,46,-23 C46,-14,54,-7,63,-7 C72,-7,79,-14,79,-23 Z" Fill="#FF000000" Style="{StaticResource BS9}" />
 			<Path Data="F0 M -54,-37 C0,-5,9,13,31,94 " Style="{StaticResource BS9}" />
@@ -11534,7 +11534,7 @@
 	<ControlTemplate x:Key="SFGPUCVRU">
 		<Canvas>
 			<Polygon Points="-180,-118 -180,122 180,122 180,-118 -180,-118" Style="{Binding Fill}" />
-			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Line}" />
+			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Lines}" />
 			<Polygon Points="0,2 -90,-48 -90,52 90,-48 90,52 0,2" Fill="#FF000000" />
 			<TextBlock Text="U" Style="{StaticResource BT75}" Canvas.Left="-28" Canvas.Top="-123" />
 		</Canvas>
@@ -11564,7 +11564,7 @@
 	<ControlTemplate x:Key="SFGPUCVRUM">
 		<Canvas>
 			<Polygon Points="-180,-118 -180,122 180,122 180,-118 -180,-118" Style="{Binding Fill}" />
-			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Line}" />
+			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Lines}" />
 			<Polygon Points="0,2 -90,-48 -90,52 90,-48 90,52 0,2" Fill="#FF000000" />
 			<TextBlock Text="U" Style="{StaticResource BT75}" Canvas.Left="-28" Canvas.Top="-123" />
 			<TextBlock Text="M" Style="{StaticResource BT65}" Canvas.Left="-28" Canvas.Top="48" />
@@ -11597,7 +11597,7 @@
 	<ControlTemplate x:Key="SFGPUCVRUL">
 		<Canvas>
 			<Polygon Points="-180,-118 -180,122 180,122 180,-118 -180,-118" Style="{Binding Fill}" />
-			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Line}" />
+			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Lines}" />
 			<TextBlock Text="U" Style="{StaticResource BT75}" Canvas.Left="-28" Canvas.Top="-123" />
 			<Polygon Points="0,2 -90,-48 -90,52 90,-48 90,52 0,2" Fill="#FF000000" />
 			<TextBlock Text="L" Style="{StaticResource BT65}" Canvas.Left="-20" Canvas.Top="48" />
@@ -11630,7 +11630,7 @@
 	<ControlTemplate x:Key="SFGPUCVRUH">
 		<Canvas>
 			<Polygon Points="-180,-118 -180,122 180,122 180,-118 -180,-118" Style="{Binding Fill}" />
-			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Line}" />
+			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Lines}" />
 			<Polygon Points="0,2 -90,-48 -90,52 90,-48 90,52 0,2" Fill="#FF000000" />
 			<TextBlock Text="H" Style="{StaticResource BT65}" Canvas.Left="-24" Canvas.Top="48" />
 			<TextBlock Text="U" Style="{StaticResource BT75}" Canvas.Left="-28" Canvas.Top="-123" />
@@ -11662,7 +11662,7 @@
 	<ControlTemplate x:Key="SFGPUCVRS">
 		<Canvas>
 			<Polygon Points="-180,-118 -180,122 180,122 180,-118 -180,-118" Style="{Binding Fill}" />
-			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Line}" />
+			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Lines}" />
 			<Polygon Points="0,2 -90,-48 -90,52 90,-48 90,52 0,2" Fill="#FF000000" />
 			<TextBlock Text="R" Style="{StaticResource BT75}" Canvas.Left="-28" Canvas.Top="-123" />
 		</Canvas>
@@ -11751,7 +11751,7 @@
 	<ControlTemplate x:Key="SFGPUCVRUC">
 		<Canvas>
 			<Polygon Points="-180,-118 -180,122 180,122 180,-118 -180,-118" Style="{Binding Fill}" />
-			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Line}" />
+			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Lines}" />
 			<Polygon Points="0,2 -90,-48 -90,52 90,-48 90,52 0,2" Fill="#FF000000" />
 			<TextBlock Text="Y" Style="{StaticResource BT75}" Canvas.Left="-26" Canvas.Top="-123" />
 		</Canvas>
@@ -11780,7 +11780,7 @@
 	<ControlTemplate x:Key="SFGPUCVRA">
 		<Canvas>
 			<Polygon Points="-180,-118 -180,122 180,122 180,-118 -180,-118" Style="{Binding Fill}" />
-			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Line}" />
+			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Lines}" />
 			<Polygon Points="0,2 -90,-48 -90,52 90,-48 90,52 0,2" Fill="#FF000000" />
 			<TextBlock Text="A" Style="{StaticResource BT75}" Canvas.Left="-28" Canvas.Top="-123" />
 		</Canvas>
@@ -11809,7 +11809,7 @@
 	<ControlTemplate x:Key="SFGPUCVRW">
 		<Canvas>
 			<Polygon Points="-180,-118 -180,122 180,122 180,-118 -180,-118" Style="{Binding Fill}" />
-			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Line}" />
+			<Polygon Points="-180,122 180,122 180,-118 -180,-118" Style="{Binding Lines}" />
 			<Polygon Points="0,2 -90,-48 -90,52 90,-48 90,52 0,2" Fill="#FF000000" />
 			<TextBlock Text="P" Style="{StaticResource BT75}" Canvas.Left="-26" Canvas.Top="-123" />
 		</Canvas>
