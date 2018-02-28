@@ -1,7 +1,7 @@
 # Overview #
 
 This is a re-hosting of the [MilSym Codeplex project](http://milsym.codeplex.com).
-The project is no longer under active development but there are some additions and updates:
+Although the project is no longer under active development, there are some additions and updates:
 
 1. A new WPF map example was added, based on the Fischer [XAML-Map-Control](https://github.com/ClemensFischer/XAML-Map-Control).
 2. A new UWP map example was added, based on the Fischer [XAML-Map-Control](https://github.com/ClemensFischer/XAML-Map-Control).
@@ -12,8 +12,8 @@ The project is no longer under active development but there are some additions a
 For those seeking to utilize open source military symbology projects supported by the US military, the projects at 
 [Mission Command](https://github.com/missioncommand) are active and recommended.
 
-Only the WPF and UWP portions of this project are relevant as Microsoft no longer supports Silveright in Visual Studio.
-The entire project can be built under Windows using the <pre>build.bat</pre> file at the root level 
+Only the WPF and UWP portions of this project are relevant as Microsoft no longer supports Silveright in recent Visual Studio versions.
+The entire project (except Silverlight) can be built under Windows using the <pre>build.bat</pre> file at the root level 
 assuming that the *devenv* application is in the path. 
 Otherwise the solution files at the root level
 can be built in the same order as in the batch file.
