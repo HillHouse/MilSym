@@ -193,16 +193,16 @@ CXML file*
 
 Resummarizing, this is the last of several plannned military symbology code drops
 corresponding to the various appendices in the [MIL-STD 2525C
-standard](http://milsym.codeplex.com/download?DownloadId=99498). For
+standard](media/2525C.zip). For
 those interested in symbology in general, the [APP-6A Wikipedia
 article](http://en.wikipedia.org/wiki/APP-6a) is a good introduction to
 military symbology.\
 \
 The original Silverlight code in this C\# project now works in WPF and UWP.
-Most C# differences are managed through #ifdef's.
+Most C# differences are managed through #if's.
 XAML dependencies have been isolated to specific files.\
 \
-This code drop covers Appendices A, B, C, D, E and G.\
+This code drop covers Appendices A, B, C, D, E and G.
 
 **Notes**
 
