@@ -106,7 +106,7 @@ demonstrate the use of a translate transform.
 
 **Some Simple Map Examples**
 
-![BoundingBoxes](media/boxes.png)\
+![BoundingBoxes](media/Boxes.png)\
 *Figure 1: Sample output from FischerMapTest shows single-point symbols in
 bounding boxes.*
 
@@ -118,7 +118,7 @@ the map zooms and the symbol resizes. The example includes commented out code to
 
 In Figure 2a, the map shows a subset of the supported symbols that require a fixed number of anchor points. Sometimes these values represent points and sometimes they represent points and measures such as radii or lengths. The PlotSymbol method in the TestMapDrawing class has code commented out code that draws the base vectors that define these symbols. This is useful to verify that the symbols are being drawn correctly relative to their defining points. 
 
-![Multipoint](media/MultipointTactical.png)\
+![Multipoint](media/MultiPointTactical.png)\
 *Figure 2b: Sample output showing multi-point symbols with Bing road map background.*
 
 In Figure 2b, the map shows a subset of the supported symbols that use multiple points to define polylines or polygons. The PlotSymbol method in the TestMapDrawing class has code commented out code that draws the base vectors that define these symbols.
@@ -517,7 +517,7 @@ only tests that run in UWP, WPF and Silverlight.
     displays its current angle. Click on any of the chart buttons to
     terminate this test.
 
-![Rotating](media/rotating.png)\
+![Rotating](media/Rotating.png)\
 *Figure 5: Rotating military symbol illustrating one dynamic label*
 
 -   The Labels button exercises all of the currently supported labels.
@@ -526,7 +526,7 @@ only tests that run in UWP, WPF and Silverlight.
     very feature rich tooltips, the need for a symbol to display more
     than a cursory amount of data is diminished.
 
-![Labels](media/labels.png)\
+![Labels](media/Labels.png)\
 *Figure 6: Sample symbols illustrating label positions*
 
 -   The Miscellaneous button draws a variety of symbols including
@@ -544,7 +544,7 @@ only tests that run in UWP, WPF and Silverlight.
   7        |     The Unknown battle dimension
   8        |     The Civilian order of battle for an Unknown battle dimension. The standard calls for the use of purple on civilian order of battle objects with the exception of the hostile or suspect standard identities
 
-![Miscellaneous](media/miscellaneous.png)\
+![Miscellaneous](media/Miscellaneous.png)\
 *Figure 7: A collection of miscellaneous symbol properties*
 
 -   The Appendices combo box supports rendering all of the base symbols
@@ -558,13 +558,13 @@ only tests that run in UWP, WPF and Silverlight.
     MIL-STD 2525C appendices.
 
 
-![Symbols](media/symbols.png)\
+![Symbols](media/Symbols.png)\
 *Figure 8: Some symbols in Appendix D*\
 \
-![AppendixC](media/appendixc.png)\
+![AppendixC](media/AppendixC.png)\
 *Figure 9: Some symbols in Appendix C*\
 \
-![AppendixB](media/appendixb.png)\
+![AppendixB](media/AppendixB.png)\
 *Figure 10: Some symbols in Appendix B*
 
 -   The Mobility button illustrates the use of Modifier codes
@@ -595,7 +595,7 @@ only tests that run in UWP, WPF and Silverlight.
   2        |  10         |   Feint Dummy for Army
   2        |  11         |   Feint Dummy/Task Force for Region
 
-![Mobility](media/mobility.png)\
+![Mobility](media/Mobility.png)\
 *Figure 11: Sample mobility, headquarter, task force, feint dummy and
 echelon markings*
 
@@ -734,7 +734,7 @@ The boilerplate binding code for this example (BindStuff.cs) is due to
 Michael S. Scherotter at Microsoft. The transition of the Bing map from
 CTP to release may obviate the need for this particular approach.\
 
-![Binding](media/binding.png)\
+![Binding](media/Binding.png)\
 *Figure 12: Sample bound collection of symbols*
 
 **MapTest**
@@ -747,7 +747,7 @@ backing vector(s). The red (or purple) vectors represent the original anchor poi
 while the blue (or orange) vectors represent the transformed vectors supporting that
 particular tactical graphic based on an interpretation of the standard.\
 \
-![Tactical](media/tpwp.png)\
+![Tactical](media/TPWP.png)\
 *Figure 13: Sample three point tactical graphic
 (G\*TPWP\-\-\--\*\*\*\*X) using the MilGraphic interface, showing anchor point vectors*
 
